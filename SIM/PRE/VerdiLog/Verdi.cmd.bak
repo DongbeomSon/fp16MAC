@@ -1,0 +1,4 @@
+wvCreateWindow
+wvOpenFile -win $_nWave2 \
+           {/home/lmj4666/workarea/capstone/lab4_front-end/SIM/PRE/mul_A.fsdb}
+verdiDockWidgetDisplay -dock widgetDock_WelcomePage

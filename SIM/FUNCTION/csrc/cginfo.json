@@ -1,0 +1,231 @@
+{
+    "PrevCompiledModules": {},
+    "MlibObjs": {},
+    "NameTable": {
+        "RCA_0005": [
+            "RCA_0005",
+            "ehnx4",
+            "module",
+            5
+        ],
+        "std": [
+            "std",
+            "reYIK",
+            "module",
+            1
+        ],
+        "karastuba_12bit_test": [
+            "karastuba_12bit_test",
+            "p6jTb",
+            "module",
+            13
+        ],
+        "RCA_0008": [
+            "RCA_0008",
+            "fDGFP",
+            "module",
+            7
+        ],
+        "tb_fp16MAC": [
+            "tb_fp16MAC",
+            "yMrAT",
+            "module",
+            2
+        ],
+        "karastuba_11bit_test": [
+            "karastuba_11bit_test",
+            "Cx9zp",
+            "module",
+            12
+        ],
+        "RCA_0006": [
+            "RCA_0006",
+            "niYej",
+            "module",
+            6
+        ],
+        "RCA_0000": [
+            "RCA_0000",
+            "eNvia",
+            "module",
+            3
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module",
+            19
+        ],
+        "RCA_0001": [
+            "RCA_0001",
+            "yNvz0",
+            "module",
+            4
+        ],
+        "RCA_0009": [
+            "RCA_0009",
+            "ryz4W",
+            "module",
+            8
+        ],
+        "fp16multiplier_pipe": [
+            "fp16multiplier_pipe",
+            "AEWT8",
+            "module",
+            16
+        ],
+        "vedic_4bit": [
+            "vedic_4bit",
+            "QMbwx",
+            "module",
+            9
+        ],
+        "karastuba_6bit": [
+            "karastuba_6bit",
+            "Z11GV",
+            "module",
+            10
+        ],
+        "encoder_a": [
+            "encoder_a",
+            "JFeZ2",
+            "module",
+            15
+        ],
+        "karastuba_12bit": [
+            "karastuba_12bit",
+            "dEMT0",
+            "module",
+            11
+        ],
+        "menMult": [
+            "menMult",
+            "BVMSK",
+            "module",
+            14
+        ],
+        "CSA": [
+            "CSA",
+            "SrZub",
+            "module",
+            17
+        ],
+        "fp16MAC": [
+            "fp16MAC",
+            "tuUAY",
+            "module",
+            18
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "stat": {
+        "ru_self_cgstart": {
+            "ru_nivcsw": 3,
+            "ru_utime_sec": 0.33707700000000002,
+            "ru_majflt": 0,
+            "ru_stime_sec": 0.053439,
+            "ru_maxrss_kb": 97152,
+            "ru_minflt": 11965,
+            "ru_nvcsw": 43
+        },
+        "nQuads": 20894,
+        "ru_childs_cgstart": {
+            "ru_nivcsw": 2,
+            "ru_utime_sec": 0.054605000000000001,
+            "ru_majflt": 0,
+            "ru_stime_sec": 0.083002000000000006,
+            "ru_maxrss_kb": 38652,
+            "ru_minflt": 10089,
+            "ru_nvcsw": 56
+        },
+        "mopSpeed": 188763.00971529004,
+        "outputSizePerQuad": 88690.09294534316,
+        "nMops": 64331,
+        "mop/quad": 3.0789221786158705,
+        "ru_self_end": {
+            "ru_nivcsw": 3,
+            "ru_utime_sec": 0.67788000000000004,
+            "ru_majflt": 0,
+            "ru_stime_sec": 0.057356999999999998,
+            "ru_maxrss_kb": 105676,
+            "ru_minflt": 15762,
+            "ru_nvcsw": 43
+        },
+        "totalObjSize": 1853090802,
+        "ru_childs_end": {
+            "ru_nivcsw": 2,
+            "ru_utime_sec": 0.054605000000000001,
+            "ru_majflt": 0,
+            "ru_stime_sec": 0.083002000000000006,
+            "ru_maxrss_kb": 38652,
+            "ru_minflt": 10089,
+            "ru_nvcsw": 56
+        },
+        "quadSpeed": 61308.145761627682,
+        "Frontend(%)": 49.725172596919805,
+        "CodeGen(%)": 50.274827403080195,
+        "peak_mem_kb": 214740
+    },
+    "CurCompileUdps": {},
+    "CurCompileModules": [
+        "...MASTER...",
+        "...MASTER...",
+        "std",
+        "std",
+        "tb_fp16MAC",
+        "tb_fp16MAC",
+        "RCA_0000",
+        "RCA_0000",
+        "RCA_0001",
+        "RCA_0001",
+        "RCA_0005",
+        "RCA_0005",
+        "RCA_0006",
+        "RCA_0006",
+        "RCA_0008",
+        "RCA_0008",
+        "RCA_0009",
+        "RCA_0009",
+        "vedic_4bit",
+        "vedic_4bit",
+        "karastuba_6bit",
+        "karastuba_6bit",
+        "karastuba_12bit",
+        "karastuba_12bit",
+        "karastuba_11bit_test",
+        "karastuba_11bit_test",
+        "karastuba_12bit_test",
+        "karastuba_12bit_test",
+        "menMult",
+        "menMult",
+        "encoder_a",
+        "encoder_a",
+        "fp16multiplier_pipe",
+        "fp16multiplier_pipe",
+        "CSA",
+        "CSA",
+        "fp16MAC",
+        "fp16MAC"
+    ],
+    "PEModules": [],
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 76293
+    },
+    "CompileStatus": "Successful",
+    "LVLData": [
+        "SIM"
+    ],
+    "CompileProcesses": [
+        "cgproc.13762.json"
+    ],
+    "Misc": {
+        "cwd": "/home/capstone8/capstone/project/lab4_front-end/SIM/FUNCTION",
+        "daidir_abs": "/home/capstone8/capstone/project/lab4_front-end/SIM/FUNCTION/simv.daidir",
+        "csrc": "csrc",
+        "csrc_abs": "/home/capstone8/capstone/project/lab4_front-end/SIM/FUNCTION/csrc",
+        "daidir": "simv.daidir",
+        "default_output_dir": "csrc",
+        "archive_dir": "archive.0"
+    }
+}

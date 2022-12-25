@@ -1,0 +1,3 @@
+*design* DebussyLib (btIdent Verdi_M-2017.03-SP2)
+Command arguments:  -lib  simv.daidir/work  -saveLevel  -elab  simv.daidir/kdb  -simflow  -simdir  simv.daidir/kdb_libs  -top  tb_fp16MAC karastuba_12bit karastuba_11bit_test karastuba_12bit_test fp16multiplier_pipe CSA  -Lf  work  -SNPS_ELABCOM  -saveElab 
+Total	0 error(s),   0 warning(s)

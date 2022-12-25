@@ -1,0 +1,2141 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : fp16MAC
+Version: O-2018.06-SP4
+Date   : Fri Dec 23 23:44:49 2022
+****************************************
+
+Operating Conditions: ff1p16vn40c   Library: saed32rvt_ff1p16vn40c
+Wire Load Model Mode: enclosed
+
+  Startpoint: m1/out_reg[10]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a1/sum_reg[14]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            16000                 saed32rvt_ff1p16vn40c
+  compshift          8000                  saed32rvt_ff1p16vn40c
+  RCA_bw6            ForQA                 saed32rvt_ff1p16vn40c
+  fpadder            8000                  saed32rvt_ff1p16vn40c
+  mantissa           8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_0         8000                  saed32rvt_ff1p16vn40c
+  normalization      8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_1         8000                  saed32rvt_ff1p16vn40c
+  RCA_bw12_1         ForQA                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  m1/out_reg[10]/CLK (DFFARX1_RVT)                        0.00       0.00 r
+  m1/out_reg[10]/Q (DFFARX1_RVT)                          0.07       0.07 f
+  m1/out[10] (fp16multiplier)                             0.00       0.07 f
+  a1/B[10] (fpadder)                                      0.00       0.07 f
+  a1/cs0/expB[0] (compshift)                              0.00       0.07 f
+  a1/cs0/U92/Y (INVX1_RVT)                                0.02       0.08 r
+  a1/cs0/rc0/B[1] (RCA_bw6)                               0.00       0.08 r
+  a1/cs0/rc0/U3/Y (XOR2X1_RVT)                            0.04       0.12 f
+  a1/cs0/rc0/U0/P1 (G_Cell_326)                           0.00       0.12 f
+  a1/cs0/rc0/U0/U1/Y (AO21X1_RVT)                         0.03       0.15 f
+  a1/cs0/rc0/U0/GG (G_Cell_326)                           0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/G0 (G_Cell_325)         0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.17 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/GG (G_Cell_325)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/G0 (G_Cell_324)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.20 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/GG (G_Cell_324)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/G0 (G_Cell_323)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.22 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/GG (G_Cell_323)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/G0 (G_Cell_322)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.25 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/GG (G_Cell_322)         0.00       0.25 f
+  a1/cs0/rc0/U1/Y (XOR2X1_RVT)                            0.03       0.28 r
+  a1/cs0/rc0/Sum[6] (RCA_bw6)                             0.00       0.28 r
+  a1/cs0/U75/Y (INVX1_RVT)                                0.03       0.30 f
+  a1/cs0/U7/Y (INVX1_RVT)                                 0.02       0.32 r
+  a1/cs0/U91/Y (AO22X1_RVT)                               0.03       0.35 r
+  a1/cs0/U86/Y (INVX1_RVT)                                0.07       0.42 f
+  a1/cs0/U111/Y (MUX21X1_RVT)                             0.05       0.46 f
+  a1/cs0/U113/Y (MUX21X1_RVT)                             0.03       0.49 f
+  a1/cs0/U70/Y (MUX21X1_RVT)                              0.03       0.52 f
+  a1/cs0/U116/Y (AND2X1_RVT)                              0.02       0.54 f
+  a1/cs0/U73/Y (MUX21X1_RVT)                              0.02       0.56 f
+  a1/cs0/U43/Y (AO22X1_RVT)                               0.03       0.59 f
+  a1/cs0/mtsB_R[0] (compshift)                            0.00       0.59 f
+  a1/mts0/mtsB_R[0] (mantissa)                            0.00       0.59 f
+  a1/mts0/U19/Y (INVX1_RVT)                               0.01       0.60 r
+  a1/mts0/rc5/B[1] (RCA_bw23_0)                           0.00       0.60 r
+  a1/mts0/rc5/U45/Y (XOR2X1_RVT)                          0.03       0.63 r
+  a1/mts0/rc5/U0/P1 (G_Cell_300)                          0.00       0.63 r
+  a1/mts0/rc5/U0/U1/Y (AO21X1_RVT)                        0.03       0.65 r
+  a1/mts0/rc5/U0/GG (G_Cell_300)                          0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/G0 (G_Cell_299)        0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.68 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/GG (G_Cell_299)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/G0 (G_Cell_298)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.70 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/GG (G_Cell_298)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/G0 (G_Cell_297)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.73 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/GG (G_Cell_297)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/G0 (G_Cell_296)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.76 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/GG (G_Cell_296)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/G0 (G_Cell_295)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.78 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/GG (G_Cell_295)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/G0 (G_Cell_294)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.81 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/GG (G_Cell_294)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/G0 (G_Cell_293)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.83 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/GG (G_Cell_293)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/G0 (G_Cell_292)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.86 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/GG (G_Cell_292)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/G0 (G_Cell_291)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.89 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/GG (G_Cell_291)        0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/G0 (G_Cell_290)       0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.91 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/GG (G_Cell_290)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/G0 (G_Cell_289)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.94 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/GG (G_Cell_289)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/G0 (G_Cell_288)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.96 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/GG (G_Cell_288)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/G0 (G_Cell_287)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.99 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/GG (G_Cell_287)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/G0 (G_Cell_286)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.01 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/GG (G_Cell_286)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/G0 (G_Cell_285)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.04 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/GG (G_Cell_285)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/G0 (G_Cell_284)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.07 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/GG (G_Cell_284)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/G0 (G_Cell_283)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.09 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/GG (G_Cell_283)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/G0 (G_Cell_282)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.12 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/GG (G_Cell_282)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/G0 (G_Cell_281)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.14 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/GG (G_Cell_281)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/G0 (G_Cell_280)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.17 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/GG (G_Cell_280)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/G0 (G_Cell_279)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.20 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/GG (G_Cell_279)       0.00       1.20 r
+  a1/mts0/rc5/U71/Y (XOR2X1_RVT)                          0.03       1.23 f
+  a1/mts0/rc5/Sum[23] (RCA_bw23_0)                        0.00       1.23 f
+  a1/mts0/U35/Y (AO22X1_RVT)                              0.02       1.25 f
+  a1/mts0/R_mts[22] (mantissa)                            0.00       1.25 f
+  a1/nor0/R_mts[22] (normalization)                       0.00       1.25 f
+  a1/nor0/U60/Y (INVX1_RVT)                               0.01       1.26 r
+  a1/nor0/rc7/A[23] (RCA_bw23_1)                          0.00       1.26 r
+  a1/nor0/rc7/U39/Y (XOR2X1_RVT)                          0.02       1.29 r
+  a1/nor0/rc7/U13/Y (XOR2X1_RVT)                          0.03       1.32 f
+  a1/nor0/rc7/Sum[23] (RCA_bw23_1)                        0.00       1.32 f
+  a1/nor0/U73/Y (OA21X1_RVT)                              0.09       1.41 f
+  a1/nor0/U127/Y (OR2X1_RVT)                              0.10       1.50 f
+  a1/nor0/U143/Y (OR2X1_RVT)                              0.10       1.60 f
+  a1/nor0/U163/Y (OR2X1_RVT)                              0.10       1.70 f
+  a1/nor0/U28/Y (OR2X1_RVT)                               0.10       1.79 f
+  a1/nor0/U208/Y (OR2X1_RVT)                              0.10       1.89 f
+  a1/nor0/U230/Y (OR2X1_RVT)                              0.10       1.98 f
+  a1/nor0/U252/Y (OR2X1_RVT)                              0.07       2.06 f
+  a1/nor0/U20/Y (NBUFFX2_RVT)                             0.03       2.08 f
+  a1/nor0/U3/Y (OR2X1_RVT)                                0.08       2.16 f
+  a1/nor0/U289/Y (MUX21X1_RVT)                            0.05       2.21 f
+  a1/nor0/U7/Y (OR2X1_RVT)                                0.04       2.24 f
+  a1/nor0/U6/Y (INVX1_RVT)                                0.01       2.25 r
+  a1/nor0/U5/Y (INVX1_RVT)                                0.06       2.31 f
+  a1/nor0/U11/Y (MUX21X1_RVT)                             0.03       2.34 r
+  a1/nor0/U47/Y (OR3X1_RVT)                               0.03       2.36 r
+  a1/nor0/U8/Y (OR4X1_RVT)                                0.03       2.40 r
+  a1/nor0/U45/Y (OA21X1_RVT)                              0.02       2.42 r
+  a1/nor0/rc8/B[1] (RCA_bw12_1)                           0.00       2.42 r
+  a1/nor0/rc8/U33/Y (AND2X1_RVT)                          0.02       2.44 r
+  a1/nor0/rc8/U0/G1 (G_Cell_176)                          0.00       2.44 r
+  a1/nor0/rc8/U0/U1/Y (AO21X1_RVT)                        0.02       2.46 r
+  a1/nor0/rc8/U0/GG (G_Cell_176)                          0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/G0 (G_Cell_175)        0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.48 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/GG (G_Cell_175)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/G0 (G_Cell_174)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.51 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/GG (G_Cell_174)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/G0 (G_Cell_173)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.54 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/GG (G_Cell_173)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/G0 (G_Cell_172)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.56 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/GG (G_Cell_172)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/G0 (G_Cell_171)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.59 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/GG (G_Cell_171)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/G0 (G_Cell_170)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.62 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/GG (G_Cell_170)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/G0 (G_Cell_169)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.65 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/GG (G_Cell_169)        0.00       2.65 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/G0 (G_Cell_168)        0.00       2.65 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.67 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/GG (G_Cell_168)        0.00       2.67 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/G0 (G_Cell_167)        0.00       2.67 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.70 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/GG (G_Cell_167)        0.00       2.70 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/G0 (G_Cell_166)       0.00       2.70 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       2.73 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/GG (G_Cell_166)       0.00       2.73 r
+  a1/nor0/rc8/U2/Y (XOR2X1_RVT)                           0.04       2.77 f
+  a1/nor0/rc8/Sum[12] (RCA_bw12_1)                        0.00       2.77 f
+  a1/nor0/U85/Y (INVX1_RVT)                               0.01       2.78 r
+  a1/nor0/U79/Y (AND2X1_RVT)                              0.02       2.80 r
+  a1/nor0/U74/Y (AO22X1_RVT)                              0.02       2.82 r
+  a1/nor0/Sum[14] (normalization)                         0.00       2.82 r
+  a1/en/product[14] (encoder_add)                         0.00       2.82 r
+  a1/en/U26/Y (AO221X1_RVT)                               0.03       2.85 r
+  a1/en/out[14] (encoder_add)                             0.00       2.85 r
+  a1/sum_reg[14]/D (DFFARX1_RVT)                          0.00       2.85 r
+  data arrival time                                                  2.85
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a1/sum_reg[14]/CLK (DFFARX1_RVT)                        0.00       4.50 r
+  library setup time                                     -0.02       4.48
+  data required time                                                 4.48
+  --------------------------------------------------------------------------
+  data required time                                                 4.48
+  data arrival time                                                 -2.85
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.63
+
+
+  Startpoint: m1/out_reg[10]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a1/sum_reg[13]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            16000                 saed32rvt_ff1p16vn40c
+  compshift          8000                  saed32rvt_ff1p16vn40c
+  RCA_bw6            ForQA                 saed32rvt_ff1p16vn40c
+  fpadder            8000                  saed32rvt_ff1p16vn40c
+  mantissa           8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_0         8000                  saed32rvt_ff1p16vn40c
+  normalization      8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_1         8000                  saed32rvt_ff1p16vn40c
+  RCA_bw12_1         ForQA                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  m1/out_reg[10]/CLK (DFFARX1_RVT)                        0.00       0.00 r
+  m1/out_reg[10]/Q (DFFARX1_RVT)                          0.07       0.07 f
+  m1/out[10] (fp16multiplier)                             0.00       0.07 f
+  a1/B[10] (fpadder)                                      0.00       0.07 f
+  a1/cs0/expB[0] (compshift)                              0.00       0.07 f
+  a1/cs0/U92/Y (INVX1_RVT)                                0.02       0.08 r
+  a1/cs0/rc0/B[1] (RCA_bw6)                               0.00       0.08 r
+  a1/cs0/rc0/U3/Y (XOR2X1_RVT)                            0.04       0.12 f
+  a1/cs0/rc0/U0/P1 (G_Cell_326)                           0.00       0.12 f
+  a1/cs0/rc0/U0/U1/Y (AO21X1_RVT)                         0.03       0.15 f
+  a1/cs0/rc0/U0/GG (G_Cell_326)                           0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/G0 (G_Cell_325)         0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.17 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/GG (G_Cell_325)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/G0 (G_Cell_324)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.20 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/GG (G_Cell_324)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/G0 (G_Cell_323)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.22 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/GG (G_Cell_323)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/G0 (G_Cell_322)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.25 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/GG (G_Cell_322)         0.00       0.25 f
+  a1/cs0/rc0/U1/Y (XOR2X1_RVT)                            0.03       0.28 r
+  a1/cs0/rc0/Sum[6] (RCA_bw6)                             0.00       0.28 r
+  a1/cs0/U75/Y (INVX1_RVT)                                0.03       0.30 f
+  a1/cs0/U7/Y (INVX1_RVT)                                 0.02       0.32 r
+  a1/cs0/U91/Y (AO22X1_RVT)                               0.03       0.35 r
+  a1/cs0/U86/Y (INVX1_RVT)                                0.07       0.42 f
+  a1/cs0/U111/Y (MUX21X1_RVT)                             0.05       0.46 f
+  a1/cs0/U113/Y (MUX21X1_RVT)                             0.03       0.49 f
+  a1/cs0/U70/Y (MUX21X1_RVT)                              0.03       0.52 f
+  a1/cs0/U116/Y (AND2X1_RVT)                              0.02       0.54 f
+  a1/cs0/U73/Y (MUX21X1_RVT)                              0.02       0.56 f
+  a1/cs0/U43/Y (AO22X1_RVT)                               0.03       0.59 f
+  a1/cs0/mtsB_R[0] (compshift)                            0.00       0.59 f
+  a1/mts0/mtsB_R[0] (mantissa)                            0.00       0.59 f
+  a1/mts0/U19/Y (INVX1_RVT)                               0.01       0.60 r
+  a1/mts0/rc5/B[1] (RCA_bw23_0)                           0.00       0.60 r
+  a1/mts0/rc5/U45/Y (XOR2X1_RVT)                          0.03       0.63 r
+  a1/mts0/rc5/U0/P1 (G_Cell_300)                          0.00       0.63 r
+  a1/mts0/rc5/U0/U1/Y (AO21X1_RVT)                        0.03       0.65 r
+  a1/mts0/rc5/U0/GG (G_Cell_300)                          0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/G0 (G_Cell_299)        0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.68 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/GG (G_Cell_299)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/G0 (G_Cell_298)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.70 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/GG (G_Cell_298)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/G0 (G_Cell_297)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.73 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/GG (G_Cell_297)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/G0 (G_Cell_296)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.76 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/GG (G_Cell_296)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/G0 (G_Cell_295)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.78 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/GG (G_Cell_295)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/G0 (G_Cell_294)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.81 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/GG (G_Cell_294)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/G0 (G_Cell_293)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.83 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/GG (G_Cell_293)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/G0 (G_Cell_292)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.86 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/GG (G_Cell_292)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/G0 (G_Cell_291)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.89 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/GG (G_Cell_291)        0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/G0 (G_Cell_290)       0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.91 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/GG (G_Cell_290)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/G0 (G_Cell_289)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.94 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/GG (G_Cell_289)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/G0 (G_Cell_288)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.96 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/GG (G_Cell_288)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/G0 (G_Cell_287)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.99 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/GG (G_Cell_287)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/G0 (G_Cell_286)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.01 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/GG (G_Cell_286)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/G0 (G_Cell_285)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.04 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/GG (G_Cell_285)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/G0 (G_Cell_284)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.07 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/GG (G_Cell_284)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/G0 (G_Cell_283)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.09 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/GG (G_Cell_283)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/G0 (G_Cell_282)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.12 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/GG (G_Cell_282)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/G0 (G_Cell_281)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.14 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/GG (G_Cell_281)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/G0 (G_Cell_280)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.17 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/GG (G_Cell_280)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/G0 (G_Cell_279)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.20 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/GG (G_Cell_279)       0.00       1.20 r
+  a1/mts0/rc5/U71/Y (XOR2X1_RVT)                          0.03       1.23 f
+  a1/mts0/rc5/Sum[23] (RCA_bw23_0)                        0.00       1.23 f
+  a1/mts0/U35/Y (AO22X1_RVT)                              0.02       1.25 f
+  a1/mts0/R_mts[22] (mantissa)                            0.00       1.25 f
+  a1/nor0/R_mts[22] (normalization)                       0.00       1.25 f
+  a1/nor0/U60/Y (INVX1_RVT)                               0.01       1.26 r
+  a1/nor0/rc7/A[23] (RCA_bw23_1)                          0.00       1.26 r
+  a1/nor0/rc7/U39/Y (XOR2X1_RVT)                          0.02       1.29 r
+  a1/nor0/rc7/U13/Y (XOR2X1_RVT)                          0.03       1.32 f
+  a1/nor0/rc7/Sum[23] (RCA_bw23_1)                        0.00       1.32 f
+  a1/nor0/U73/Y (OA21X1_RVT)                              0.09       1.41 f
+  a1/nor0/U127/Y (OR2X1_RVT)                              0.10       1.50 f
+  a1/nor0/U143/Y (OR2X1_RVT)                              0.10       1.60 f
+  a1/nor0/U163/Y (OR2X1_RVT)                              0.10       1.70 f
+  a1/nor0/U28/Y (OR2X1_RVT)                               0.10       1.79 f
+  a1/nor0/U208/Y (OR2X1_RVT)                              0.10       1.89 f
+  a1/nor0/U230/Y (OR2X1_RVT)                              0.10       1.98 f
+  a1/nor0/U252/Y (OR2X1_RVT)                              0.07       2.06 f
+  a1/nor0/U20/Y (NBUFFX2_RVT)                             0.03       2.08 f
+  a1/nor0/U3/Y (OR2X1_RVT)                                0.08       2.16 f
+  a1/nor0/U289/Y (MUX21X1_RVT)                            0.05       2.21 f
+  a1/nor0/U7/Y (OR2X1_RVT)                                0.04       2.24 f
+  a1/nor0/U6/Y (INVX1_RVT)                                0.01       2.25 r
+  a1/nor0/U5/Y (INVX1_RVT)                                0.06       2.31 f
+  a1/nor0/U11/Y (MUX21X1_RVT)                             0.03       2.34 r
+  a1/nor0/U47/Y (OR3X1_RVT)                               0.03       2.36 r
+  a1/nor0/U8/Y (OR4X1_RVT)                                0.03       2.40 r
+  a1/nor0/U45/Y (OA21X1_RVT)                              0.02       2.42 r
+  a1/nor0/rc8/B[1] (RCA_bw12_1)                           0.00       2.42 r
+  a1/nor0/rc8/U33/Y (AND2X1_RVT)                          0.02       2.44 r
+  a1/nor0/rc8/U0/G1 (G_Cell_176)                          0.00       2.44 r
+  a1/nor0/rc8/U0/U1/Y (AO21X1_RVT)                        0.02       2.46 r
+  a1/nor0/rc8/U0/GG (G_Cell_176)                          0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/G0 (G_Cell_175)        0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.48 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/GG (G_Cell_175)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/G0 (G_Cell_174)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.51 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/GG (G_Cell_174)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/G0 (G_Cell_173)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.54 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/GG (G_Cell_173)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/G0 (G_Cell_172)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.56 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/GG (G_Cell_172)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/G0 (G_Cell_171)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.59 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/GG (G_Cell_171)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/G0 (G_Cell_170)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.62 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/GG (G_Cell_170)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/G0 (G_Cell_169)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.65 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/GG (G_Cell_169)        0.00       2.65 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/G0 (G_Cell_168)        0.00       2.65 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.67 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/GG (G_Cell_168)        0.00       2.67 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/G0 (G_Cell_167)        0.00       2.67 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.70 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/GG (G_Cell_167)        0.00       2.70 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/G0 (G_Cell_166)       0.00       2.70 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       2.73 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/GG (G_Cell_166)       0.00       2.73 r
+  a1/nor0/rc8/U2/Y (XOR2X1_RVT)                           0.04       2.77 f
+  a1/nor0/rc8/Sum[12] (RCA_bw12_1)                        0.00       2.77 f
+  a1/nor0/U85/Y (INVX1_RVT)                               0.01       2.78 r
+  a1/nor0/U79/Y (AND2X1_RVT)                              0.02       2.80 r
+  a1/nor0/U75/Y (AO22X1_RVT)                              0.02       2.82 r
+  a1/nor0/Sum[13] (normalization)                         0.00       2.82 r
+  a1/en/product[13] (encoder_add)                         0.00       2.82 r
+  a1/en/U28/Y (AO221X1_RVT)                               0.03       2.85 r
+  a1/en/out[13] (encoder_add)                             0.00       2.85 r
+  a1/sum_reg[13]/D (DFFARX1_RVT)                          0.00       2.85 r
+  data arrival time                                                  2.85
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a1/sum_reg[13]/CLK (DFFARX1_RVT)                        0.00       4.50 r
+  library setup time                                     -0.02       4.48
+  data required time                                                 4.48
+  --------------------------------------------------------------------------
+  data required time                                                 4.48
+  data arrival time                                                 -2.85
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.63
+
+
+  Startpoint: m1/out_reg[10]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a1/sum_reg[12]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            16000                 saed32rvt_ff1p16vn40c
+  compshift          8000                  saed32rvt_ff1p16vn40c
+  RCA_bw6            ForQA                 saed32rvt_ff1p16vn40c
+  fpadder            8000                  saed32rvt_ff1p16vn40c
+  mantissa           8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_0         8000                  saed32rvt_ff1p16vn40c
+  normalization      8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_1         8000                  saed32rvt_ff1p16vn40c
+  RCA_bw12_1         ForQA                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  m1/out_reg[10]/CLK (DFFARX1_RVT)                        0.00       0.00 r
+  m1/out_reg[10]/Q (DFFARX1_RVT)                          0.07       0.07 f
+  m1/out[10] (fp16multiplier)                             0.00       0.07 f
+  a1/B[10] (fpadder)                                      0.00       0.07 f
+  a1/cs0/expB[0] (compshift)                              0.00       0.07 f
+  a1/cs0/U92/Y (INVX1_RVT)                                0.02       0.08 r
+  a1/cs0/rc0/B[1] (RCA_bw6)                               0.00       0.08 r
+  a1/cs0/rc0/U3/Y (XOR2X1_RVT)                            0.04       0.12 f
+  a1/cs0/rc0/U0/P1 (G_Cell_326)                           0.00       0.12 f
+  a1/cs0/rc0/U0/U1/Y (AO21X1_RVT)                         0.03       0.15 f
+  a1/cs0/rc0/U0/GG (G_Cell_326)                           0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/G0 (G_Cell_325)         0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.17 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/GG (G_Cell_325)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/G0 (G_Cell_324)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.20 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/GG (G_Cell_324)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/G0 (G_Cell_323)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.22 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/GG (G_Cell_323)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/G0 (G_Cell_322)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.25 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/GG (G_Cell_322)         0.00       0.25 f
+  a1/cs0/rc0/U1/Y (XOR2X1_RVT)                            0.03       0.28 r
+  a1/cs0/rc0/Sum[6] (RCA_bw6)                             0.00       0.28 r
+  a1/cs0/U75/Y (INVX1_RVT)                                0.03       0.30 f
+  a1/cs0/U7/Y (INVX1_RVT)                                 0.02       0.32 r
+  a1/cs0/U91/Y (AO22X1_RVT)                               0.03       0.35 r
+  a1/cs0/U86/Y (INVX1_RVT)                                0.07       0.42 f
+  a1/cs0/U111/Y (MUX21X1_RVT)                             0.05       0.46 f
+  a1/cs0/U113/Y (MUX21X1_RVT)                             0.03       0.49 f
+  a1/cs0/U70/Y (MUX21X1_RVT)                              0.03       0.52 f
+  a1/cs0/U116/Y (AND2X1_RVT)                              0.02       0.54 f
+  a1/cs0/U73/Y (MUX21X1_RVT)                              0.02       0.56 f
+  a1/cs0/U43/Y (AO22X1_RVT)                               0.03       0.59 f
+  a1/cs0/mtsB_R[0] (compshift)                            0.00       0.59 f
+  a1/mts0/mtsB_R[0] (mantissa)                            0.00       0.59 f
+  a1/mts0/U19/Y (INVX1_RVT)                               0.01       0.60 r
+  a1/mts0/rc5/B[1] (RCA_bw23_0)                           0.00       0.60 r
+  a1/mts0/rc5/U45/Y (XOR2X1_RVT)                          0.03       0.63 r
+  a1/mts0/rc5/U0/P1 (G_Cell_300)                          0.00       0.63 r
+  a1/mts0/rc5/U0/U1/Y (AO21X1_RVT)                        0.03       0.65 r
+  a1/mts0/rc5/U0/GG (G_Cell_300)                          0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/G0 (G_Cell_299)        0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.68 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/GG (G_Cell_299)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/G0 (G_Cell_298)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.70 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/GG (G_Cell_298)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/G0 (G_Cell_297)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.73 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/GG (G_Cell_297)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/G0 (G_Cell_296)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.76 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/GG (G_Cell_296)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/G0 (G_Cell_295)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.78 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/GG (G_Cell_295)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/G0 (G_Cell_294)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.81 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/GG (G_Cell_294)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/G0 (G_Cell_293)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.83 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/GG (G_Cell_293)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/G0 (G_Cell_292)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.86 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/GG (G_Cell_292)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/G0 (G_Cell_291)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.89 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/GG (G_Cell_291)        0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/G0 (G_Cell_290)       0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.91 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/GG (G_Cell_290)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/G0 (G_Cell_289)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.94 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/GG (G_Cell_289)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/G0 (G_Cell_288)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.96 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/GG (G_Cell_288)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/G0 (G_Cell_287)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.99 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/GG (G_Cell_287)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/G0 (G_Cell_286)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.01 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/GG (G_Cell_286)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/G0 (G_Cell_285)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.04 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/GG (G_Cell_285)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/G0 (G_Cell_284)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.07 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/GG (G_Cell_284)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/G0 (G_Cell_283)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.09 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/GG (G_Cell_283)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/G0 (G_Cell_282)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.12 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/GG (G_Cell_282)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/G0 (G_Cell_281)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.14 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/GG (G_Cell_281)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/G0 (G_Cell_280)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.17 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/GG (G_Cell_280)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/G0 (G_Cell_279)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.20 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/GG (G_Cell_279)       0.00       1.20 r
+  a1/mts0/rc5/U71/Y (XOR2X1_RVT)                          0.03       1.23 f
+  a1/mts0/rc5/Sum[23] (RCA_bw23_0)                        0.00       1.23 f
+  a1/mts0/U35/Y (AO22X1_RVT)                              0.02       1.25 f
+  a1/mts0/R_mts[22] (mantissa)                            0.00       1.25 f
+  a1/nor0/R_mts[22] (normalization)                       0.00       1.25 f
+  a1/nor0/U60/Y (INVX1_RVT)                               0.01       1.26 r
+  a1/nor0/rc7/A[23] (RCA_bw23_1)                          0.00       1.26 r
+  a1/nor0/rc7/U39/Y (XOR2X1_RVT)                          0.02       1.29 r
+  a1/nor0/rc7/U13/Y (XOR2X1_RVT)                          0.03       1.32 f
+  a1/nor0/rc7/Sum[23] (RCA_bw23_1)                        0.00       1.32 f
+  a1/nor0/U73/Y (OA21X1_RVT)                              0.09       1.41 f
+  a1/nor0/U127/Y (OR2X1_RVT)                              0.10       1.50 f
+  a1/nor0/U143/Y (OR2X1_RVT)                              0.10       1.60 f
+  a1/nor0/U163/Y (OR2X1_RVT)                              0.10       1.70 f
+  a1/nor0/U28/Y (OR2X1_RVT)                               0.10       1.79 f
+  a1/nor0/U208/Y (OR2X1_RVT)                              0.10       1.89 f
+  a1/nor0/U230/Y (OR2X1_RVT)                              0.10       1.98 f
+  a1/nor0/U252/Y (OR2X1_RVT)                              0.07       2.06 f
+  a1/nor0/U20/Y (NBUFFX2_RVT)                             0.03       2.08 f
+  a1/nor0/U3/Y (OR2X1_RVT)                                0.08       2.16 f
+  a1/nor0/U289/Y (MUX21X1_RVT)                            0.05       2.21 f
+  a1/nor0/U7/Y (OR2X1_RVT)                                0.04       2.24 f
+  a1/nor0/U6/Y (INVX1_RVT)                                0.01       2.25 r
+  a1/nor0/U5/Y (INVX1_RVT)                                0.06       2.31 f
+  a1/nor0/U11/Y (MUX21X1_RVT)                             0.03       2.34 r
+  a1/nor0/U47/Y (OR3X1_RVT)                               0.03       2.36 r
+  a1/nor0/U8/Y (OR4X1_RVT)                                0.03       2.40 r
+  a1/nor0/U45/Y (OA21X1_RVT)                              0.02       2.42 r
+  a1/nor0/rc8/B[1] (RCA_bw12_1)                           0.00       2.42 r
+  a1/nor0/rc8/U33/Y (AND2X1_RVT)                          0.02       2.44 r
+  a1/nor0/rc8/U0/G1 (G_Cell_176)                          0.00       2.44 r
+  a1/nor0/rc8/U0/U1/Y (AO21X1_RVT)                        0.02       2.46 r
+  a1/nor0/rc8/U0/GG (G_Cell_176)                          0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/G0 (G_Cell_175)        0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.48 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/GG (G_Cell_175)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/G0 (G_Cell_174)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.51 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/GG (G_Cell_174)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/G0 (G_Cell_173)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.54 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/GG (G_Cell_173)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/G0 (G_Cell_172)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.56 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/GG (G_Cell_172)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/G0 (G_Cell_171)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.59 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/GG (G_Cell_171)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/G0 (G_Cell_170)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.62 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/GG (G_Cell_170)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/G0 (G_Cell_169)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.65 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/GG (G_Cell_169)        0.00       2.65 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/G0 (G_Cell_168)        0.00       2.65 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.67 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/GG (G_Cell_168)        0.00       2.67 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/G0 (G_Cell_167)        0.00       2.67 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.70 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/GG (G_Cell_167)        0.00       2.70 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/G0 (G_Cell_166)       0.00       2.70 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       2.73 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/GG (G_Cell_166)       0.00       2.73 r
+  a1/nor0/rc8/U2/Y (XOR2X1_RVT)                           0.04       2.77 f
+  a1/nor0/rc8/Sum[12] (RCA_bw12_1)                        0.00       2.77 f
+  a1/nor0/U85/Y (INVX1_RVT)                               0.01       2.78 r
+  a1/nor0/U79/Y (AND2X1_RVT)                              0.02       2.80 r
+  a1/nor0/U76/Y (AO22X1_RVT)                              0.02       2.82 r
+  a1/nor0/Sum[12] (normalization)                         0.00       2.82 r
+  a1/en/product[12] (encoder_add)                         0.00       2.82 r
+  a1/en/U30/Y (AO221X1_RVT)                               0.03       2.85 r
+  a1/en/out[12] (encoder_add)                             0.00       2.85 r
+  a1/sum_reg[12]/D (DFFARX1_RVT)                          0.00       2.85 r
+  data arrival time                                                  2.85
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a1/sum_reg[12]/CLK (DFFARX1_RVT)                        0.00       4.50 r
+  library setup time                                     -0.02       4.48
+  data required time                                                 4.48
+  --------------------------------------------------------------------------
+  data required time                                                 4.48
+  data arrival time                                                 -2.85
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.63
+
+
+  Startpoint: m1/out_reg[10]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a1/sum_reg[11]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            16000                 saed32rvt_ff1p16vn40c
+  compshift          8000                  saed32rvt_ff1p16vn40c
+  RCA_bw6            ForQA                 saed32rvt_ff1p16vn40c
+  fpadder            8000                  saed32rvt_ff1p16vn40c
+  mantissa           8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_0         8000                  saed32rvt_ff1p16vn40c
+  normalization      8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_1         8000                  saed32rvt_ff1p16vn40c
+  RCA_bw12_1         ForQA                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  m1/out_reg[10]/CLK (DFFARX1_RVT)                        0.00       0.00 r
+  m1/out_reg[10]/Q (DFFARX1_RVT)                          0.07       0.07 f
+  m1/out[10] (fp16multiplier)                             0.00       0.07 f
+  a1/B[10] (fpadder)                                      0.00       0.07 f
+  a1/cs0/expB[0] (compshift)                              0.00       0.07 f
+  a1/cs0/U92/Y (INVX1_RVT)                                0.02       0.08 r
+  a1/cs0/rc0/B[1] (RCA_bw6)                               0.00       0.08 r
+  a1/cs0/rc0/U3/Y (XOR2X1_RVT)                            0.04       0.12 f
+  a1/cs0/rc0/U0/P1 (G_Cell_326)                           0.00       0.12 f
+  a1/cs0/rc0/U0/U1/Y (AO21X1_RVT)                         0.03       0.15 f
+  a1/cs0/rc0/U0/GG (G_Cell_326)                           0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/G0 (G_Cell_325)         0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.17 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/GG (G_Cell_325)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/G0 (G_Cell_324)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.20 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/GG (G_Cell_324)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/G0 (G_Cell_323)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.22 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/GG (G_Cell_323)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/G0 (G_Cell_322)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.25 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/GG (G_Cell_322)         0.00       0.25 f
+  a1/cs0/rc0/U1/Y (XOR2X1_RVT)                            0.03       0.28 r
+  a1/cs0/rc0/Sum[6] (RCA_bw6)                             0.00       0.28 r
+  a1/cs0/U75/Y (INVX1_RVT)                                0.03       0.30 f
+  a1/cs0/U7/Y (INVX1_RVT)                                 0.02       0.32 r
+  a1/cs0/U91/Y (AO22X1_RVT)                               0.03       0.35 r
+  a1/cs0/U86/Y (INVX1_RVT)                                0.07       0.42 f
+  a1/cs0/U111/Y (MUX21X1_RVT)                             0.05       0.46 f
+  a1/cs0/U113/Y (MUX21X1_RVT)                             0.03       0.49 f
+  a1/cs0/U70/Y (MUX21X1_RVT)                              0.03       0.52 f
+  a1/cs0/U116/Y (AND2X1_RVT)                              0.02       0.54 f
+  a1/cs0/U73/Y (MUX21X1_RVT)                              0.02       0.56 f
+  a1/cs0/U43/Y (AO22X1_RVT)                               0.03       0.59 f
+  a1/cs0/mtsB_R[0] (compshift)                            0.00       0.59 f
+  a1/mts0/mtsB_R[0] (mantissa)                            0.00       0.59 f
+  a1/mts0/U19/Y (INVX1_RVT)                               0.01       0.60 r
+  a1/mts0/rc5/B[1] (RCA_bw23_0)                           0.00       0.60 r
+  a1/mts0/rc5/U45/Y (XOR2X1_RVT)                          0.03       0.63 r
+  a1/mts0/rc5/U0/P1 (G_Cell_300)                          0.00       0.63 r
+  a1/mts0/rc5/U0/U1/Y (AO21X1_RVT)                        0.03       0.65 r
+  a1/mts0/rc5/U0/GG (G_Cell_300)                          0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/G0 (G_Cell_299)        0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.68 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/GG (G_Cell_299)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/G0 (G_Cell_298)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.70 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/GG (G_Cell_298)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/G0 (G_Cell_297)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.73 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/GG (G_Cell_297)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/G0 (G_Cell_296)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.76 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/GG (G_Cell_296)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/G0 (G_Cell_295)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.78 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/GG (G_Cell_295)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/G0 (G_Cell_294)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.81 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/GG (G_Cell_294)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/G0 (G_Cell_293)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.83 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/GG (G_Cell_293)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/G0 (G_Cell_292)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.86 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/GG (G_Cell_292)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/G0 (G_Cell_291)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.89 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/GG (G_Cell_291)        0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/G0 (G_Cell_290)       0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.91 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/GG (G_Cell_290)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/G0 (G_Cell_289)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.94 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/GG (G_Cell_289)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/G0 (G_Cell_288)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.96 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/GG (G_Cell_288)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/G0 (G_Cell_287)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.99 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/GG (G_Cell_287)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/G0 (G_Cell_286)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.01 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/GG (G_Cell_286)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/G0 (G_Cell_285)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.04 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/GG (G_Cell_285)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/G0 (G_Cell_284)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.07 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/GG (G_Cell_284)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/G0 (G_Cell_283)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.09 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/GG (G_Cell_283)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/G0 (G_Cell_282)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.12 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/GG (G_Cell_282)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/G0 (G_Cell_281)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.14 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/GG (G_Cell_281)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/G0 (G_Cell_280)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.17 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/GG (G_Cell_280)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/G0 (G_Cell_279)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.20 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/GG (G_Cell_279)       0.00       1.20 r
+  a1/mts0/rc5/U71/Y (XOR2X1_RVT)                          0.03       1.23 f
+  a1/mts0/rc5/Sum[23] (RCA_bw23_0)                        0.00       1.23 f
+  a1/mts0/U35/Y (AO22X1_RVT)                              0.02       1.25 f
+  a1/mts0/R_mts[22] (mantissa)                            0.00       1.25 f
+  a1/nor0/R_mts[22] (normalization)                       0.00       1.25 f
+  a1/nor0/U60/Y (INVX1_RVT)                               0.01       1.26 r
+  a1/nor0/rc7/A[23] (RCA_bw23_1)                          0.00       1.26 r
+  a1/nor0/rc7/U39/Y (XOR2X1_RVT)                          0.02       1.29 r
+  a1/nor0/rc7/U13/Y (XOR2X1_RVT)                          0.03       1.32 f
+  a1/nor0/rc7/Sum[23] (RCA_bw23_1)                        0.00       1.32 f
+  a1/nor0/U73/Y (OA21X1_RVT)                              0.09       1.41 f
+  a1/nor0/U127/Y (OR2X1_RVT)                              0.10       1.50 f
+  a1/nor0/U143/Y (OR2X1_RVT)                              0.10       1.60 f
+  a1/nor0/U163/Y (OR2X1_RVT)                              0.10       1.70 f
+  a1/nor0/U28/Y (OR2X1_RVT)                               0.10       1.79 f
+  a1/nor0/U208/Y (OR2X1_RVT)                              0.10       1.89 f
+  a1/nor0/U230/Y (OR2X1_RVT)                              0.10       1.98 f
+  a1/nor0/U252/Y (OR2X1_RVT)                              0.07       2.06 f
+  a1/nor0/U20/Y (NBUFFX2_RVT)                             0.03       2.08 f
+  a1/nor0/U3/Y (OR2X1_RVT)                                0.08       2.16 f
+  a1/nor0/U289/Y (MUX21X1_RVT)                            0.05       2.21 f
+  a1/nor0/U7/Y (OR2X1_RVT)                                0.04       2.24 f
+  a1/nor0/U6/Y (INVX1_RVT)                                0.01       2.25 r
+  a1/nor0/U5/Y (INVX1_RVT)                                0.06       2.31 f
+  a1/nor0/U11/Y (MUX21X1_RVT)                             0.03       2.34 r
+  a1/nor0/U47/Y (OR3X1_RVT)                               0.03       2.36 r
+  a1/nor0/U8/Y (OR4X1_RVT)                                0.03       2.40 r
+  a1/nor0/U45/Y (OA21X1_RVT)                              0.02       2.42 r
+  a1/nor0/rc8/B[1] (RCA_bw12_1)                           0.00       2.42 r
+  a1/nor0/rc8/U33/Y (AND2X1_RVT)                          0.02       2.44 r
+  a1/nor0/rc8/U0/G1 (G_Cell_176)                          0.00       2.44 r
+  a1/nor0/rc8/U0/U1/Y (AO21X1_RVT)                        0.02       2.46 r
+  a1/nor0/rc8/U0/GG (G_Cell_176)                          0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/G0 (G_Cell_175)        0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.48 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/GG (G_Cell_175)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/G0 (G_Cell_174)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.51 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/GG (G_Cell_174)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/G0 (G_Cell_173)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.54 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/GG (G_Cell_173)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/G0 (G_Cell_172)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.56 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/GG (G_Cell_172)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/G0 (G_Cell_171)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.59 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/GG (G_Cell_171)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/G0 (G_Cell_170)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.62 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/GG (G_Cell_170)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/G0 (G_Cell_169)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.65 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/GG (G_Cell_169)        0.00       2.65 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/G0 (G_Cell_168)        0.00       2.65 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.67 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/GG (G_Cell_168)        0.00       2.67 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/G0 (G_Cell_167)        0.00       2.67 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.70 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/GG (G_Cell_167)        0.00       2.70 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/G0 (G_Cell_166)       0.00       2.70 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       2.73 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/GG (G_Cell_166)       0.00       2.73 r
+  a1/nor0/rc8/U2/Y (XOR2X1_RVT)                           0.04       2.77 f
+  a1/nor0/rc8/Sum[12] (RCA_bw12_1)                        0.00       2.77 f
+  a1/nor0/U85/Y (INVX1_RVT)                               0.01       2.78 r
+  a1/nor0/U79/Y (AND2X1_RVT)                              0.02       2.80 r
+  a1/nor0/U77/Y (AO22X1_RVT)                              0.02       2.82 r
+  a1/nor0/Sum[11] (normalization)                         0.00       2.82 r
+  a1/en/product[11] (encoder_add)                         0.00       2.82 r
+  a1/en/U32/Y (AO221X1_RVT)                               0.03       2.85 r
+  a1/en/out[11] (encoder_add)                             0.00       2.85 r
+  a1/sum_reg[11]/D (DFFARX1_RVT)                          0.00       2.85 r
+  data arrival time                                                  2.85
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a1/sum_reg[11]/CLK (DFFARX1_RVT)                        0.00       4.50 r
+  library setup time                                     -0.02       4.48
+  data required time                                                 4.48
+  --------------------------------------------------------------------------
+  data required time                                                 4.48
+  data arrival time                                                 -2.85
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.63
+
+
+  Startpoint: m1/out_reg[10]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a1/sum_reg[10]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            16000                 saed32rvt_ff1p16vn40c
+  compshift          8000                  saed32rvt_ff1p16vn40c
+  RCA_bw6            ForQA                 saed32rvt_ff1p16vn40c
+  fpadder            8000                  saed32rvt_ff1p16vn40c
+  mantissa           8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_0         8000                  saed32rvt_ff1p16vn40c
+  normalization      8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_1         8000                  saed32rvt_ff1p16vn40c
+  RCA_bw12_1         ForQA                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  m1/out_reg[10]/CLK (DFFARX1_RVT)                        0.00       0.00 r
+  m1/out_reg[10]/Q (DFFARX1_RVT)                          0.07       0.07 f
+  m1/out[10] (fp16multiplier)                             0.00       0.07 f
+  a1/B[10] (fpadder)                                      0.00       0.07 f
+  a1/cs0/expB[0] (compshift)                              0.00       0.07 f
+  a1/cs0/U92/Y (INVX1_RVT)                                0.02       0.08 r
+  a1/cs0/rc0/B[1] (RCA_bw6)                               0.00       0.08 r
+  a1/cs0/rc0/U3/Y (XOR2X1_RVT)                            0.04       0.12 f
+  a1/cs0/rc0/U0/P1 (G_Cell_326)                           0.00       0.12 f
+  a1/cs0/rc0/U0/U1/Y (AO21X1_RVT)                         0.03       0.15 f
+  a1/cs0/rc0/U0/GG (G_Cell_326)                           0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/G0 (G_Cell_325)         0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.17 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/GG (G_Cell_325)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/G0 (G_Cell_324)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.20 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/GG (G_Cell_324)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/G0 (G_Cell_323)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.22 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/GG (G_Cell_323)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/G0 (G_Cell_322)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.25 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/GG (G_Cell_322)         0.00       0.25 f
+  a1/cs0/rc0/U1/Y (XOR2X1_RVT)                            0.03       0.28 r
+  a1/cs0/rc0/Sum[6] (RCA_bw6)                             0.00       0.28 r
+  a1/cs0/U75/Y (INVX1_RVT)                                0.03       0.30 f
+  a1/cs0/U7/Y (INVX1_RVT)                                 0.02       0.32 r
+  a1/cs0/U91/Y (AO22X1_RVT)                               0.03       0.35 r
+  a1/cs0/U86/Y (INVX1_RVT)                                0.07       0.42 f
+  a1/cs0/U111/Y (MUX21X1_RVT)                             0.05       0.46 f
+  a1/cs0/U113/Y (MUX21X1_RVT)                             0.03       0.49 f
+  a1/cs0/U70/Y (MUX21X1_RVT)                              0.03       0.52 f
+  a1/cs0/U116/Y (AND2X1_RVT)                              0.02       0.54 f
+  a1/cs0/U73/Y (MUX21X1_RVT)                              0.02       0.56 f
+  a1/cs0/U43/Y (AO22X1_RVT)                               0.03       0.59 f
+  a1/cs0/mtsB_R[0] (compshift)                            0.00       0.59 f
+  a1/mts0/mtsB_R[0] (mantissa)                            0.00       0.59 f
+  a1/mts0/U19/Y (INVX1_RVT)                               0.01       0.60 r
+  a1/mts0/rc5/B[1] (RCA_bw23_0)                           0.00       0.60 r
+  a1/mts0/rc5/U45/Y (XOR2X1_RVT)                          0.03       0.63 r
+  a1/mts0/rc5/U0/P1 (G_Cell_300)                          0.00       0.63 r
+  a1/mts0/rc5/U0/U1/Y (AO21X1_RVT)                        0.03       0.65 r
+  a1/mts0/rc5/U0/GG (G_Cell_300)                          0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/G0 (G_Cell_299)        0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.68 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/GG (G_Cell_299)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/G0 (G_Cell_298)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.70 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/GG (G_Cell_298)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/G0 (G_Cell_297)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.73 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/GG (G_Cell_297)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/G0 (G_Cell_296)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.76 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/GG (G_Cell_296)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/G0 (G_Cell_295)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.78 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/GG (G_Cell_295)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/G0 (G_Cell_294)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.81 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/GG (G_Cell_294)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/G0 (G_Cell_293)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.83 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/GG (G_Cell_293)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/G0 (G_Cell_292)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.86 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/GG (G_Cell_292)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/G0 (G_Cell_291)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.89 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/GG (G_Cell_291)        0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/G0 (G_Cell_290)       0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.91 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/GG (G_Cell_290)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/G0 (G_Cell_289)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.94 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/GG (G_Cell_289)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/G0 (G_Cell_288)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.96 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/GG (G_Cell_288)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/G0 (G_Cell_287)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.99 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/GG (G_Cell_287)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/G0 (G_Cell_286)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.01 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/GG (G_Cell_286)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/G0 (G_Cell_285)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.04 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/GG (G_Cell_285)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/G0 (G_Cell_284)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.07 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/GG (G_Cell_284)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/G0 (G_Cell_283)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.09 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/GG (G_Cell_283)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/G0 (G_Cell_282)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.12 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/GG (G_Cell_282)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/G0 (G_Cell_281)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.14 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/GG (G_Cell_281)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/G0 (G_Cell_280)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.17 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/GG (G_Cell_280)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/G0 (G_Cell_279)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.20 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/GG (G_Cell_279)       0.00       1.20 r
+  a1/mts0/rc5/U71/Y (XOR2X1_RVT)                          0.03       1.23 f
+  a1/mts0/rc5/Sum[23] (RCA_bw23_0)                        0.00       1.23 f
+  a1/mts0/U35/Y (AO22X1_RVT)                              0.02       1.25 f
+  a1/mts0/R_mts[22] (mantissa)                            0.00       1.25 f
+  a1/nor0/R_mts[22] (normalization)                       0.00       1.25 f
+  a1/nor0/U60/Y (INVX1_RVT)                               0.01       1.26 r
+  a1/nor0/rc7/A[23] (RCA_bw23_1)                          0.00       1.26 r
+  a1/nor0/rc7/U39/Y (XOR2X1_RVT)                          0.02       1.29 r
+  a1/nor0/rc7/U13/Y (XOR2X1_RVT)                          0.03       1.32 f
+  a1/nor0/rc7/Sum[23] (RCA_bw23_1)                        0.00       1.32 f
+  a1/nor0/U73/Y (OA21X1_RVT)                              0.09       1.41 f
+  a1/nor0/U127/Y (OR2X1_RVT)                              0.10       1.50 f
+  a1/nor0/U143/Y (OR2X1_RVT)                              0.10       1.60 f
+  a1/nor0/U163/Y (OR2X1_RVT)                              0.10       1.70 f
+  a1/nor0/U28/Y (OR2X1_RVT)                               0.10       1.79 f
+  a1/nor0/U208/Y (OR2X1_RVT)                              0.10       1.89 f
+  a1/nor0/U230/Y (OR2X1_RVT)                              0.10       1.98 f
+  a1/nor0/U252/Y (OR2X1_RVT)                              0.07       2.06 f
+  a1/nor0/U20/Y (NBUFFX2_RVT)                             0.03       2.08 f
+  a1/nor0/U3/Y (OR2X1_RVT)                                0.08       2.16 f
+  a1/nor0/U289/Y (MUX21X1_RVT)                            0.05       2.21 f
+  a1/nor0/U7/Y (OR2X1_RVT)                                0.04       2.24 f
+  a1/nor0/U6/Y (INVX1_RVT)                                0.01       2.25 r
+  a1/nor0/U5/Y (INVX1_RVT)                                0.06       2.31 f
+  a1/nor0/U11/Y (MUX21X1_RVT)                             0.03       2.34 r
+  a1/nor0/U47/Y (OR3X1_RVT)                               0.03       2.36 r
+  a1/nor0/U8/Y (OR4X1_RVT)                                0.03       2.40 r
+  a1/nor0/U45/Y (OA21X1_RVT)                              0.02       2.42 r
+  a1/nor0/rc8/B[1] (RCA_bw12_1)                           0.00       2.42 r
+  a1/nor0/rc8/U33/Y (AND2X1_RVT)                          0.02       2.44 r
+  a1/nor0/rc8/U0/G1 (G_Cell_176)                          0.00       2.44 r
+  a1/nor0/rc8/U0/U1/Y (AO21X1_RVT)                        0.02       2.46 r
+  a1/nor0/rc8/U0/GG (G_Cell_176)                          0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/G0 (G_Cell_175)        0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.48 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/GG (G_Cell_175)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/G0 (G_Cell_174)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.51 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/GG (G_Cell_174)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/G0 (G_Cell_173)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.54 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/GG (G_Cell_173)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/G0 (G_Cell_172)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.56 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/GG (G_Cell_172)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/G0 (G_Cell_171)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.59 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/GG (G_Cell_171)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/G0 (G_Cell_170)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.62 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/GG (G_Cell_170)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/G0 (G_Cell_169)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.65 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/GG (G_Cell_169)        0.00       2.65 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/G0 (G_Cell_168)        0.00       2.65 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.67 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/GG (G_Cell_168)        0.00       2.67 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/G0 (G_Cell_167)        0.00       2.67 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.70 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/GG (G_Cell_167)        0.00       2.70 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/G0 (G_Cell_166)       0.00       2.70 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       2.73 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/GG (G_Cell_166)       0.00       2.73 r
+  a1/nor0/rc8/U2/Y (XOR2X1_RVT)                           0.04       2.77 f
+  a1/nor0/rc8/Sum[12] (RCA_bw12_1)                        0.00       2.77 f
+  a1/nor0/U85/Y (INVX1_RVT)                               0.01       2.78 r
+  a1/nor0/U79/Y (AND2X1_RVT)                              0.02       2.80 r
+  a1/nor0/U78/Y (AO22X1_RVT)                              0.02       2.82 r
+  a1/nor0/Sum[10] (normalization)                         0.00       2.82 r
+  a1/en/product[10] (encoder_add)                         0.00       2.82 r
+  a1/en/U34/Y (AO221X1_RVT)                               0.03       2.85 r
+  a1/en/out[10] (encoder_add)                             0.00       2.85 r
+  a1/sum_reg[10]/D (DFFARX1_RVT)                          0.00       2.85 r
+  data arrival time                                                  2.85
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a1/sum_reg[10]/CLK (DFFARX1_RVT)                        0.00       4.50 r
+  library setup time                                     -0.02       4.48
+  data required time                                                 4.48
+  --------------------------------------------------------------------------
+  data required time                                                 4.48
+  data arrival time                                                 -2.85
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.63
+
+
+  Startpoint: m1/out_reg[10]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a1/sum_reg[15]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            16000                 saed32rvt_ff1p16vn40c
+  compshift          8000                  saed32rvt_ff1p16vn40c
+  RCA_bw6            ForQA                 saed32rvt_ff1p16vn40c
+  fpadder            8000                  saed32rvt_ff1p16vn40c
+  mantissa           8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_0         8000                  saed32rvt_ff1p16vn40c
+  normalization      8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_1         8000                  saed32rvt_ff1p16vn40c
+  RCA_bw12_1         ForQA                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  m1/out_reg[10]/CLK (DFFARX1_RVT)                        0.00       0.00 r
+  m1/out_reg[10]/Q (DFFARX1_RVT)                          0.07       0.07 f
+  m1/out[10] (fp16multiplier)                             0.00       0.07 f
+  a1/B[10] (fpadder)                                      0.00       0.07 f
+  a1/cs0/expB[0] (compshift)                              0.00       0.07 f
+  a1/cs0/U92/Y (INVX1_RVT)                                0.02       0.08 r
+  a1/cs0/rc0/B[1] (RCA_bw6)                               0.00       0.08 r
+  a1/cs0/rc0/U3/Y (XOR2X1_RVT)                            0.04       0.12 f
+  a1/cs0/rc0/U0/P1 (G_Cell_326)                           0.00       0.12 f
+  a1/cs0/rc0/U0/U1/Y (AO21X1_RVT)                         0.03       0.15 f
+  a1/cs0/rc0/U0/GG (G_Cell_326)                           0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/G0 (G_Cell_325)         0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.17 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/GG (G_Cell_325)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/G0 (G_Cell_324)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.20 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/GG (G_Cell_324)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/G0 (G_Cell_323)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.22 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/GG (G_Cell_323)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/G0 (G_Cell_322)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.25 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/GG (G_Cell_322)         0.00       0.25 f
+  a1/cs0/rc0/U1/Y (XOR2X1_RVT)                            0.03       0.28 r
+  a1/cs0/rc0/Sum[6] (RCA_bw6)                             0.00       0.28 r
+  a1/cs0/U75/Y (INVX1_RVT)                                0.03       0.30 f
+  a1/cs0/U7/Y (INVX1_RVT)                                 0.02       0.32 r
+  a1/cs0/U91/Y (AO22X1_RVT)                               0.03       0.35 r
+  a1/cs0/U86/Y (INVX1_RVT)                                0.07       0.42 f
+  a1/cs0/U111/Y (MUX21X1_RVT)                             0.05       0.46 f
+  a1/cs0/U113/Y (MUX21X1_RVT)                             0.03       0.49 f
+  a1/cs0/U70/Y (MUX21X1_RVT)                              0.03       0.52 f
+  a1/cs0/U116/Y (AND2X1_RVT)                              0.02       0.54 f
+  a1/cs0/U73/Y (MUX21X1_RVT)                              0.02       0.56 f
+  a1/cs0/U43/Y (AO22X1_RVT)                               0.03       0.59 f
+  a1/cs0/mtsB_R[0] (compshift)                            0.00       0.59 f
+  a1/mts0/mtsB_R[0] (mantissa)                            0.00       0.59 f
+  a1/mts0/U19/Y (INVX1_RVT)                               0.01       0.60 r
+  a1/mts0/rc5/B[1] (RCA_bw23_0)                           0.00       0.60 r
+  a1/mts0/rc5/U45/Y (XOR2X1_RVT)                          0.03       0.63 r
+  a1/mts0/rc5/U0/P1 (G_Cell_300)                          0.00       0.63 r
+  a1/mts0/rc5/U0/U1/Y (AO21X1_RVT)                        0.03       0.65 r
+  a1/mts0/rc5/U0/GG (G_Cell_300)                          0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/G0 (G_Cell_299)        0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.68 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/GG (G_Cell_299)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/G0 (G_Cell_298)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.70 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/GG (G_Cell_298)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/G0 (G_Cell_297)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.73 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/GG (G_Cell_297)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/G0 (G_Cell_296)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.76 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/GG (G_Cell_296)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/G0 (G_Cell_295)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.78 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/GG (G_Cell_295)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/G0 (G_Cell_294)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.81 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/GG (G_Cell_294)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/G0 (G_Cell_293)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.83 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/GG (G_Cell_293)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/G0 (G_Cell_292)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.86 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/GG (G_Cell_292)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/G0 (G_Cell_291)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.89 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/GG (G_Cell_291)        0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/G0 (G_Cell_290)       0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.91 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/GG (G_Cell_290)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/G0 (G_Cell_289)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.94 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/GG (G_Cell_289)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/G0 (G_Cell_288)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.96 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/GG (G_Cell_288)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/G0 (G_Cell_287)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.99 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/GG (G_Cell_287)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/G0 (G_Cell_286)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.01 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/GG (G_Cell_286)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/G0 (G_Cell_285)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.04 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/GG (G_Cell_285)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/G0 (G_Cell_284)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.07 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/GG (G_Cell_284)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/G0 (G_Cell_283)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.09 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/GG (G_Cell_283)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/G0 (G_Cell_282)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.12 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/GG (G_Cell_282)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/G0 (G_Cell_281)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.14 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/GG (G_Cell_281)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/G0 (G_Cell_280)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.17 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/GG (G_Cell_280)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/G0 (G_Cell_279)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.20 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/GG (G_Cell_279)       0.00       1.20 r
+  a1/mts0/rc5/U71/Y (XOR2X1_RVT)                          0.03       1.23 f
+  a1/mts0/rc5/Sum[23] (RCA_bw23_0)                        0.00       1.23 f
+  a1/mts0/U35/Y (AO22X1_RVT)                              0.02       1.25 f
+  a1/mts0/R_mts[22] (mantissa)                            0.00       1.25 f
+  a1/nor0/R_mts[22] (normalization)                       0.00       1.25 f
+  a1/nor0/U60/Y (INVX1_RVT)                               0.01       1.26 r
+  a1/nor0/rc7/A[23] (RCA_bw23_1)                          0.00       1.26 r
+  a1/nor0/rc7/U39/Y (XOR2X1_RVT)                          0.02       1.29 r
+  a1/nor0/rc7/U13/Y (XOR2X1_RVT)                          0.03       1.32 f
+  a1/nor0/rc7/Sum[23] (RCA_bw23_1)                        0.00       1.32 f
+  a1/nor0/U73/Y (OA21X1_RVT)                              0.09       1.41 f
+  a1/nor0/U127/Y (OR2X1_RVT)                              0.10       1.50 f
+  a1/nor0/U143/Y (OR2X1_RVT)                              0.10       1.60 f
+  a1/nor0/U163/Y (OR2X1_RVT)                              0.10       1.70 f
+  a1/nor0/U28/Y (OR2X1_RVT)                               0.10       1.79 f
+  a1/nor0/U208/Y (OR2X1_RVT)                              0.10       1.89 f
+  a1/nor0/U230/Y (OR2X1_RVT)                              0.10       1.98 f
+  a1/nor0/U252/Y (OR2X1_RVT)                              0.07       2.06 f
+  a1/nor0/U20/Y (NBUFFX2_RVT)                             0.03       2.08 f
+  a1/nor0/U3/Y (OR2X1_RVT)                                0.08       2.16 f
+  a1/nor0/U289/Y (MUX21X1_RVT)                            0.05       2.21 f
+  a1/nor0/U7/Y (OR2X1_RVT)                                0.04       2.24 f
+  a1/nor0/U6/Y (INVX1_RVT)                                0.01       2.25 r
+  a1/nor0/U5/Y (INVX1_RVT)                                0.06       2.31 f
+  a1/nor0/U11/Y (MUX21X1_RVT)                             0.03       2.34 r
+  a1/nor0/U47/Y (OR3X1_RVT)                               0.03       2.36 r
+  a1/nor0/U8/Y (OR4X1_RVT)                                0.03       2.40 r
+  a1/nor0/U45/Y (OA21X1_RVT)                              0.02       2.42 r
+  a1/nor0/rc8/B[1] (RCA_bw12_1)                           0.00       2.42 r
+  a1/nor0/rc8/U33/Y (AND2X1_RVT)                          0.02       2.44 r
+  a1/nor0/rc8/U0/G1 (G_Cell_176)                          0.00       2.44 r
+  a1/nor0/rc8/U0/U1/Y (AO21X1_RVT)                        0.02       2.46 r
+  a1/nor0/rc8/U0/GG (G_Cell_176)                          0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/G0 (G_Cell_175)        0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.48 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/GG (G_Cell_175)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/G0 (G_Cell_174)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.51 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/GG (G_Cell_174)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/G0 (G_Cell_173)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.54 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/GG (G_Cell_173)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/G0 (G_Cell_172)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.56 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/GG (G_Cell_172)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/G0 (G_Cell_171)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.59 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/GG (G_Cell_171)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/G0 (G_Cell_170)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.62 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/GG (G_Cell_170)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/G0 (G_Cell_169)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.65 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/GG (G_Cell_169)        0.00       2.65 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/G0 (G_Cell_168)        0.00       2.65 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.67 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/GG (G_Cell_168)        0.00       2.67 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/G0 (G_Cell_167)        0.00       2.67 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.70 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/GG (G_Cell_167)        0.00       2.70 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/G0 (G_Cell_166)       0.00       2.70 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       2.73 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/GG (G_Cell_166)       0.00       2.73 r
+  a1/nor0/rc8/U2/Y (XOR2X1_RVT)                           0.03       2.76 r
+  a1/nor0/rc8/Sum[12] (RCA_bw12_1)                        0.00       2.76 r
+  a1/nor0/U66/Y (OA21X1_RVT)                              0.02       2.78 r
+  a1/nor0/Sum[15] (normalization)                         0.00       2.78 r
+  a1/en/product[15] (encoder_add)                         0.00       2.78 r
+  a1/en/U24/Y (AO222X1_RVT)                               0.04       2.82 r
+  a1/en/out[15] (encoder_add)                             0.00       2.82 r
+  a1/sum_reg[15]/D (DFFARX1_RVT)                          0.00       2.82 r
+  data arrival time                                                  2.82
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a1/sum_reg[15]/CLK (DFFARX1_RVT)                        0.00       4.50 r
+  library setup time                                     -0.02       4.48
+  data required time                                                 4.48
+  --------------------------------------------------------------------------
+  data required time                                                 4.48
+  data arrival time                                                 -2.82
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.66
+
+
+  Startpoint: m1/out_reg[10]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a1/sum_reg[9]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            16000                 saed32rvt_ff1p16vn40c
+  compshift          8000                  saed32rvt_ff1p16vn40c
+  RCA_bw6            ForQA                 saed32rvt_ff1p16vn40c
+  fpadder            8000                  saed32rvt_ff1p16vn40c
+  mantissa           8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_0         8000                  saed32rvt_ff1p16vn40c
+  normalization      8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_1         8000                  saed32rvt_ff1p16vn40c
+  RCA_bw12_1         ForQA                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  m1/out_reg[10]/CLK (DFFARX1_RVT)                        0.00       0.00 r
+  m1/out_reg[10]/Q (DFFARX1_RVT)                          0.07       0.07 f
+  m1/out[10] (fp16multiplier)                             0.00       0.07 f
+  a1/B[10] (fpadder)                                      0.00       0.07 f
+  a1/cs0/expB[0] (compshift)                              0.00       0.07 f
+  a1/cs0/U92/Y (INVX1_RVT)                                0.02       0.08 r
+  a1/cs0/rc0/B[1] (RCA_bw6)                               0.00       0.08 r
+  a1/cs0/rc0/U3/Y (XOR2X1_RVT)                            0.04       0.12 f
+  a1/cs0/rc0/U0/P1 (G_Cell_326)                           0.00       0.12 f
+  a1/cs0/rc0/U0/U1/Y (AO21X1_RVT)                         0.03       0.15 f
+  a1/cs0/rc0/U0/GG (G_Cell_326)                           0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/G0 (G_Cell_325)         0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.17 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/GG (G_Cell_325)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/G0 (G_Cell_324)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.20 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/GG (G_Cell_324)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/G0 (G_Cell_323)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.22 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/GG (G_Cell_323)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/G0 (G_Cell_322)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.25 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/GG (G_Cell_322)         0.00       0.25 f
+  a1/cs0/rc0/U1/Y (XOR2X1_RVT)                            0.03       0.28 r
+  a1/cs0/rc0/Sum[6] (RCA_bw6)                             0.00       0.28 r
+  a1/cs0/U75/Y (INVX1_RVT)                                0.03       0.30 f
+  a1/cs0/U7/Y (INVX1_RVT)                                 0.02       0.32 r
+  a1/cs0/U91/Y (AO22X1_RVT)                               0.03       0.35 r
+  a1/cs0/U86/Y (INVX1_RVT)                                0.07       0.42 f
+  a1/cs0/U111/Y (MUX21X1_RVT)                             0.05       0.46 f
+  a1/cs0/U113/Y (MUX21X1_RVT)                             0.03       0.49 f
+  a1/cs0/U70/Y (MUX21X1_RVT)                              0.03       0.52 f
+  a1/cs0/U116/Y (AND2X1_RVT)                              0.02       0.54 f
+  a1/cs0/U73/Y (MUX21X1_RVT)                              0.02       0.56 f
+  a1/cs0/U43/Y (AO22X1_RVT)                               0.03       0.59 f
+  a1/cs0/mtsB_R[0] (compshift)                            0.00       0.59 f
+  a1/mts0/mtsB_R[0] (mantissa)                            0.00       0.59 f
+  a1/mts0/U19/Y (INVX1_RVT)                               0.01       0.60 r
+  a1/mts0/rc5/B[1] (RCA_bw23_0)                           0.00       0.60 r
+  a1/mts0/rc5/U45/Y (XOR2X1_RVT)                          0.03       0.63 r
+  a1/mts0/rc5/U0/P1 (G_Cell_300)                          0.00       0.63 r
+  a1/mts0/rc5/U0/U1/Y (AO21X1_RVT)                        0.03       0.65 r
+  a1/mts0/rc5/U0/GG (G_Cell_300)                          0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/G0 (G_Cell_299)        0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.68 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/GG (G_Cell_299)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/G0 (G_Cell_298)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.70 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/GG (G_Cell_298)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/G0 (G_Cell_297)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.73 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/GG (G_Cell_297)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/G0 (G_Cell_296)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.76 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/GG (G_Cell_296)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/G0 (G_Cell_295)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.78 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/GG (G_Cell_295)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/G0 (G_Cell_294)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.81 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/GG (G_Cell_294)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/G0 (G_Cell_293)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.83 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/GG (G_Cell_293)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/G0 (G_Cell_292)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.86 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/GG (G_Cell_292)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/G0 (G_Cell_291)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.89 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/GG (G_Cell_291)        0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/G0 (G_Cell_290)       0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.91 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/GG (G_Cell_290)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/G0 (G_Cell_289)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.94 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/GG (G_Cell_289)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/G0 (G_Cell_288)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.96 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/GG (G_Cell_288)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/G0 (G_Cell_287)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.99 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/GG (G_Cell_287)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/G0 (G_Cell_286)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.01 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/GG (G_Cell_286)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/G0 (G_Cell_285)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.04 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/GG (G_Cell_285)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/G0 (G_Cell_284)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.07 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/GG (G_Cell_284)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/G0 (G_Cell_283)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.09 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/GG (G_Cell_283)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/G0 (G_Cell_282)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.12 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/GG (G_Cell_282)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/G0 (G_Cell_281)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.14 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/GG (G_Cell_281)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/G0 (G_Cell_280)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.17 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/GG (G_Cell_280)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/G0 (G_Cell_279)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.20 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/GG (G_Cell_279)       0.00       1.20 r
+  a1/mts0/rc5/U71/Y (XOR2X1_RVT)                          0.03       1.23 f
+  a1/mts0/rc5/Sum[23] (RCA_bw23_0)                        0.00       1.23 f
+  a1/mts0/U35/Y (AO22X1_RVT)                              0.02       1.25 f
+  a1/mts0/R_mts[22] (mantissa)                            0.00       1.25 f
+  a1/nor0/R_mts[22] (normalization)                       0.00       1.25 f
+  a1/nor0/U60/Y (INVX1_RVT)                               0.01       1.26 r
+  a1/nor0/rc7/A[23] (RCA_bw23_1)                          0.00       1.26 r
+  a1/nor0/rc7/U39/Y (XOR2X1_RVT)                          0.02       1.29 r
+  a1/nor0/rc7/U13/Y (XOR2X1_RVT)                          0.03       1.32 f
+  a1/nor0/rc7/Sum[23] (RCA_bw23_1)                        0.00       1.32 f
+  a1/nor0/U73/Y (OA21X1_RVT)                              0.09       1.41 f
+  a1/nor0/U127/Y (OR2X1_RVT)                              0.10       1.50 f
+  a1/nor0/U143/Y (OR2X1_RVT)                              0.10       1.60 f
+  a1/nor0/U163/Y (OR2X1_RVT)                              0.10       1.70 f
+  a1/nor0/U28/Y (OR2X1_RVT)                               0.10       1.79 f
+  a1/nor0/U208/Y (OR2X1_RVT)                              0.10       1.89 f
+  a1/nor0/U230/Y (OR2X1_RVT)                              0.10       1.98 f
+  a1/nor0/U252/Y (OR2X1_RVT)                              0.07       2.06 f
+  a1/nor0/U20/Y (NBUFFX2_RVT)                             0.03       2.08 f
+  a1/nor0/U3/Y (OR2X1_RVT)                                0.08       2.16 f
+  a1/nor0/U289/Y (MUX21X1_RVT)                            0.05       2.21 f
+  a1/nor0/U7/Y (OR2X1_RVT)                                0.04       2.24 f
+  a1/nor0/U6/Y (INVX1_RVT)                                0.01       2.25 r
+  a1/nor0/U5/Y (INVX1_RVT)                                0.06       2.31 f
+  a1/nor0/U11/Y (MUX21X1_RVT)                             0.03       2.34 r
+  a1/nor0/U47/Y (OR3X1_RVT)                               0.03       2.36 r
+  a1/nor0/U8/Y (OR4X1_RVT)                                0.03       2.40 r
+  a1/nor0/U45/Y (OA21X1_RVT)                              0.02       2.42 r
+  a1/nor0/rc8/B[1] (RCA_bw12_1)                           0.00       2.42 r
+  a1/nor0/rc8/U33/Y (AND2X1_RVT)                          0.02       2.44 r
+  a1/nor0/rc8/U0/G1 (G_Cell_176)                          0.00       2.44 r
+  a1/nor0/rc8/U0/U1/Y (AO21X1_RVT)                        0.02       2.46 r
+  a1/nor0/rc8/U0/GG (G_Cell_176)                          0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/G0 (G_Cell_175)        0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.48 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/GG (G_Cell_175)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/G0 (G_Cell_174)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.51 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/GG (G_Cell_174)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/G0 (G_Cell_173)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.54 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/GG (G_Cell_173)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/G0 (G_Cell_172)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.56 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/GG (G_Cell_172)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/G0 (G_Cell_171)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.59 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/GG (G_Cell_171)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/G0 (G_Cell_170)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.62 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/GG (G_Cell_170)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/G0 (G_Cell_169)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.65 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/GG (G_Cell_169)        0.00       2.65 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/G0 (G_Cell_168)        0.00       2.65 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.67 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/GG (G_Cell_168)        0.00       2.67 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/G0 (G_Cell_167)        0.00       2.67 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.70 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/GG (G_Cell_167)        0.00       2.70 r
+  a1/nor0/rc8/U16/Y (XOR2X1_RVT)                          0.02       2.72 r
+  a1/nor0/rc8/Sum[11] (RCA_bw12_1)                        0.00       2.72 r
+  a1/nor0/Sum[9] (normalization)                          0.00       2.72 r
+  a1/en/product[9] (encoder_add)                          0.00       2.72 r
+  a1/en/U15/Y (AO222X1_RVT)                               0.03       2.76 r
+  a1/en/out[9] (encoder_add)                              0.00       2.76 r
+  a1/sum_reg[9]/D (DFFARX1_RVT)                           0.00       2.76 r
+  data arrival time                                                  2.76
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a1/sum_reg[9]/CLK (DFFARX1_RVT)                         0.00       4.50 r
+  library setup time                                     -0.02       4.48
+  data required time                                                 4.48
+  --------------------------------------------------------------------------
+  data required time                                                 4.48
+  data arrival time                                                 -2.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.73
+
+
+  Startpoint: m1/out_reg[10]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a1/sum_reg[8]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            16000                 saed32rvt_ff1p16vn40c
+  compshift          8000                  saed32rvt_ff1p16vn40c
+  RCA_bw6            ForQA                 saed32rvt_ff1p16vn40c
+  fpadder            8000                  saed32rvt_ff1p16vn40c
+  mantissa           8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_0         8000                  saed32rvt_ff1p16vn40c
+  normalization      8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_1         8000                  saed32rvt_ff1p16vn40c
+  RCA_bw12_1         ForQA                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  m1/out_reg[10]/CLK (DFFARX1_RVT)                        0.00       0.00 r
+  m1/out_reg[10]/Q (DFFARX1_RVT)                          0.07       0.07 f
+  m1/out[10] (fp16multiplier)                             0.00       0.07 f
+  a1/B[10] (fpadder)                                      0.00       0.07 f
+  a1/cs0/expB[0] (compshift)                              0.00       0.07 f
+  a1/cs0/U92/Y (INVX1_RVT)                                0.02       0.08 r
+  a1/cs0/rc0/B[1] (RCA_bw6)                               0.00       0.08 r
+  a1/cs0/rc0/U3/Y (XOR2X1_RVT)                            0.04       0.12 f
+  a1/cs0/rc0/U0/P1 (G_Cell_326)                           0.00       0.12 f
+  a1/cs0/rc0/U0/U1/Y (AO21X1_RVT)                         0.03       0.15 f
+  a1/cs0/rc0/U0/GG (G_Cell_326)                           0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/G0 (G_Cell_325)         0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.17 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/GG (G_Cell_325)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/G0 (G_Cell_324)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.20 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/GG (G_Cell_324)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/G0 (G_Cell_323)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.22 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/GG (G_Cell_323)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/G0 (G_Cell_322)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.25 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/GG (G_Cell_322)         0.00       0.25 f
+  a1/cs0/rc0/U1/Y (XOR2X1_RVT)                            0.03       0.28 r
+  a1/cs0/rc0/Sum[6] (RCA_bw6)                             0.00       0.28 r
+  a1/cs0/U75/Y (INVX1_RVT)                                0.03       0.30 f
+  a1/cs0/U7/Y (INVX1_RVT)                                 0.02       0.32 r
+  a1/cs0/U91/Y (AO22X1_RVT)                               0.03       0.35 r
+  a1/cs0/U86/Y (INVX1_RVT)                                0.07       0.42 f
+  a1/cs0/U111/Y (MUX21X1_RVT)                             0.05       0.46 f
+  a1/cs0/U113/Y (MUX21X1_RVT)                             0.03       0.49 f
+  a1/cs0/U70/Y (MUX21X1_RVT)                              0.03       0.52 f
+  a1/cs0/U116/Y (AND2X1_RVT)                              0.02       0.54 f
+  a1/cs0/U73/Y (MUX21X1_RVT)                              0.02       0.56 f
+  a1/cs0/U43/Y (AO22X1_RVT)                               0.03       0.59 f
+  a1/cs0/mtsB_R[0] (compshift)                            0.00       0.59 f
+  a1/mts0/mtsB_R[0] (mantissa)                            0.00       0.59 f
+  a1/mts0/U19/Y (INVX1_RVT)                               0.01       0.60 r
+  a1/mts0/rc5/B[1] (RCA_bw23_0)                           0.00       0.60 r
+  a1/mts0/rc5/U45/Y (XOR2X1_RVT)                          0.03       0.63 r
+  a1/mts0/rc5/U0/P1 (G_Cell_300)                          0.00       0.63 r
+  a1/mts0/rc5/U0/U1/Y (AO21X1_RVT)                        0.03       0.65 r
+  a1/mts0/rc5/U0/GG (G_Cell_300)                          0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/G0 (G_Cell_299)        0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.68 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/GG (G_Cell_299)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/G0 (G_Cell_298)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.70 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/GG (G_Cell_298)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/G0 (G_Cell_297)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.73 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/GG (G_Cell_297)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/G0 (G_Cell_296)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.76 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/GG (G_Cell_296)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/G0 (G_Cell_295)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.78 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/GG (G_Cell_295)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/G0 (G_Cell_294)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.81 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/GG (G_Cell_294)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/G0 (G_Cell_293)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.83 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/GG (G_Cell_293)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/G0 (G_Cell_292)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.86 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/GG (G_Cell_292)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/G0 (G_Cell_291)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.89 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/GG (G_Cell_291)        0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/G0 (G_Cell_290)       0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.91 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/GG (G_Cell_290)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/G0 (G_Cell_289)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.94 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/GG (G_Cell_289)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/G0 (G_Cell_288)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.96 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/GG (G_Cell_288)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/G0 (G_Cell_287)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.99 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/GG (G_Cell_287)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/G0 (G_Cell_286)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.01 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/GG (G_Cell_286)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/G0 (G_Cell_285)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.04 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/GG (G_Cell_285)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/G0 (G_Cell_284)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.07 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/GG (G_Cell_284)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/G0 (G_Cell_283)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.09 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/GG (G_Cell_283)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/G0 (G_Cell_282)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.12 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/GG (G_Cell_282)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/G0 (G_Cell_281)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.14 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/GG (G_Cell_281)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/G0 (G_Cell_280)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.17 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/GG (G_Cell_280)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/G0 (G_Cell_279)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.20 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/GG (G_Cell_279)       0.00       1.20 r
+  a1/mts0/rc5/U71/Y (XOR2X1_RVT)                          0.03       1.23 f
+  a1/mts0/rc5/Sum[23] (RCA_bw23_0)                        0.00       1.23 f
+  a1/mts0/U35/Y (AO22X1_RVT)                              0.02       1.25 f
+  a1/mts0/R_mts[22] (mantissa)                            0.00       1.25 f
+  a1/nor0/R_mts[22] (normalization)                       0.00       1.25 f
+  a1/nor0/U60/Y (INVX1_RVT)                               0.01       1.26 r
+  a1/nor0/rc7/A[23] (RCA_bw23_1)                          0.00       1.26 r
+  a1/nor0/rc7/U39/Y (XOR2X1_RVT)                          0.02       1.29 r
+  a1/nor0/rc7/U13/Y (XOR2X1_RVT)                          0.03       1.32 f
+  a1/nor0/rc7/Sum[23] (RCA_bw23_1)                        0.00       1.32 f
+  a1/nor0/U73/Y (OA21X1_RVT)                              0.09       1.41 f
+  a1/nor0/U127/Y (OR2X1_RVT)                              0.10       1.50 f
+  a1/nor0/U143/Y (OR2X1_RVT)                              0.10       1.60 f
+  a1/nor0/U163/Y (OR2X1_RVT)                              0.10       1.70 f
+  a1/nor0/U28/Y (OR2X1_RVT)                               0.10       1.79 f
+  a1/nor0/U208/Y (OR2X1_RVT)                              0.10       1.89 f
+  a1/nor0/U230/Y (OR2X1_RVT)                              0.10       1.98 f
+  a1/nor0/U252/Y (OR2X1_RVT)                              0.07       2.06 f
+  a1/nor0/U20/Y (NBUFFX2_RVT)                             0.03       2.08 f
+  a1/nor0/U3/Y (OR2X1_RVT)                                0.08       2.16 f
+  a1/nor0/U289/Y (MUX21X1_RVT)                            0.05       2.21 f
+  a1/nor0/U7/Y (OR2X1_RVT)                                0.04       2.24 f
+  a1/nor0/U6/Y (INVX1_RVT)                                0.01       2.25 r
+  a1/nor0/U5/Y (INVX1_RVT)                                0.06       2.31 f
+  a1/nor0/U11/Y (MUX21X1_RVT)                             0.03       2.34 r
+  a1/nor0/U47/Y (OR3X1_RVT)                               0.03       2.36 r
+  a1/nor0/U8/Y (OR4X1_RVT)                                0.03       2.40 r
+  a1/nor0/U45/Y (OA21X1_RVT)                              0.02       2.42 r
+  a1/nor0/rc8/B[1] (RCA_bw12_1)                           0.00       2.42 r
+  a1/nor0/rc8/U33/Y (AND2X1_RVT)                          0.02       2.44 r
+  a1/nor0/rc8/U0/G1 (G_Cell_176)                          0.00       2.44 r
+  a1/nor0/rc8/U0/U1/Y (AO21X1_RVT)                        0.02       2.46 r
+  a1/nor0/rc8/U0/GG (G_Cell_176)                          0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/G0 (G_Cell_175)        0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.48 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/GG (G_Cell_175)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/G0 (G_Cell_174)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.51 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/GG (G_Cell_174)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/G0 (G_Cell_173)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.54 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/GG (G_Cell_173)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/G0 (G_Cell_172)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.56 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/GG (G_Cell_172)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/G0 (G_Cell_171)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.59 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/GG (G_Cell_171)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/G0 (G_Cell_170)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.62 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/GG (G_Cell_170)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/G0 (G_Cell_169)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.65 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/GG (G_Cell_169)        0.00       2.65 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/G0 (G_Cell_168)        0.00       2.65 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.67 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/GG (G_Cell_168)        0.00       2.67 r
+  a1/nor0/rc8/U19/Y (XOR2X1_RVT)                          0.02       2.69 r
+  a1/nor0/rc8/Sum[10] (RCA_bw12_1)                        0.00       2.69 r
+  a1/nor0/Sum[8] (normalization)                          0.00       2.69 r
+  a1/en/product[8] (encoder_add)                          0.00       2.69 r
+  a1/en/U16/Y (AO222X1_RVT)                               0.03       2.73 r
+  a1/en/out[8] (encoder_add)                              0.00       2.73 r
+  a1/sum_reg[8]/D (DFFARX1_RVT)                           0.00       2.73 r
+  data arrival time                                                  2.73
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a1/sum_reg[8]/CLK (DFFARX1_RVT)                         0.00       4.50 r
+  library setup time                                     -0.02       4.48
+  data required time                                                 4.48
+  --------------------------------------------------------------------------
+  data required time                                                 4.48
+  data arrival time                                                 -2.73
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.76
+
+
+  Startpoint: m1/out_reg[10]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a1/sum_reg[7]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            16000                 saed32rvt_ff1p16vn40c
+  compshift          8000                  saed32rvt_ff1p16vn40c
+  RCA_bw6            ForQA                 saed32rvt_ff1p16vn40c
+  fpadder            8000                  saed32rvt_ff1p16vn40c
+  mantissa           8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_0         8000                  saed32rvt_ff1p16vn40c
+  normalization      8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_1         8000                  saed32rvt_ff1p16vn40c
+  RCA_bw12_1         ForQA                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  m1/out_reg[10]/CLK (DFFARX1_RVT)                        0.00       0.00 r
+  m1/out_reg[10]/Q (DFFARX1_RVT)                          0.07       0.07 f
+  m1/out[10] (fp16multiplier)                             0.00       0.07 f
+  a1/B[10] (fpadder)                                      0.00       0.07 f
+  a1/cs0/expB[0] (compshift)                              0.00       0.07 f
+  a1/cs0/U92/Y (INVX1_RVT)                                0.02       0.08 r
+  a1/cs0/rc0/B[1] (RCA_bw6)                               0.00       0.08 r
+  a1/cs0/rc0/U3/Y (XOR2X1_RVT)                            0.04       0.12 f
+  a1/cs0/rc0/U0/P1 (G_Cell_326)                           0.00       0.12 f
+  a1/cs0/rc0/U0/U1/Y (AO21X1_RVT)                         0.03       0.15 f
+  a1/cs0/rc0/U0/GG (G_Cell_326)                           0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/G0 (G_Cell_325)         0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.17 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/GG (G_Cell_325)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/G0 (G_Cell_324)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.20 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/GG (G_Cell_324)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/G0 (G_Cell_323)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.22 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/GG (G_Cell_323)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/G0 (G_Cell_322)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.25 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/GG (G_Cell_322)         0.00       0.25 f
+  a1/cs0/rc0/U1/Y (XOR2X1_RVT)                            0.03       0.28 r
+  a1/cs0/rc0/Sum[6] (RCA_bw6)                             0.00       0.28 r
+  a1/cs0/U75/Y (INVX1_RVT)                                0.03       0.30 f
+  a1/cs0/U7/Y (INVX1_RVT)                                 0.02       0.32 r
+  a1/cs0/U91/Y (AO22X1_RVT)                               0.03       0.35 r
+  a1/cs0/U86/Y (INVX1_RVT)                                0.07       0.42 f
+  a1/cs0/U111/Y (MUX21X1_RVT)                             0.05       0.46 f
+  a1/cs0/U113/Y (MUX21X1_RVT)                             0.03       0.49 f
+  a1/cs0/U70/Y (MUX21X1_RVT)                              0.03       0.52 f
+  a1/cs0/U116/Y (AND2X1_RVT)                              0.02       0.54 f
+  a1/cs0/U73/Y (MUX21X1_RVT)                              0.02       0.56 f
+  a1/cs0/U43/Y (AO22X1_RVT)                               0.03       0.59 f
+  a1/cs0/mtsB_R[0] (compshift)                            0.00       0.59 f
+  a1/mts0/mtsB_R[0] (mantissa)                            0.00       0.59 f
+  a1/mts0/U19/Y (INVX1_RVT)                               0.01       0.60 r
+  a1/mts0/rc5/B[1] (RCA_bw23_0)                           0.00       0.60 r
+  a1/mts0/rc5/U45/Y (XOR2X1_RVT)                          0.03       0.63 r
+  a1/mts0/rc5/U0/P1 (G_Cell_300)                          0.00       0.63 r
+  a1/mts0/rc5/U0/U1/Y (AO21X1_RVT)                        0.03       0.65 r
+  a1/mts0/rc5/U0/GG (G_Cell_300)                          0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/G0 (G_Cell_299)        0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.68 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/GG (G_Cell_299)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/G0 (G_Cell_298)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.70 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/GG (G_Cell_298)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/G0 (G_Cell_297)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.73 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/GG (G_Cell_297)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/G0 (G_Cell_296)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.76 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/GG (G_Cell_296)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/G0 (G_Cell_295)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.78 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/GG (G_Cell_295)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/G0 (G_Cell_294)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.81 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/GG (G_Cell_294)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/G0 (G_Cell_293)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.83 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/GG (G_Cell_293)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/G0 (G_Cell_292)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.86 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/GG (G_Cell_292)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/G0 (G_Cell_291)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.89 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/GG (G_Cell_291)        0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/G0 (G_Cell_290)       0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.91 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/GG (G_Cell_290)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/G0 (G_Cell_289)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.94 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/GG (G_Cell_289)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/G0 (G_Cell_288)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.96 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/GG (G_Cell_288)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/G0 (G_Cell_287)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.99 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/GG (G_Cell_287)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/G0 (G_Cell_286)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.01 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/GG (G_Cell_286)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/G0 (G_Cell_285)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.04 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/GG (G_Cell_285)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/G0 (G_Cell_284)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.07 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/GG (G_Cell_284)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/G0 (G_Cell_283)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.09 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/GG (G_Cell_283)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/G0 (G_Cell_282)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.12 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/GG (G_Cell_282)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/G0 (G_Cell_281)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.14 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/GG (G_Cell_281)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/G0 (G_Cell_280)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.17 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/GG (G_Cell_280)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/G0 (G_Cell_279)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.20 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/GG (G_Cell_279)       0.00       1.20 r
+  a1/mts0/rc5/U71/Y (XOR2X1_RVT)                          0.03       1.23 f
+  a1/mts0/rc5/Sum[23] (RCA_bw23_0)                        0.00       1.23 f
+  a1/mts0/U35/Y (AO22X1_RVT)                              0.02       1.25 f
+  a1/mts0/R_mts[22] (mantissa)                            0.00       1.25 f
+  a1/nor0/R_mts[22] (normalization)                       0.00       1.25 f
+  a1/nor0/U60/Y (INVX1_RVT)                               0.01       1.26 r
+  a1/nor0/rc7/A[23] (RCA_bw23_1)                          0.00       1.26 r
+  a1/nor0/rc7/U39/Y (XOR2X1_RVT)                          0.02       1.29 r
+  a1/nor0/rc7/U13/Y (XOR2X1_RVT)                          0.03       1.32 f
+  a1/nor0/rc7/Sum[23] (RCA_bw23_1)                        0.00       1.32 f
+  a1/nor0/U73/Y (OA21X1_RVT)                              0.09       1.41 f
+  a1/nor0/U127/Y (OR2X1_RVT)                              0.10       1.50 f
+  a1/nor0/U143/Y (OR2X1_RVT)                              0.10       1.60 f
+  a1/nor0/U163/Y (OR2X1_RVT)                              0.10       1.70 f
+  a1/nor0/U28/Y (OR2X1_RVT)                               0.10       1.79 f
+  a1/nor0/U208/Y (OR2X1_RVT)                              0.10       1.89 f
+  a1/nor0/U230/Y (OR2X1_RVT)                              0.10       1.98 f
+  a1/nor0/U252/Y (OR2X1_RVT)                              0.07       2.06 f
+  a1/nor0/U20/Y (NBUFFX2_RVT)                             0.03       2.08 f
+  a1/nor0/U3/Y (OR2X1_RVT)                                0.08       2.16 f
+  a1/nor0/U289/Y (MUX21X1_RVT)                            0.05       2.21 f
+  a1/nor0/U7/Y (OR2X1_RVT)                                0.04       2.24 f
+  a1/nor0/U6/Y (INVX1_RVT)                                0.01       2.25 r
+  a1/nor0/U5/Y (INVX1_RVT)                                0.06       2.31 f
+  a1/nor0/U11/Y (MUX21X1_RVT)                             0.03       2.34 r
+  a1/nor0/U47/Y (OR3X1_RVT)                               0.03       2.36 r
+  a1/nor0/U8/Y (OR4X1_RVT)                                0.03       2.40 r
+  a1/nor0/U45/Y (OA21X1_RVT)                              0.02       2.42 r
+  a1/nor0/rc8/B[1] (RCA_bw12_1)                           0.00       2.42 r
+  a1/nor0/rc8/U33/Y (AND2X1_RVT)                          0.02       2.44 r
+  a1/nor0/rc8/U0/G1 (G_Cell_176)                          0.00       2.44 r
+  a1/nor0/rc8/U0/U1/Y (AO21X1_RVT)                        0.02       2.46 r
+  a1/nor0/rc8/U0/GG (G_Cell_176)                          0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/G0 (G_Cell_175)        0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.48 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/GG (G_Cell_175)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/G0 (G_Cell_174)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.51 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/GG (G_Cell_174)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/G0 (G_Cell_173)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.54 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/GG (G_Cell_173)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/G0 (G_Cell_172)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.56 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/GG (G_Cell_172)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/G0 (G_Cell_171)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.59 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/GG (G_Cell_171)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/G0 (G_Cell_170)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.62 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/GG (G_Cell_170)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/G0 (G_Cell_169)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.65 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/GG (G_Cell_169)        0.00       2.65 r
+  a1/nor0/rc8/U20/Y (XOR2X1_RVT)                          0.02       2.67 r
+  a1/nor0/rc8/Sum[9] (RCA_bw12_1)                         0.00       2.67 r
+  a1/nor0/Sum[7] (normalization)                          0.00       2.67 r
+  a1/en/product[7] (encoder_add)                          0.00       2.67 r
+  a1/en/U17/Y (AO222X1_RVT)                               0.03       2.70 r
+  a1/en/out[7] (encoder_add)                              0.00       2.70 r
+  a1/sum_reg[7]/D (DFFARX1_RVT)                           0.00       2.70 r
+  data arrival time                                                  2.70
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a1/sum_reg[7]/CLK (DFFARX1_RVT)                         0.00       4.50 r
+  library setup time                                     -0.02       4.48
+  data required time                                                 4.48
+  --------------------------------------------------------------------------
+  data required time                                                 4.48
+  data arrival time                                                 -2.70
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.78
+
+
+  Startpoint: m1/out_reg[10]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a1/sum_reg[6]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            16000                 saed32rvt_ff1p16vn40c
+  compshift          8000                  saed32rvt_ff1p16vn40c
+  RCA_bw6            ForQA                 saed32rvt_ff1p16vn40c
+  fpadder            8000                  saed32rvt_ff1p16vn40c
+  mantissa           8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_0         8000                  saed32rvt_ff1p16vn40c
+  normalization      8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_1         8000                  saed32rvt_ff1p16vn40c
+  RCA_bw12_1         ForQA                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  m1/out_reg[10]/CLK (DFFARX1_RVT)                        0.00       0.00 r
+  m1/out_reg[10]/Q (DFFARX1_RVT)                          0.07       0.07 f
+  m1/out[10] (fp16multiplier)                             0.00       0.07 f
+  a1/B[10] (fpadder)                                      0.00       0.07 f
+  a1/cs0/expB[0] (compshift)                              0.00       0.07 f
+  a1/cs0/U92/Y (INVX1_RVT)                                0.02       0.08 r
+  a1/cs0/rc0/B[1] (RCA_bw6)                               0.00       0.08 r
+  a1/cs0/rc0/U3/Y (XOR2X1_RVT)                            0.04       0.12 f
+  a1/cs0/rc0/U0/P1 (G_Cell_326)                           0.00       0.12 f
+  a1/cs0/rc0/U0/U1/Y (AO21X1_RVT)                         0.03       0.15 f
+  a1/cs0/rc0/U0/GG (G_Cell_326)                           0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/G0 (G_Cell_325)         0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.17 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/GG (G_Cell_325)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/G0 (G_Cell_324)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.20 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/GG (G_Cell_324)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/G0 (G_Cell_323)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.22 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/GG (G_Cell_323)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/G0 (G_Cell_322)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.25 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/GG (G_Cell_322)         0.00       0.25 f
+  a1/cs0/rc0/U1/Y (XOR2X1_RVT)                            0.03       0.28 r
+  a1/cs0/rc0/Sum[6] (RCA_bw6)                             0.00       0.28 r
+  a1/cs0/U75/Y (INVX1_RVT)                                0.03       0.30 f
+  a1/cs0/U7/Y (INVX1_RVT)                                 0.02       0.32 r
+  a1/cs0/U91/Y (AO22X1_RVT)                               0.03       0.35 r
+  a1/cs0/U86/Y (INVX1_RVT)                                0.07       0.42 f
+  a1/cs0/U111/Y (MUX21X1_RVT)                             0.05       0.46 f
+  a1/cs0/U113/Y (MUX21X1_RVT)                             0.03       0.49 f
+  a1/cs0/U70/Y (MUX21X1_RVT)                              0.03       0.52 f
+  a1/cs0/U116/Y (AND2X1_RVT)                              0.02       0.54 f
+  a1/cs0/U73/Y (MUX21X1_RVT)                              0.02       0.56 f
+  a1/cs0/U43/Y (AO22X1_RVT)                               0.03       0.59 f
+  a1/cs0/mtsB_R[0] (compshift)                            0.00       0.59 f
+  a1/mts0/mtsB_R[0] (mantissa)                            0.00       0.59 f
+  a1/mts0/U19/Y (INVX1_RVT)                               0.01       0.60 r
+  a1/mts0/rc5/B[1] (RCA_bw23_0)                           0.00       0.60 r
+  a1/mts0/rc5/U45/Y (XOR2X1_RVT)                          0.03       0.63 r
+  a1/mts0/rc5/U0/P1 (G_Cell_300)                          0.00       0.63 r
+  a1/mts0/rc5/U0/U1/Y (AO21X1_RVT)                        0.03       0.65 r
+  a1/mts0/rc5/U0/GG (G_Cell_300)                          0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/G0 (G_Cell_299)        0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.68 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/GG (G_Cell_299)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/G0 (G_Cell_298)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.70 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/GG (G_Cell_298)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/G0 (G_Cell_297)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.73 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/GG (G_Cell_297)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/G0 (G_Cell_296)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.76 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/GG (G_Cell_296)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/G0 (G_Cell_295)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.78 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/GG (G_Cell_295)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/G0 (G_Cell_294)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.81 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/GG (G_Cell_294)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/G0 (G_Cell_293)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.83 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/GG (G_Cell_293)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/G0 (G_Cell_292)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.86 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/GG (G_Cell_292)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/G0 (G_Cell_291)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.89 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/GG (G_Cell_291)        0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/G0 (G_Cell_290)       0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.91 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/GG (G_Cell_290)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/G0 (G_Cell_289)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.94 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/GG (G_Cell_289)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/G0 (G_Cell_288)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.96 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/GG (G_Cell_288)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/G0 (G_Cell_287)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.99 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/GG (G_Cell_287)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/G0 (G_Cell_286)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.01 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/GG (G_Cell_286)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/G0 (G_Cell_285)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.04 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/GG (G_Cell_285)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/G0 (G_Cell_284)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.07 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/GG (G_Cell_284)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/G0 (G_Cell_283)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.09 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/GG (G_Cell_283)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/G0 (G_Cell_282)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.12 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/GG (G_Cell_282)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/G0 (G_Cell_281)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.14 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/GG (G_Cell_281)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/G0 (G_Cell_280)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.17 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/GG (G_Cell_280)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/G0 (G_Cell_279)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.20 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/GG (G_Cell_279)       0.00       1.20 r
+  a1/mts0/rc5/U71/Y (XOR2X1_RVT)                          0.03       1.23 f
+  a1/mts0/rc5/Sum[23] (RCA_bw23_0)                        0.00       1.23 f
+  a1/mts0/U35/Y (AO22X1_RVT)                              0.02       1.25 f
+  a1/mts0/R_mts[22] (mantissa)                            0.00       1.25 f
+  a1/nor0/R_mts[22] (normalization)                       0.00       1.25 f
+  a1/nor0/U60/Y (INVX1_RVT)                               0.01       1.26 r
+  a1/nor0/rc7/A[23] (RCA_bw23_1)                          0.00       1.26 r
+  a1/nor0/rc7/U39/Y (XOR2X1_RVT)                          0.02       1.29 r
+  a1/nor0/rc7/U13/Y (XOR2X1_RVT)                          0.03       1.32 f
+  a1/nor0/rc7/Sum[23] (RCA_bw23_1)                        0.00       1.32 f
+  a1/nor0/U73/Y (OA21X1_RVT)                              0.09       1.41 f
+  a1/nor0/U127/Y (OR2X1_RVT)                              0.10       1.50 f
+  a1/nor0/U143/Y (OR2X1_RVT)                              0.10       1.60 f
+  a1/nor0/U163/Y (OR2X1_RVT)                              0.10       1.70 f
+  a1/nor0/U28/Y (OR2X1_RVT)                               0.10       1.79 f
+  a1/nor0/U208/Y (OR2X1_RVT)                              0.10       1.89 f
+  a1/nor0/U230/Y (OR2X1_RVT)                              0.10       1.98 f
+  a1/nor0/U252/Y (OR2X1_RVT)                              0.07       2.06 f
+  a1/nor0/U20/Y (NBUFFX2_RVT)                             0.03       2.08 f
+  a1/nor0/U3/Y (OR2X1_RVT)                                0.08       2.16 f
+  a1/nor0/U289/Y (MUX21X1_RVT)                            0.05       2.21 f
+  a1/nor0/U7/Y (OR2X1_RVT)                                0.04       2.24 f
+  a1/nor0/U6/Y (INVX1_RVT)                                0.01       2.25 r
+  a1/nor0/U5/Y (INVX1_RVT)                                0.06       2.31 f
+  a1/nor0/U11/Y (MUX21X1_RVT)                             0.04       2.35 f
+  a1/nor0/U47/Y (OR3X1_RVT)                               0.02       2.37 f
+  a1/nor0/U8/Y (OR4X1_RVT)                                0.03       2.40 f
+  a1/nor0/U45/Y (OA21X1_RVT)                              0.02       2.42 f
+  a1/nor0/rc8/B[1] (RCA_bw12_1)                           0.00       2.42 f
+  a1/nor0/rc8/U33/Y (AND2X1_RVT)                          0.02       2.44 f
+  a1/nor0/rc8/U0/G1 (G_Cell_176)                          0.00       2.44 f
+  a1/nor0/rc8/U0/U1/Y (AO21X1_RVT)                        0.02       2.46 f
+  a1/nor0/rc8/U0/GG (G_Cell_176)                          0.00       2.46 f
+  a1/nor0/rc8/loop_1[1].genblk1.U1/G0 (G_Cell_175)        0.00       2.46 f
+  a1/nor0/rc8/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.02       2.48 f
+  a1/nor0/rc8/loop_1[1].genblk1.U1/GG (G_Cell_175)        0.00       2.48 f
+  a1/nor0/rc8/loop_1[2].genblk1.U1/G0 (G_Cell_174)        0.00       2.48 f
+  a1/nor0/rc8/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.02       2.51 f
+  a1/nor0/rc8/loop_1[2].genblk1.U1/GG (G_Cell_174)        0.00       2.51 f
+  a1/nor0/rc8/loop_1[3].genblk1.U1/G0 (G_Cell_173)        0.00       2.51 f
+  a1/nor0/rc8/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.02       2.53 f
+  a1/nor0/rc8/loop_1[3].genblk1.U1/GG (G_Cell_173)        0.00       2.53 f
+  a1/nor0/rc8/loop_1[4].genblk1.U1/G0 (G_Cell_172)        0.00       2.53 f
+  a1/nor0/rc8/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.02       2.56 f
+  a1/nor0/rc8/loop_1[4].genblk1.U1/GG (G_Cell_172)        0.00       2.56 f
+  a1/nor0/rc8/loop_1[5].genblk1.U1/G0 (G_Cell_171)        0.00       2.56 f
+  a1/nor0/rc8/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.02       2.58 f
+  a1/nor0/rc8/loop_1[5].genblk1.U1/GG (G_Cell_171)        0.00       2.58 f
+  a1/nor0/rc8/loop_1[6].genblk1.U1/G0 (G_Cell_170)        0.00       2.58 f
+  a1/nor0/rc8/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.02       2.61 f
+  a1/nor0/rc8/loop_1[6].genblk1.U1/GG (G_Cell_170)        0.00       2.61 f
+  a1/nor0/rc8/U17/Y (XOR2X1_RVT)                          0.03       2.64 r
+  a1/nor0/rc8/Sum[8] (RCA_bw12_1)                         0.00       2.64 r
+  a1/nor0/Sum[6] (normalization)                          0.00       2.64 r
+  a1/en/product[6] (encoder_add)                          0.00       2.64 r
+  a1/en/U18/Y (AO222X1_RVT)                               0.03       2.67 r
+  a1/en/out[6] (encoder_add)                              0.00       2.67 r
+  a1/sum_reg[6]/D (DFFARX1_RVT)                           0.00       2.67 r
+  data arrival time                                                  2.67
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a1/sum_reg[6]/CLK (DFFARX1_RVT)                         0.00       4.50 r
+  library setup time                                     -0.02       4.48
+  data required time                                                 4.48
+  --------------------------------------------------------------------------
+  data required time                                                 4.48
+  data arrival time                                                 -2.67
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.81
+
+
+1

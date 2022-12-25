@@ -1,0 +1,1246 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                Version O-2018.06-SP4 for linux64 - Nov 27, 2018
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+
+
+I am ready...
+
+
+==================================================================
+
+Library Settings:
+search_path:             . /data/SYNOPSYS/syn/2018.06-SP4/libraries/syn /data/SYNOPSYS/syn/2018.06-SP4/minpower/syn /data/SYNOPSYS/syn/2018.06-SP4/dw/syn_ver /data/SYNOPSYS/syn/2018.06-SP4/dw/sim_ver
+link_library:             * your_library.db 
+target_library:          your_library.db
+symbol_library:          your_library.sdb
+mw_reference_library:    
+mw_design_library:       
+
+==================================================================
+
+I am ready...
+
+Initializing gui preferences from file  /home/capstone8/.synopsys_dv_prefs.tcl
+define_design_lib WORK -path “work”
+1
+source rm_setup/lib_setup.tcl
+*  saed32rvt_ff1p16vn40c.db saed32rvt_ss0p95v125c.db   dw_foundation.sldb
+# load & elaborate design 
+analyze -library WORK -format verilog ../RTL/fp16multiplier.v
+Running PRESTO HDLC
+Compiling source file ../RTL/fp16multiplier.v
+Warning:  ../RTL/fp16multiplier.v:45: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Presto compilation completed successfully.
+Loading db file '/data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ff1p16vn40c.db'
+Information: Using CCS timing libraries. (TIM-024)
+Loading db file '/data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v125c.db'
+Loading db file '/data/SYNOPSYS/syn/2018.06-SP4/libraries/syn/dw_foundation.sldb'
+1
+analyze -library WORK -format verilog ../RTL/fpadder.v
+Running PRESTO HDLC
+Compiling source file ../RTL/fpadder.v
+Warning:  ../RTL/fpadder.v:149: the undeclared symbol 'st' assumed to have the default net type, which is 'wire'. (VER-936)
+Presto compilation completed successfully.
+1
+analyze -library WORK -format verilog ../RTL/fp16MAC.v
+Running PRESTO HDLC
+Compiling source file ../RTL/fp16MAC.v
+Presto compilation completed successfully.
+1
+analyze -library WORK -format verilog ../RTL/kogge_stone_Nbit.v
+Running PRESTO HDLC
+Compiling source file ../RTL/kogge_stone_Nbit.v
+Warning:  ../RTL/kogge_stone_Nbit.v:67: Parameter keyword used in local parameter declaration. (VER-329)
+Warning:  ../RTL/kogge_stone_Nbit.v:107: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../RTL/kogge_stone_Nbit.v:105: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../RTL/kogge_stone_Nbit.v:113: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../RTL/kogge_stone_Nbit.v:113: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../RTL/kogge_stone_Nbit.v:122: A unnamed generate block with an LRM-defined name 'genblk3' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../RTL/kogge_stone_Nbit.v:138: Parameter keyword used in local parameter declaration. (VER-329)
+Warning:  ../RTL/kogge_stone_Nbit.v:180: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../RTL/kogge_stone_Nbit.v:178: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../RTL/kogge_stone_Nbit.v:186: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../RTL/kogge_stone_Nbit.v:186: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../RTL/kogge_stone_Nbit.v:195: A unnamed generate block with an LRM-defined name 'genblk3' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../RTL/kogge_stone_Nbit.v:277: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../RTL/kogge_stone_Nbit.v:275: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../RTL/kogge_stone_Nbit.v:283: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../RTL/kogge_stone_Nbit.v:283: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../RTL/kogge_stone_Nbit.v:292: A unnamed generate block with an LRM-defined name 'genblk3' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../RTL/kogge_stone_Nbit.v:300: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../RTL/kogge_stone_Nbit.v:298: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../RTL/kogge_stone_Nbit.v:306: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../RTL/kogge_stone_Nbit.v:306: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../RTL/kogge_stone_Nbit.v:315: A unnamed generate block with an LRM-defined name 'genblk3' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Presto compilation completed successfully.
+1
+analyze -library WORK -format verilog ../RTL/1bit_adder.v
+Running PRESTO HDLC
+Compiling source file ../RTL/1bit_adder.v
+Presto compilation completed successfully.
+1
+elaborate -architecture verilog -library WORK fp16MAC
+Loading db file '/data/SYNOPSYS/syn/2018.06-SP4/libraries/syn/gtech.db'
+Loading db file '/data/SYNOPSYS/syn/2018.06-SP4/libraries/syn/standard.sldb'
+  Loading link library 'saed32rvt_ff1p16vn40c'
+  Loading link library 'saed32rvt_ss0p95v125c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Inferred memory devices in process
+	in routine fp16MAC line 42 in file
+		'../RTL/fp16MAC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     input_a_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     input_b_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       acc_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'fp16MAC'.
+Information: Building the design 'fp16multiplier'. (HDL-193)
+
+Inferred memory devices in process
+	in routine fp16multiplier line 767 in file
+		'../RTL/fp16multiplier.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       out_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'fpadder'. (HDL-193)
+
+Inferred memory devices in process
+	in routine fpadder line 43 in file
+		'../RTL/fpadder.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       sum_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'menMult'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'encoder_a'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'biasAdder'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'rounder'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'encoder_b'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'encoder_add'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'compshift'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mantissa'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'normalization'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'karastuba_11bit'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'RCA' instantiated from design 'biasAdder' with
+	the parameters "bw=5". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'RCA' instantiated from design 'rounder' with
+	the parameters "bw=12". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'RCA' instantiated from design 'compshift' with
+	the parameters "bw=6". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'RCA' instantiated from design 'mantissa' with
+	the parameters "bw=23". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'karastuba_6bit'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'RCA' instantiated from design 'karastuba_11bit' with
+	the parameters "bw=11". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'RCA' instantiated from design 'karastuba_11bit' with
+	the parameters "bw=16". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'G_Cell'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'vedic_4bit'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'RCA' instantiated from design 'karastuba_6bit' with
+	the parameters "bw=4". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'RCA' instantiated from design 'karastuba_6bit' with
+	the parameters "bw=8". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'RCA' instantiated from design 'karastuba_6bit' with
+	the parameters "bw=9". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'half_adder'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Adder2'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Adder3'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Adder4'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Adder5'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'full_adder'. (HDL-193)
+Presto compilation completed successfully.
+1
+current_design fp16MAC
+Current design is 'fp16MAC'.
+{fp16MAC}
+check_design > reports/check_design.rpt
+# design constraints
+set INPUTPORT [remove_from_collection [all_inputs] [get_ports "CLK RESETn"]]
+{a[15] a[14] a[13] a[12] a[11] a[10] a[9] a[8] a[7] a[6] a[5] a[4] a[3] a[2] a[1] a[0] b[15] b[14] b[13] b[12] b[11] b[10] b[9] b[8] b[7] b[6] b[5] b[4] b[3] b[2] b[1] b[0]}
+set OUTPUTPORT [all_outputs]
+{acc[15] acc[14] acc[13] acc[12] acc[11] acc[10] acc[9] acc[8] acc[7] acc[6] acc[5] acc[4] acc[3] acc[2] acc[1] acc[0]}
+set_load [load_of saed32rvt_ff1p16vn40c/NBUFFX2_RVT/A] $OUTPUTPORT
+1
+set_driving_cell -library saed32rvt_ff1p16vn40c -lib_cell NBUFFX2_RVT -pin Y -no_design_rule $INPUTPORT
+1
+# timing constraints
+set_operating_conditions ff1p16vn40c -library saed32rvt_ff1p16vn40c
+Using operating conditions 'ff1p16vn40c' found in library 'saed32rvt_ff1p16vn40c'.
+1
+create_clock -period 5 -name MAIN_CLOCK [get_ports CLK]
+1
+set_clock_uncertainty 0.5 [get_clocks MAIN_CLOCK]
+1
+set_input_delay -clock MAIN_CLOCK -max 2.0 [remove_from_collection [all_inputs] CLK ]
+1
+set_input_delay -clock MAIN_CLOCK -min 0.1 [remove_from_collection [all_inputs] CLK ]
+1
+set_output_delay -clock MAIN_CLOCK -max 2.0 [all_outputs]
+1
+set_output_delay -clock MAIN_CLOCK -min -0.1 [all_outputs]
+1
+# synthesis constraints
+set_max_area 0
+1
+report_qor > reports/qor.rpt
+# compile (synthesis)
+compile -area_effort medium -map_effort high > reports/compile.rpt
+# report
+report_area > reports/synth_area.rpt
+report_design > reports/synth_design.rpt
+report_cell > reports/synth_cells.rpt
+report_qor > reports/synth_qor.rpt
+report_resources > reports/synth_resources.rpt
+report_timing -max_paths 10 > reports/synth_timing.rpt
+report_power -analysis_effort medium > reports/synth_power.rpt
+# save results
+write -f ddc -hierarchy -output results/fp16MAC.ddc
+Writing ddc file 'results/fp16MAC.ddc'.
+1
+write -hierarchy -format verilog -output results/fp16MAC.mapped.v
+Writing verilog file '/home/capstone8/capstone/project/lab4_front-end/SYN/results/fp16MAC.mapped.v'.
+Warning: Verilog writer has added 4 nets to module karastuba_11bit using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 1 nets to module normalization using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+write_sdc results/fp16MAC.sdc -version 2.1
+1
+write_sdf results/fp16MAC.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/capstone8/capstone/project/lab4_front-end/SYN/results/fp16MAC.sdf'. (WT-3)
+1
+1
+Warning: Cannot use command line editor for terminal type 'xterm'.  (UI-74)
+dc_shell>  
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : fp16MAC
+Version: O-2018.06-SP4
+Date   : Fri Dec 23 23:45:01 2022
+****************************************
+
+Operating Conditions: ff1p16vn40c   Library: saed32rvt_ff1p16vn40c
+Wire Load Model Mode: enclosed
+
+  Startpoint: m1/out_reg[10]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a1/sum_reg[14]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            16000                 saed32rvt_ff1p16vn40c
+  compshift          8000                  saed32rvt_ff1p16vn40c
+  RCA_bw6            ForQA                 saed32rvt_ff1p16vn40c
+  fpadder            8000                  saed32rvt_ff1p16vn40c
+  mantissa           8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_0         8000                  saed32rvt_ff1p16vn40c
+  normalization      8000                  saed32rvt_ff1p16vn40c
+  RCA_bw23_1         8000                  saed32rvt_ff1p16vn40c
+  RCA_bw12_1         ForQA                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  m1/out_reg[10]/CLK (DFFARX1_RVT)                        0.00       0.00 r
+  m1/out_reg[10]/Q (DFFARX1_RVT)                          0.07       0.07 f
+  m1/out[10] (fp16multiplier)                             0.00       0.07 f
+  a1/B[10] (fpadder)                                      0.00       0.07 f
+  a1/cs0/expB[0] (compshift)                              0.00       0.07 f
+  a1/cs0/U92/Y (INVX1_RVT)                                0.02       0.08 r
+  a1/cs0/rc0/B[1] (RCA_bw6)                               0.00       0.08 r
+  a1/cs0/rc0/U3/Y (XOR2X1_RVT)                            0.04       0.12 f
+  a1/cs0/rc0/U0/P1 (G_Cell_326)                           0.00       0.12 f
+  a1/cs0/rc0/U0/U1/Y (AO21X1_RVT)                         0.03       0.15 f
+  a1/cs0/rc0/U0/GG (G_Cell_326)                           0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/G0 (G_Cell_325)         0.00       0.15 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.17 f
+  a1/cs0/rc0/loop_1[1].genblk1.U1/GG (G_Cell_325)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/G0 (G_Cell_324)         0.00       0.17 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.20 f
+  a1/cs0/rc0/loop_1[2].genblk1.U1/GG (G_Cell_324)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/G0 (G_Cell_323)         0.00       0.20 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.22 f
+  a1/cs0/rc0/loop_1[3].genblk1.U1/GG (G_Cell_323)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/G0 (G_Cell_322)         0.00       0.22 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)       0.02       0.25 f
+  a1/cs0/rc0/loop_1[4].genblk1.U1/GG (G_Cell_322)         0.00       0.25 f
+  a1/cs0/rc0/U1/Y (XOR2X1_RVT)                            0.03       0.28 r
+  a1/cs0/rc0/Sum[6] (RCA_bw6)                             0.00       0.28 r
+  a1/cs0/U75/Y (INVX1_RVT)                                0.03       0.30 f
+  a1/cs0/U7/Y (INVX1_RVT)                                 0.02       0.32 r
+  a1/cs0/U91/Y (AO22X1_RVT)                               0.03       0.35 r
+  a1/cs0/U86/Y (INVX1_RVT)                                0.07       0.42 f
+  a1/cs0/U111/Y (MUX21X1_RVT)                             0.05       0.46 f
+  a1/cs0/U113/Y (MUX21X1_RVT)                             0.03       0.49 f
+  a1/cs0/U70/Y (MUX21X1_RVT)                              0.03       0.52 f
+  a1/cs0/U116/Y (AND2X1_RVT)                              0.02       0.54 f
+  a1/cs0/U73/Y (MUX21X1_RVT)                              0.02       0.56 f
+  a1/cs0/U43/Y (AO22X1_RVT)                               0.03       0.59 f
+  a1/cs0/mtsB_R[0] (compshift)                            0.00       0.59 f
+  a1/mts0/mtsB_R[0] (mantissa)                            0.00       0.59 f
+  a1/mts0/U19/Y (INVX1_RVT)                               0.01       0.60 r
+  a1/mts0/rc5/B[1] (RCA_bw23_0)                           0.00       0.60 r
+  a1/mts0/rc5/U45/Y (XOR2X1_RVT)                          0.03       0.63 r
+  a1/mts0/rc5/U0/P1 (G_Cell_300)                          0.00       0.63 r
+  a1/mts0/rc5/U0/U1/Y (AO21X1_RVT)                        0.03       0.65 r
+  a1/mts0/rc5/U0/GG (G_Cell_300)                          0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/G0 (G_Cell_299)        0.00       0.65 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.68 r
+  a1/mts0/rc5/loop_1[1].genblk1.U1/GG (G_Cell_299)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/G0 (G_Cell_298)        0.00       0.68 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.70 r
+  a1/mts0/rc5/loop_1[2].genblk1.U1/GG (G_Cell_298)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/G0 (G_Cell_297)        0.00       0.70 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.73 r
+  a1/mts0/rc5/loop_1[3].genblk1.U1/GG (G_Cell_297)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/G0 (G_Cell_296)        0.00       0.73 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.76 r
+  a1/mts0/rc5/loop_1[4].genblk1.U1/GG (G_Cell_296)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/G0 (G_Cell_295)        0.00       0.76 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.78 r
+  a1/mts0/rc5/loop_1[5].genblk1.U1/GG (G_Cell_295)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/G0 (G_Cell_294)        0.00       0.78 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.81 r
+  a1/mts0/rc5/loop_1[6].genblk1.U1/GG (G_Cell_294)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/G0 (G_Cell_293)        0.00       0.81 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.83 r
+  a1/mts0/rc5/loop_1[7].genblk1.U1/GG (G_Cell_293)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/G0 (G_Cell_292)        0.00       0.83 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.86 r
+  a1/mts0/rc5/loop_1[8].genblk1.U1/GG (G_Cell_292)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/G0 (G_Cell_291)        0.00       0.86 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       0.89 r
+  a1/mts0/rc5/loop_1[9].genblk1.U1/GG (G_Cell_291)        0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/G0 (G_Cell_290)       0.00       0.89 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.91 r
+  a1/mts0/rc5/loop_1[10].genblk1.U1/GG (G_Cell_290)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/G0 (G_Cell_289)       0.00       0.91 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.94 r
+  a1/mts0/rc5/loop_1[11].genblk1.U1/GG (G_Cell_289)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/G0 (G_Cell_288)       0.00       0.94 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.96 r
+  a1/mts0/rc5/loop_1[12].genblk1.U1/GG (G_Cell_288)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/G0 (G_Cell_287)       0.00       0.96 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       0.99 r
+  a1/mts0/rc5/loop_1[13].genblk1.U1/GG (G_Cell_287)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/G0 (G_Cell_286)       0.00       0.99 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.01 r
+  a1/mts0/rc5/loop_1[14].genblk1.U1/GG (G_Cell_286)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/G0 (G_Cell_285)       0.00       1.01 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.04 r
+  a1/mts0/rc5/loop_1[15].genblk1.U1/GG (G_Cell_285)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/G0 (G_Cell_284)       0.00       1.04 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.07 r
+  a1/mts0/rc5/loop_1[16].genblk1.U1/GG (G_Cell_284)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/G0 (G_Cell_283)       0.00       1.07 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.09 r
+  a1/mts0/rc5/loop_1[17].genblk1.U1/GG (G_Cell_283)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/G0 (G_Cell_282)       0.00       1.09 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.12 r
+  a1/mts0/rc5/loop_1[18].genblk1.U1/GG (G_Cell_282)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/G0 (G_Cell_281)       0.00       1.12 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.14 r
+  a1/mts0/rc5/loop_1[19].genblk1.U1/GG (G_Cell_281)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/G0 (G_Cell_280)       0.00       1.14 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.17 r
+  a1/mts0/rc5/loop_1[20].genblk1.U1/GG (G_Cell_280)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/G0 (G_Cell_279)       0.00       1.17 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       1.20 r
+  a1/mts0/rc5/loop_1[21].genblk1.U1/GG (G_Cell_279)       0.00       1.20 r
+  a1/mts0/rc5/U71/Y (XOR2X1_RVT)                          0.03       1.23 f
+  a1/mts0/rc5/Sum[23] (RCA_bw23_0)                        0.00       1.23 f
+  a1/mts0/U35/Y (AO22X1_RVT)                              0.02       1.25 f
+  a1/mts0/R_mts[22] (mantissa)                            0.00       1.25 f
+  a1/nor0/R_mts[22] (normalization)                       0.00       1.25 f
+  a1/nor0/U60/Y (INVX1_RVT)                               0.01       1.26 r
+  a1/nor0/rc7/A[23] (RCA_bw23_1)                          0.00       1.26 r
+  a1/nor0/rc7/U39/Y (XOR2X1_RVT)                          0.02       1.29 r
+  a1/nor0/rc7/U13/Y (XOR2X1_RVT)                          0.03       1.32 f
+  a1/nor0/rc7/Sum[23] (RCA_bw23_1)                        0.00       1.32 f
+  a1/nor0/U73/Y (OA21X1_RVT)                              0.09       1.41 f
+  a1/nor0/U127/Y (OR2X1_RVT)                              0.10       1.50 f
+  a1/nor0/U143/Y (OR2X1_RVT)                              0.10       1.60 f
+  a1/nor0/U163/Y (OR2X1_RVT)                              0.10       1.70 f
+  a1/nor0/U28/Y (OR2X1_RVT)                               0.10       1.79 f
+  a1/nor0/U208/Y (OR2X1_RVT)                              0.10       1.89 f
+  a1/nor0/U230/Y (OR2X1_RVT)                              0.10       1.98 f
+  a1/nor0/U252/Y (OR2X1_RVT)                              0.07       2.06 f
+  a1/nor0/U20/Y (NBUFFX2_RVT)                             0.03       2.08 f
+  a1/nor0/U3/Y (OR2X1_RVT)                                0.08       2.16 f
+  a1/nor0/U289/Y (MUX21X1_RVT)                            0.05       2.21 f
+  a1/nor0/U7/Y (OR2X1_RVT)                                0.04       2.24 f
+  a1/nor0/U6/Y (INVX1_RVT)                                0.01       2.25 r
+  a1/nor0/U5/Y (INVX1_RVT)                                0.06       2.31 f
+  a1/nor0/U11/Y (MUX21X1_RVT)                             0.03       2.34 r
+  a1/nor0/U47/Y (OR3X1_RVT)                               0.03       2.36 r
+  a1/nor0/U8/Y (OR4X1_RVT)                                0.03       2.40 r
+  a1/nor0/U45/Y (OA21X1_RVT)                              0.02       2.42 r
+  a1/nor0/rc8/B[1] (RCA_bw12_1)                           0.00       2.42 r
+  a1/nor0/rc8/U33/Y (AND2X1_RVT)                          0.02       2.44 r
+  a1/nor0/rc8/U0/G1 (G_Cell_176)                          0.00       2.44 r
+  a1/nor0/rc8/U0/U1/Y (AO21X1_RVT)                        0.02       2.46 r
+  a1/nor0/rc8/U0/GG (G_Cell_176)                          0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/G0 (G_Cell_175)        0.00       2.46 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.48 r
+  a1/nor0/rc8/loop_1[1].genblk1.U1/GG (G_Cell_175)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/G0 (G_Cell_174)        0.00       2.48 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.51 r
+  a1/nor0/rc8/loop_1[2].genblk1.U1/GG (G_Cell_174)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/G0 (G_Cell_173)        0.00       2.51 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.54 r
+  a1/nor0/rc8/loop_1[3].genblk1.U1/GG (G_Cell_173)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/G0 (G_Cell_172)        0.00       2.54 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.56 r
+  a1/nor0/rc8/loop_1[4].genblk1.U1/GG (G_Cell_172)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/G0 (G_Cell_171)        0.00       2.56 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.59 r
+  a1/nor0/rc8/loop_1[5].genblk1.U1/GG (G_Cell_171)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/G0 (G_Cell_170)        0.00       2.59 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.62 r
+  a1/nor0/rc8/loop_1[6].genblk1.U1/GG (G_Cell_170)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/G0 (G_Cell_169)        0.00       2.62 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.65 r
+  a1/nor0/rc8/loop_1[7].genblk1.U1/GG (G_Cell_169)        0.00       2.65 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/G0 (G_Cell_168)        0.00       2.65 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.67 r
+  a1/nor0/rc8/loop_1[8].genblk1.U1/GG (G_Cell_168)        0.00       2.67 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/G0 (G_Cell_167)        0.00       2.67 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)      0.03       2.70 r
+  a1/nor0/rc8/loop_1[9].genblk1.U1/GG (G_Cell_167)        0.00       2.70 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/G0 (G_Cell_166)       0.00       2.70 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)     0.03       2.73 r
+  a1/nor0/rc8/loop_1[10].genblk1.U1/GG (G_Cell_166)       0.00       2.73 r
+  a1/nor0/rc8/U2/Y (XOR2X1_RVT)                           0.04       2.77 f
+  a1/nor0/rc8/Sum[12] (RCA_bw12_1)                        0.00       2.77 f
+  a1/nor0/U85/Y (INVX1_RVT)                               0.01       2.78 r
+  a1/nor0/U79/Y (AND2X1_RVT)                              0.02       2.80 r
+  a1/nor0/U74/Y (AO22X1_RVT)                              0.02       2.82 r
+  a1/nor0/Sum[14] (normalization)                         0.00       2.82 r
+  a1/en/product[14] (encoder_add)                         0.00       2.82 r
+  a1/en/U26/Y (AO221X1_RVT)                               0.03       2.85 r
+  a1/en/out[14] (encoder_add)                             0.00       2.85 r
+  a1/sum_reg[14]/D (DFFARX1_RVT)                          0.00       2.85 r
+  data arrival time                                                  2.85
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a1/sum_reg[14]/CLK (DFFARX1_RVT)                        0.00       4.50 r
+  library setup time                                     -0.02       4.48
+  data required time                                                 4.48
+  --------------------------------------------------------------------------
+  data required time                                                 4.48
+  data arrival time                                                 -2.85
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.63
+
+
+1
+dc_shell> Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : fp16MAC
+Version: O-2018.06-SP4
+Date   : Fri Dec 23 23:45:17 2022
+****************************************
+
+
+Library(s) Used:
+
+    saed32rvt_ff1p16vn40c (File: /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ff1p16vn40c.db)
+
+
+Operating Conditions: ff1p16vn40c   Library: saed32rvt_ff1p16vn40c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+fp16MAC                16000             saed32rvt_ff1p16vn40c
+fp16multiplier         8000              saed32rvt_ff1p16vn40c
+fpadder                8000              saed32rvt_ff1p16vn40c
+menMult                8000              saed32rvt_ff1p16vn40c
+encoder_a              ForQA             saed32rvt_ff1p16vn40c
+biasAdder              8000              saed32rvt_ff1p16vn40c
+rounder                8000              saed32rvt_ff1p16vn40c
+encoder_b              ForQA             saed32rvt_ff1p16vn40c
+encoder_add            ForQA             saed32rvt_ff1p16vn40c
+compshift              8000              saed32rvt_ff1p16vn40c
+mantissa               8000              saed32rvt_ff1p16vn40c
+normalization          8000              saed32rvt_ff1p16vn40c
+karastuba_11bit        8000              saed32rvt_ff1p16vn40c
+RCA_bw5_0              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw12_0             ForQA             saed32rvt_ff1p16vn40c
+RCA_bw6                ForQA             saed32rvt_ff1p16vn40c
+RCA_bw23_0             8000              saed32rvt_ff1p16vn40c
+karastuba_6bit_0       8000              saed32rvt_ff1p16vn40c
+RCA_bw11               ForQA             saed32rvt_ff1p16vn40c
+RCA_bw16               8000              saed32rvt_ff1p16vn40c
+G_Cell_0               ForQA             saed32rvt_ff1p16vn40c
+vedic_4bit_0           ForQA             saed32rvt_ff1p16vn40c
+RCA_bw4_0              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw8_0              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw9_0              ForQA             saed32rvt_ff1p16vn40c
+half_adder_0           ForQA             saed32rvt_ff1p16vn40c
+Adder2_0               ForQA             saed32rvt_ff1p16vn40c
+Adder3_0               ForQA             saed32rvt_ff1p16vn40c
+Adder4_0               ForQA             saed32rvt_ff1p16vn40c
+Adder5_0               ForQA             saed32rvt_ff1p16vn40c
+full_adder_0           ForQA             saed32rvt_ff1p16vn40c
+RCA_bw5_1              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw5_2              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw5_3              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw5_4              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw5_5              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw5_6              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw5_7              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw5_8              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw5_9              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw5_10             ForQA             saed32rvt_ff1p16vn40c
+RCA_bw5_11             ForQA             saed32rvt_ff1p16vn40c
+RCA_bw5_12             ForQA             saed32rvt_ff1p16vn40c
+RCA_bw5_13             ForQA             saed32rvt_ff1p16vn40c
+RCA_bw5_14             ForQA             saed32rvt_ff1p16vn40c
+RCA_bw5_15             ForQA             saed32rvt_ff1p16vn40c
+RCA_bw5_16             ForQA             saed32rvt_ff1p16vn40c
+RCA_bw5_17             ForQA             saed32rvt_ff1p16vn40c
+RCA_bw5_18             ForQA             saed32rvt_ff1p16vn40c
+RCA_bw12_1             ForQA             saed32rvt_ff1p16vn40c
+RCA_bw23_1             8000              saed32rvt_ff1p16vn40c
+RCA_bw23_2             8000              saed32rvt_ff1p16vn40c
+karastuba_6bit_1       8000              saed32rvt_ff1p16vn40c
+karastuba_6bit_2       8000              saed32rvt_ff1p16vn40c
+karastuba_6bit_3       8000              saed32rvt_ff1p16vn40c
+G_Cell_1               ForQA             saed32rvt_ff1p16vn40c
+G_Cell_2               ForQA             saed32rvt_ff1p16vn40c
+G_Cell_3               ForQA             saed32rvt_ff1p16vn40c
+G_Cell_4               ForQA             saed32rvt_ff1p16vn40c
+G_Cell_5               ForQA             saed32rvt_ff1p16vn40c
+G_Cell_6               ForQA             saed32rvt_ff1p16vn40c
+G_Cell_7               ForQA             saed32rvt_ff1p16vn40c
+G_Cell_8               ForQA             saed32rvt_ff1p16vn40c
+G_Cell_9               ForQA             saed32rvt_ff1p16vn40c
+G_Cell_10              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_11              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_12              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_13              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_14              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_15              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_16              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_17              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_18              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_19              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_20              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_21              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_22              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_23              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_24              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_25              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_26              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_27              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_28              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_29              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_30              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_31              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_32              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_33              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_34              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_35              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_36              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_37              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_38              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_39              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_40              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_41              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_42              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_43              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_44              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_45              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_46              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_47              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_48              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_49              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_50              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_51              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_52              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_53              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_54              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_55              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_56              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_57              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_58              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_59              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_60              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_61              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_62              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_63              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_64              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_65              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_66              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_67              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_68              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_69              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_70              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_71              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_72              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_73              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_74              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_75              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_76              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_77              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_78              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_79              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_80              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_81              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_82              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_83              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_84              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_85              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_86              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_87              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_88              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_89              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_90              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_91              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_92              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_93              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_94              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_95              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_96              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_97              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_98              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_99              ForQA             saed32rvt_ff1p16vn40c
+G_Cell_100             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_101             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_102             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_103             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_104             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_105             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_106             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_107             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_108             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_109             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_110             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_111             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_112             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_113             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_114             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_115             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_116             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_117             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_118             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_119             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_120             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_121             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_122             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_123             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_124             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_125             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_126             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_127             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_128             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_129             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_130             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_131             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_132             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_133             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_134             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_135             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_136             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_137             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_138             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_139             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_140             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_141             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_142             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_143             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_144             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_145             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_146             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_147             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_148             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_149             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_150             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_151             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_152             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_153             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_154             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_155             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_156             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_157             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_158             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_159             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_160             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_161             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_162             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_163             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_164             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_165             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_166             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_167             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_168             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_169             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_170             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_171             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_172             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_173             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_174             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_175             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_176             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_177             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_178             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_179             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_180             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_181             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_182             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_183             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_184             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_185             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_186             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_187             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_188             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_189             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_190             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_191             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_192             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_193             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_194             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_195             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_196             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_197             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_198             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_199             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_200             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_201             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_202             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_203             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_204             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_205             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_206             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_207             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_208             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_209             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_210             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_211             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_212             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_213             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_214             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_215             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_216             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_217             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_218             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_219             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_220             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_221             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_222             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_223             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_224             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_225             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_226             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_227             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_228             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_229             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_230             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_231             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_232             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_233             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_234             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_235             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_236             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_237             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_238             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_239             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_240             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_241             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_242             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_243             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_244             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_245             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_246             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_247             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_248             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_249             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_250             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_251             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_252             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_253             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_254             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_255             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_256             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_257             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_258             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_259             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_260             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_261             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_262             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_263             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_264             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_265             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_266             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_267             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_268             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_269             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_270             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_271             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_272             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_273             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_274             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_275             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_276             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_277             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_278             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_279             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_280             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_281             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_282             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_283             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_284             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_285             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_286             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_287             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_288             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_289             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_290             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_291             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_292             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_293             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_294             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_295             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_296             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_297             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_298             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_299             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_300             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_301             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_302             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_303             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_304             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_305             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_306             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_307             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_308             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_309             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_310             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_311             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_312             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_313             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_314             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_315             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_316             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_317             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_318             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_319             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_320             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_321             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_322             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_323             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_324             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_325             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_326             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_327             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_328             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_329             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_330             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_331             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_332             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_333             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_334             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_335             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_336             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_337             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_338             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_339             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_340             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_341             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_342             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_343             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_344             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_345             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_346             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_347             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_348             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_349             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_350             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_351             ForQA             saed32rvt_ff1p16vn40c
+G_Cell_352             ForQA             saed32rvt_ff1p16vn40c
+vedic_4bit_1           ForQA             saed32rvt_ff1p16vn40c
+vedic_4bit_2           ForQA             saed32rvt_ff1p16vn40c
+vedic_4bit_3           ForQA             saed32rvt_ff1p16vn40c
+vedic_4bit_4           ForQA             saed32rvt_ff1p16vn40c
+vedic_4bit_5           ForQA             saed32rvt_ff1p16vn40c
+vedic_4bit_6           ForQA             saed32rvt_ff1p16vn40c
+vedic_4bit_7           ForQA             saed32rvt_ff1p16vn40c
+vedic_4bit_8           ForQA             saed32rvt_ff1p16vn40c
+vedic_4bit_9           ForQA             saed32rvt_ff1p16vn40c
+vedic_4bit_10          ForQA             saed32rvt_ff1p16vn40c
+vedic_4bit_11          ForQA             saed32rvt_ff1p16vn40c
+RCA_bw4_1              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw4_2              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw4_3              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw4_4              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw4_5              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw4_6              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw4_7              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw8_1              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw8_2              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw8_3              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw8_4              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw8_5              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw8_6              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw8_7              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw9_1              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw9_2              ForQA             saed32rvt_ff1p16vn40c
+RCA_bw9_3              ForQA             saed32rvt_ff1p16vn40c
+half_adder_1           ForQA             saed32rvt_ff1p16vn40c
+half_adder_2           ForQA             saed32rvt_ff1p16vn40c
+half_adder_3           ForQA             saed32rvt_ff1p16vn40c
+half_adder_4           ForQA             saed32rvt_ff1p16vn40c
+half_adder_5           ForQA             saed32rvt_ff1p16vn40c
+half_adder_6           ForQA             saed32rvt_ff1p16vn40c
+half_adder_7           ForQA             saed32rvt_ff1p16vn40c
+half_adder_8           ForQA             saed32rvt_ff1p16vn40c
+half_adder_9           ForQA             saed32rvt_ff1p16vn40c
+half_adder_10          ForQA             saed32rvt_ff1p16vn40c
+half_adder_11          ForQA             saed32rvt_ff1p16vn40c
+half_adder_12          ForQA             saed32rvt_ff1p16vn40c
+half_adder_13          ForQA             saed32rvt_ff1p16vn40c
+half_adder_14          ForQA             saed32rvt_ff1p16vn40c
+half_adder_15          ForQA             saed32rvt_ff1p16vn40c
+half_adder_16          ForQA             saed32rvt_ff1p16vn40c
+half_adder_17          ForQA             saed32rvt_ff1p16vn40c
+half_adder_18          ForQA             saed32rvt_ff1p16vn40c
+half_adder_19          ForQA             saed32rvt_ff1p16vn40c
+half_adder_20          ForQA             saed32rvt_ff1p16vn40c
+half_adder_21          ForQA             saed32rvt_ff1p16vn40c
+half_adder_22          ForQA             saed32rvt_ff1p16vn40c
+half_adder_23          ForQA             saed32rvt_ff1p16vn40c
+half_adder_24          ForQA             saed32rvt_ff1p16vn40c
+half_adder_25          ForQA             saed32rvt_ff1p16vn40c
+half_adder_26          ForQA             saed32rvt_ff1p16vn40c
+half_adder_27          ForQA             saed32rvt_ff1p16vn40c
+half_adder_28          ForQA             saed32rvt_ff1p16vn40c
+half_adder_29          ForQA             saed32rvt_ff1p16vn40c
+half_adder_30          ForQA             saed32rvt_ff1p16vn40c
+half_adder_31          ForQA             saed32rvt_ff1p16vn40c
+half_adder_32          ForQA             saed32rvt_ff1p16vn40c
+half_adder_33          ForQA             saed32rvt_ff1p16vn40c
+half_adder_34          ForQA             saed32rvt_ff1p16vn40c
+half_adder_35          ForQA             saed32rvt_ff1p16vn40c
+half_adder_36          ForQA             saed32rvt_ff1p16vn40c
+half_adder_37          ForQA             saed32rvt_ff1p16vn40c
+half_adder_38          ForQA             saed32rvt_ff1p16vn40c
+half_adder_39          ForQA             saed32rvt_ff1p16vn40c
+half_adder_40          ForQA             saed32rvt_ff1p16vn40c
+half_adder_41          ForQA             saed32rvt_ff1p16vn40c
+half_adder_42          ForQA             saed32rvt_ff1p16vn40c
+half_adder_43          ForQA             saed32rvt_ff1p16vn40c
+half_adder_44          ForQA             saed32rvt_ff1p16vn40c
+half_adder_45          ForQA             saed32rvt_ff1p16vn40c
+half_adder_46          ForQA             saed32rvt_ff1p16vn40c
+half_adder_47          ForQA             saed32rvt_ff1p16vn40c
+half_adder_48          ForQA             saed32rvt_ff1p16vn40c
+half_adder_49          ForQA             saed32rvt_ff1p16vn40c
+half_adder_50          ForQA             saed32rvt_ff1p16vn40c
+half_adder_51          ForQA             saed32rvt_ff1p16vn40c
+half_adder_52          ForQA             saed32rvt_ff1p16vn40c
+half_adder_53          ForQA             saed32rvt_ff1p16vn40c
+half_adder_54          ForQA             saed32rvt_ff1p16vn40c
+half_adder_55          ForQA             saed32rvt_ff1p16vn40c
+half_adder_56          ForQA             saed32rvt_ff1p16vn40c
+half_adder_57          ForQA             saed32rvt_ff1p16vn40c
+half_adder_58          ForQA             saed32rvt_ff1p16vn40c
+half_adder_59          ForQA             saed32rvt_ff1p16vn40c
+half_adder_60          ForQA             saed32rvt_ff1p16vn40c
+half_adder_61          ForQA             saed32rvt_ff1p16vn40c
+half_adder_62          ForQA             saed32rvt_ff1p16vn40c
+half_adder_63          ForQA             saed32rvt_ff1p16vn40c
+half_adder_64          ForQA             saed32rvt_ff1p16vn40c
+half_adder_65          ForQA             saed32rvt_ff1p16vn40c
+half_adder_66          ForQA             saed32rvt_ff1p16vn40c
+half_adder_67          ForQA             saed32rvt_ff1p16vn40c
+half_adder_68          ForQA             saed32rvt_ff1p16vn40c
+half_adder_69          ForQA             saed32rvt_ff1p16vn40c
+half_adder_70          ForQA             saed32rvt_ff1p16vn40c
+half_adder_71          ForQA             saed32rvt_ff1p16vn40c
+half_adder_72          ForQA             saed32rvt_ff1p16vn40c
+half_adder_73          ForQA             saed32rvt_ff1p16vn40c
+half_adder_74          ForQA             saed32rvt_ff1p16vn40c
+half_adder_75          ForQA             saed32rvt_ff1p16vn40c
+half_adder_76          ForQA             saed32rvt_ff1p16vn40c
+half_adder_77          ForQA             saed32rvt_ff1p16vn40c
+half_adder_78          ForQA             saed32rvt_ff1p16vn40c
+half_adder_79          ForQA             saed32rvt_ff1p16vn40c
+half_adder_80          ForQA             saed32rvt_ff1p16vn40c
+half_adder_81          ForQA             saed32rvt_ff1p16vn40c
+half_adder_82          ForQA             saed32rvt_ff1p16vn40c
+half_adder_83          ForQA             saed32rvt_ff1p16vn40c
+Adder2_1               ForQA             saed32rvt_ff1p16vn40c
+Adder2_2               ForQA             saed32rvt_ff1p16vn40c
+Adder2_3               ForQA             saed32rvt_ff1p16vn40c
+Adder2_4               ForQA             saed32rvt_ff1p16vn40c
+Adder2_5               ForQA             saed32rvt_ff1p16vn40c
+Adder2_6               ForQA             saed32rvt_ff1p16vn40c
+Adder2_7               ForQA             saed32rvt_ff1p16vn40c
+Adder2_8               ForQA             saed32rvt_ff1p16vn40c
+Adder2_9               ForQA             saed32rvt_ff1p16vn40c
+Adder2_10              ForQA             saed32rvt_ff1p16vn40c
+Adder2_11              ForQA             saed32rvt_ff1p16vn40c
+Adder3_1               ForQA             saed32rvt_ff1p16vn40c
+Adder3_2               ForQA             saed32rvt_ff1p16vn40c
+Adder3_3               ForQA             saed32rvt_ff1p16vn40c
+Adder3_4               ForQA             saed32rvt_ff1p16vn40c
+Adder3_5               ForQA             saed32rvt_ff1p16vn40c
+Adder3_6               ForQA             saed32rvt_ff1p16vn40c
+Adder3_7               ForQA             saed32rvt_ff1p16vn40c
+Adder3_8               ForQA             saed32rvt_ff1p16vn40c
+Adder3_9               ForQA             saed32rvt_ff1p16vn40c
+Adder3_10              ForQA             saed32rvt_ff1p16vn40c
+Adder3_11              ForQA             saed32rvt_ff1p16vn40c
+Adder4_1               ForQA             saed32rvt_ff1p16vn40c
+Adder4_2               ForQA             saed32rvt_ff1p16vn40c
+Adder4_3               ForQA             saed32rvt_ff1p16vn40c
+Adder4_4               ForQA             saed32rvt_ff1p16vn40c
+Adder4_5               ForQA             saed32rvt_ff1p16vn40c
+Adder4_6               ForQA             saed32rvt_ff1p16vn40c
+Adder4_7               ForQA             saed32rvt_ff1p16vn40c
+Adder4_8               ForQA             saed32rvt_ff1p16vn40c
+Adder4_9               ForQA             saed32rvt_ff1p16vn40c
+Adder4_10              ForQA             saed32rvt_ff1p16vn40c
+Adder4_11              ForQA             saed32rvt_ff1p16vn40c
+Adder5_1               ForQA             saed32rvt_ff1p16vn40c
+Adder5_2               ForQA             saed32rvt_ff1p16vn40c
+Adder5_3               ForQA             saed32rvt_ff1p16vn40c
+Adder5_4               ForQA             saed32rvt_ff1p16vn40c
+Adder5_5               ForQA             saed32rvt_ff1p16vn40c
+Adder5_6               ForQA             saed32rvt_ff1p16vn40c
+Adder5_7               ForQA             saed32rvt_ff1p16vn40c
+Adder5_8               ForQA             saed32rvt_ff1p16vn40c
+Adder5_9               ForQA             saed32rvt_ff1p16vn40c
+Adder5_10              ForQA             saed32rvt_ff1p16vn40c
+Adder5_11              ForQA             saed32rvt_ff1p16vn40c
+full_adder_1           ForQA             saed32rvt_ff1p16vn40c
+full_adder_2           ForQA             saed32rvt_ff1p16vn40c
+full_adder_3           ForQA             saed32rvt_ff1p16vn40c
+full_adder_4           ForQA             saed32rvt_ff1p16vn40c
+full_adder_5           ForQA             saed32rvt_ff1p16vn40c
+full_adder_6           ForQA             saed32rvt_ff1p16vn40c
+full_adder_7           ForQA             saed32rvt_ff1p16vn40c
+full_adder_8           ForQA             saed32rvt_ff1p16vn40c
+full_adder_9           ForQA             saed32rvt_ff1p16vn40c
+full_adder_10          ForQA             saed32rvt_ff1p16vn40c
+full_adder_11          ForQA             saed32rvt_ff1p16vn40c
+full_adder_12          ForQA             saed32rvt_ff1p16vn40c
+full_adder_13          ForQA             saed32rvt_ff1p16vn40c
+full_adder_14          ForQA             saed32rvt_ff1p16vn40c
+full_adder_15          ForQA             saed32rvt_ff1p16vn40c
+full_adder_16          ForQA             saed32rvt_ff1p16vn40c
+full_adder_17          ForQA             saed32rvt_ff1p16vn40c
+full_adder_18          ForQA             saed32rvt_ff1p16vn40c
+full_adder_19          ForQA             saed32rvt_ff1p16vn40c
+full_adder_20          ForQA             saed32rvt_ff1p16vn40c
+full_adder_21          ForQA             saed32rvt_ff1p16vn40c
+full_adder_22          ForQA             saed32rvt_ff1p16vn40c
+full_adder_23          ForQA             saed32rvt_ff1p16vn40c
+full_adder_24          ForQA             saed32rvt_ff1p16vn40c
+full_adder_25          ForQA             saed32rvt_ff1p16vn40c
+full_adder_26          ForQA             saed32rvt_ff1p16vn40c
+full_adder_27          ForQA             saed32rvt_ff1p16vn40c
+full_adder_28          ForQA             saed32rvt_ff1p16vn40c
+full_adder_29          ForQA             saed32rvt_ff1p16vn40c
+full_adder_30          ForQA             saed32rvt_ff1p16vn40c
+full_adder_31          ForQA             saed32rvt_ff1p16vn40c
+full_adder_32          ForQA             saed32rvt_ff1p16vn40c
+full_adder_33          ForQA             saed32rvt_ff1p16vn40c
+full_adder_34          ForQA             saed32rvt_ff1p16vn40c
+full_adder_35          ForQA             saed32rvt_ff1p16vn40c
+full_adder_36          ForQA             saed32rvt_ff1p16vn40c
+full_adder_37          ForQA             saed32rvt_ff1p16vn40c
+full_adder_38          ForQA             saed32rvt_ff1p16vn40c
+full_adder_39          ForQA             saed32rvt_ff1p16vn40c
+full_adder_40          ForQA             saed32rvt_ff1p16vn40c
+full_adder_41          ForQA             saed32rvt_ff1p16vn40c
+full_adder_42          ForQA             saed32rvt_ff1p16vn40c
+full_adder_43          ForQA             saed32rvt_ff1p16vn40c
+full_adder_44          ForQA             saed32rvt_ff1p16vn40c
+full_adder_45          ForQA             saed32rvt_ff1p16vn40c
+full_adder_46          ForQA             saed32rvt_ff1p16vn40c
+full_adder_47          ForQA             saed32rvt_ff1p16vn40c
+full_adder_48          ForQA             saed32rvt_ff1p16vn40c
+full_adder_49          ForQA             saed32rvt_ff1p16vn40c
+full_adder_50          ForQA             saed32rvt_ff1p16vn40c
+full_adder_51          ForQA             saed32rvt_ff1p16vn40c
+full_adder_52          ForQA             saed32rvt_ff1p16vn40c
+full_adder_53          ForQA             saed32rvt_ff1p16vn40c
+full_adder_54          ForQA             saed32rvt_ff1p16vn40c
+full_adder_55          ForQA             saed32rvt_ff1p16vn40c
+full_adder_56          ForQA             saed32rvt_ff1p16vn40c
+full_adder_57          ForQA             saed32rvt_ff1p16vn40c
+full_adder_58          ForQA             saed32rvt_ff1p16vn40c
+full_adder_59          ForQA             saed32rvt_ff1p16vn40c
+full_adder_60          ForQA             saed32rvt_ff1p16vn40c
+full_adder_61          ForQA             saed32rvt_ff1p16vn40c
+full_adder_62          ForQA             saed32rvt_ff1p16vn40c
+full_adder_63          ForQA             saed32rvt_ff1p16vn40c
+full_adder_64          ForQA             saed32rvt_ff1p16vn40c
+full_adder_65          ForQA             saed32rvt_ff1p16vn40c
+full_adder_66          ForQA             saed32rvt_ff1p16vn40c
+full_adder_67          ForQA             saed32rvt_ff1p16vn40c
+full_adder_68          ForQA             saed32rvt_ff1p16vn40c
+full_adder_69          ForQA             saed32rvt_ff1p16vn40c
+full_adder_70          ForQA             saed32rvt_ff1p16vn40c
+full_adder_71          ForQA             saed32rvt_ff1p16vn40c
+full_adder_72          ForQA             saed32rvt_ff1p16vn40c
+full_adder_73          ForQA             saed32rvt_ff1p16vn40c
+full_adder_74          ForQA             saed32rvt_ff1p16vn40c
+full_adder_75          ForQA             saed32rvt_ff1p16vn40c
+full_adder_76          ForQA             saed32rvt_ff1p16vn40c
+full_adder_77          ForQA             saed32rvt_ff1p16vn40c
+full_adder_78          ForQA             saed32rvt_ff1p16vn40c
+full_adder_79          ForQA             saed32rvt_ff1p16vn40c
+full_adder_80          ForQA             saed32rvt_ff1p16vn40c
+full_adder_81          ForQA             saed32rvt_ff1p16vn40c
+full_adder_82          ForQA             saed32rvt_ff1p16vn40c
+full_adder_83          ForQA             saed32rvt_ff1p16vn40c
+full_adder_84          ForQA             saed32rvt_ff1p16vn40c
+full_adder_85          ForQA             saed32rvt_ff1p16vn40c
+full_adder_86          ForQA             saed32rvt_ff1p16vn40c
+full_adder_87          ForQA             saed32rvt_ff1p16vn40c
+full_adder_88          ForQA             saed32rvt_ff1p16vn40c
+full_adder_89          ForQA             saed32rvt_ff1p16vn40c
+full_adder_90          ForQA             saed32rvt_ff1p16vn40c
+full_adder_91          ForQA             saed32rvt_ff1p16vn40c
+full_adder_92          ForQA             saed32rvt_ff1p16vn40c
+full_adder_93          ForQA             saed32rvt_ff1p16vn40c
+full_adder_94          ForQA             saed32rvt_ff1p16vn40c
+full_adder_95          ForQA             saed32rvt_ff1p16vn40c
+
+
+Global Operating Voltage = 1.16 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  = 178.0288 uW   (73%)
+  Net Switching Power  =  65.5585 uW   (27%)
+                         ---------
+Total Dynamic Power    = 243.5874 uW  (100%)
+
+Cell Leakage Power     = 224.5132 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       -3.2544e+01            5.2324        1.3184e+07        -1.4127e+01
+                                                                                 (  -3.02%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational    210.5729           60.3261        2.1133e+08          482.2273  ( 103.02%)
+--------------------------------------------------------------------------------------------------
+Total            178.0289 uW        65.5585 uW     2.2451e+08 pW       468.1002 uW
+1
+dc_shell>  
+****************************************
+Report : area
+Design : fp16MAC
+Version: O-2018.06-SP4
+Date   : Fri Dec 23 23:45:22 2022
+****************************************
+
+Library(s) Used:
+
+    saed32rvt_ff1p16vn40c (File: /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ff1p16vn40c.db)
+
+Number of ports:                         4643
+Number of nets:                          7599
+Number of cells:                         3686
+Number of combinational cells:           2906
+Number of sequential cells:                80
+Number of macros/black boxes:               0
+Number of buf/inv:                        147
+Number of references:                       4
+
+Combinational area:               8849.294124
+Buf/Inv area:                      194.420162
+Noncombinational area:             569.282570
+Macro/Black Box area:                0.000000
+Net Interconnect area:            1586.246035
+
+Total cell area:                  9418.576694
+Total area:                      11004.822730
+1
+dc_shell> dc_shell> dc_shell> 
+Thank you...

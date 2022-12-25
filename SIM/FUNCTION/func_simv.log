@@ -1,0 +1,15 @@
+Command: /home/capstone8/capstone/project/lab4_front-end/SIM/FUNCTION/./simv -ucli -i fsdb.tcl -l func_simv.log
+Chronologic VCS simulator copyright 1991-2017
+Contains Synopsys proprietary information.
+Compiler version M-2017.03-SP2; Runtime version M-2017.03-SP2;  Dec 23 23:57 2022
+ucli% # Example of TB file expression 
+ucli% call {$fsdbDumpfile ("TOP.fsdb")};
+*Verdi* Loading libsscore_vcs201703.so
+FSDB Dumper for VCS, Release Verdi_M-2017.03-SP2, Linux, 08/20/2017
+(C) 1996 - 2017 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'TOP.fsdb'
+ucli% call {$fsdbDumpvars (0, tb_config_mul)};
+file fsdb.tcl, line 3: Error-[UCLI-CALL-CMD-GENERAL] call command failed
+  Calling of $fsdbDumpvars (0, tb_config_mul) command failed; The specified 
+  object 'tb_config_mul' provided to the command is not valid or not 
+  supported. Please also enter 'show' command to see all valid objects.

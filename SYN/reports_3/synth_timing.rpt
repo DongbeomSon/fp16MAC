@@ -1,0 +1,1645 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : fp16MAC
+Version: O-2018.06-SP4
+Date   : Fri Dec 23 04:05:21 2022
+****************************************
+
+Operating Conditions: ff1p16vn40c   Library: saed32rvt_ff1p16vn40c
+Wire Load Model Mode: enclosed
+
+  Startpoint: a[1] (input port clocked by MAIN_CLOCK)
+  Endpoint: m1/p_multi_reg[21]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+  RCA_bw4_6          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_6bit_3   8000                  saed32rvt_ff1p16vn40c
+  vedic_4bit_7       ForQA                 saed32rvt_ff1p16vn40c
+  Adder2_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_56      ForQA                 saed32rvt_ff1p16vn40c
+  Adder3_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_54      ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_51      ForQA                 saed32rvt_ff1p16vn40c
+  Adder5_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_49      ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw8_5          ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw9_3          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_11bit    8000                  saed32rvt_ff1p16vn40c
+  RCA_bw16           8000                  saed32rvt_ff1p16vn40c
+  fp16multiplier     8000                  saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  a[1] (in)                                               0.01       2.01 f
+  m1/A[1] (fp16multiplier)                                0.00       2.01 f
+  m1/U0/a[1] (menMult)                                    0.00       2.01 f
+  m1/U0/menti/a[1] (karastuba_11bit)                      0.00       2.01 f
+  m1/U0/menti/km1/a[1] (karastuba_6bit_3)                 0.00       2.01 f
+  m1/U0/menti/km1/rca1/B[2] (RCA_bw4_6)                   0.00       2.01 f
+  m1/U0/menti/km1/rca1/U4/Y (XOR2X1_RVT)                  0.04       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/P1 (G_Cell_98)
+                                                          0.00       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.08 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/GG (G_Cell_98)
+                                                          0.00       2.08 r
+  m1/U0/menti/km1/rca1/U2/Y (XOR2X1_RVT)                  0.04       2.12 f
+  m1/U0/menti/km1/rca1/Sum[3] (RCA_bw4_6)                 0.00       2.12 f
+  m1/U0/menti/km1/u2/a[2] (vedic_4bit_7)                  0.00       2.12 f
+  m1/U0/menti/km1/u2/U9/Y (AND2X1_RVT)                    0.02       2.14 f
+  m1/U0/menti/km1/u2/adder2/c (Adder2_7)                  0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/A (half_adder_41)          0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/U2/Y (AND2X1_RVT)          0.02       2.16 f
+  m1/U0/menti/km1/u2/adder2/u1/cout (half_adder_41)       0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/B (full_adder_56)          0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/U2/Y (XOR2X1_RVT)          0.03       2.20 f
+  m1/U0/menti/km1/u2/adder2/u3/U1/Y (XOR2X1_RVT)          0.04       2.24 r
+  m1/U0/menti/km1/u2/adder2/u3/sum (full_adder_56)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder2/msb[0] (Adder2_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/add[0] (Adder3_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/cin (full_adder_55)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/U1/Y (XOR2X1_RVT)          0.04       2.28 f
+  m1/U0/menti/km1/u2/adder3/u1/sum (full_adder_55)        0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/B (half_adder_38)          0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/U2/Y (AND2X1_RVT)          0.02       2.30 f
+  m1/U0/menti/km1/u2/adder3/u2/cout (half_adder_38)       0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/B (full_adder_54)          0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/U1/Y (XOR2X1_RVT)          0.04       2.34 r
+  m1/U0/menti/km1/u2/adder3/u4/U3/Y (AO22X1_RVT)          0.02       2.36 r
+  m1/U0/menti/km1/u2/adder3/u4/cout (full_adder_54)       0.00       2.36 r
+  m1/U0/menti/km1/u2/adder3/U1/Y (OR2X1_RVT)              0.02       2.38 r
+  m1/U0/menti/km1/u2/adder3/msb[1] (Adder3_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/add[1] (Adder4_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/B (full_adder_51)          0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/U1/Y (XOR2X1_RVT)          0.04       2.42 f
+  m1/U0/menti/km1/u2/adder4/u2/U2/Y (XOR2X1_RVT)          0.04       2.46 r
+  m1/U0/menti/km1/u2/adder4/u2/sum (full_adder_51)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder4/msb[0] (Adder4_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/add[0] (Adder5_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/cin (full_adder_50)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/U3/Y (AO22X1_RVT)          0.02       2.49 r
+  m1/U0/menti/km1/u2/adder5/u0/cout (full_adder_50)       0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/B (full_adder_49)          0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/U1/Y (XOR2X1_RVT)          0.04       2.53 f
+  m1/U0/menti/km1/u2/adder5/u1/U2/Y (XOR2X1_RVT)          0.04       2.56 f
+  m1/U0/menti/km1/u2/adder5/u1/sum (full_adder_49)        0.00       2.56 f
+  m1/U0/menti/km1/u2/adder5/msb[0] (Adder5_7)             0.00       2.56 f
+  m1/U0/menti/km1/u2/U1/Y (XNOR2X1_RVT)                   0.03       2.59 f
+  m1/U0/menti/km1/u2/out[6] (vedic_4bit_7)                0.00       2.59 f
+  m1/U0/menti/km1/sub_mid/B[7] (RCA_bw8_5)                0.00       2.59 f
+  m1/U0/menti/km1/sub_mid/U6/Y (XOR2X1_RVT)               0.04       2.63 r
+  m1/U0/menti/km1/sub_mid/U5/Y (XOR2X1_RVT)               0.04       2.67 f
+  m1/U0/menti/km1/sub_mid/Sum[7] (RCA_bw8_5)              0.00       2.67 f
+  m1/U0/menti/km1/add1/B[7] (RCA_bw9_3)                   0.00       2.67 f
+  m1/U0/menti/km1/add1/U3/Y (XOR2X1_RVT)                  0.04       2.71 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/P1 (G_Cell_69)
+                                                          0.00       2.71 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.74 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/GG (G_Cell_69)
+                                                          0.00       2.74 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/G0 (G_Cell_68)
+                                                          0.00       2.74 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.77 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/GG (G_Cell_68)
+                                                          0.00       2.77 r
+  m1/U0/menti/km1/add1/U13/Y (XOR2X1_RVT)                 0.04       2.81 f
+  m1/U0/menti/km1/add1/Sum[9] (RCA_bw9_3)                 0.00       2.81 f
+  m1/U0/menti/km1/out[11] (karastuba_6bit_3)              0.00       2.81 f
+  m1/U0/menti/add1/A[6] (RCA_bw16)                        0.00       2.81 f
+  m1/U0/menti/add1/U8/Y (XOR2X1_RVT)                      0.04       2.84 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/P1 (G_Cell_143)
+                                                          0.00       2.84 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.87 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/GG (G_Cell_143)
+                                                          0.00       2.87 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/G0 (G_Cell_142)
+                                                          0.00       2.87 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.90 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/GG (G_Cell_142)
+                                                          0.00       2.90 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/G0 (G_Cell_141)
+                                                          0.00       2.90 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.92 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/GG (G_Cell_141)
+                                                          0.00       2.92 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/G0 (G_Cell_140)
+                                                          0.00       2.92 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.95 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/GG (G_Cell_140)
+                                                          0.00       2.95 r
+  m1/U0/menti/add1/loop_1[9].genblk1.U1/G0 (G_Cell_139)
+                                                          0.00       2.95 r
+  m1/U0/menti/add1/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.97 r
+  m1/U0/menti/add1/loop_1[9].genblk1.U1/GG (G_Cell_139)
+                                                          0.00       2.97 r
+  m1/U0/menti/add1/loop_1[10].genblk1.U1/G0 (G_Cell_138)
+                                                          0.00       2.97 r
+  m1/U0/menti/add1/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       3.00 r
+  m1/U0/menti/add1/loop_1[10].genblk1.U1/GG (G_Cell_138)
+                                                          0.00       3.00 r
+  m1/U0/menti/add1/loop_1[11].genblk1.U1/G0 (G_Cell_137)
+                                                          0.00       3.00 r
+  m1/U0/menti/add1/loop_1[11].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       3.02 r
+  m1/U0/menti/add1/loop_1[11].genblk1.U1/GG (G_Cell_137)
+                                                          0.00       3.02 r
+  m1/U0/menti/add1/loop_1[12].genblk1.U1/G0 (G_Cell_136)
+                                                          0.00       3.02 r
+  m1/U0/menti/add1/loop_1[12].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       3.05 r
+  m1/U0/menti/add1/loop_1[12].genblk1.U1/GG (G_Cell_136)
+                                                          0.00       3.05 r
+  m1/U0/menti/add1/loop_1[13].genblk1.U1/G0 (G_Cell_135)
+                                                          0.00       3.05 r
+  m1/U0/menti/add1/loop_1[13].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       3.08 r
+  m1/U0/menti/add1/loop_1[13].genblk1.U1/GG (G_Cell_135)
+                                                          0.00       3.08 r
+  m1/U0/menti/add1/loop_1[14].genblk1.U1/G0 (G_Cell_134)
+                                                          0.00       3.08 r
+  m1/U0/menti/add1/loop_1[14].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       3.10 r
+  m1/U0/menti/add1/loop_1[14].genblk1.U1/GG (G_Cell_134)
+                                                          0.00       3.10 r
+  m1/U0/menti/add1/U30/Y (XOR2X1_RVT)                     0.03       3.14 f
+  m1/U0/menti/add1/Sum[16] (RCA_bw16)                     0.00       3.14 f
+  m1/U0/menti/out[21] (karastuba_11bit)                   0.00       3.14 f
+  m1/U0/out[21] (menMult)                                 0.00       3.14 f
+  m1/U35/Y (AO22X1_RVT)                                   0.02       3.16 f
+  m1/p_multi_reg[21]/D (DFFX1_RVT)                        0.00       3.16 f
+  data arrival time                                                  3.16
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  m1/p_multi_reg[21]/CLK (DFFX1_RVT)                      0.00       4.50 r
+  library setup time                                     -0.01       4.49
+  data required time                                                 4.49
+  --------------------------------------------------------------------------
+  data required time                                                 4.49
+  data arrival time                                                 -3.16
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.33
+
+
+  Startpoint: a[1] (input port clocked by MAIN_CLOCK)
+  Endpoint: m1/p_multi_reg[20]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+  RCA_bw4_6          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_6bit_3   8000                  saed32rvt_ff1p16vn40c
+  vedic_4bit_7       ForQA                 saed32rvt_ff1p16vn40c
+  Adder2_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_56      ForQA                 saed32rvt_ff1p16vn40c
+  Adder3_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_54      ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_51      ForQA                 saed32rvt_ff1p16vn40c
+  Adder5_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_49      ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw8_5          ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw9_3          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_11bit    8000                  saed32rvt_ff1p16vn40c
+  RCA_bw16           8000                  saed32rvt_ff1p16vn40c
+  fp16multiplier     8000                  saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  a[1] (in)                                               0.01       2.01 f
+  m1/A[1] (fp16multiplier)                                0.00       2.01 f
+  m1/U0/a[1] (menMult)                                    0.00       2.01 f
+  m1/U0/menti/a[1] (karastuba_11bit)                      0.00       2.01 f
+  m1/U0/menti/km1/a[1] (karastuba_6bit_3)                 0.00       2.01 f
+  m1/U0/menti/km1/rca1/B[2] (RCA_bw4_6)                   0.00       2.01 f
+  m1/U0/menti/km1/rca1/U4/Y (XOR2X1_RVT)                  0.04       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/P1 (G_Cell_98)
+                                                          0.00       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.08 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/GG (G_Cell_98)
+                                                          0.00       2.08 r
+  m1/U0/menti/km1/rca1/U2/Y (XOR2X1_RVT)                  0.04       2.12 f
+  m1/U0/menti/km1/rca1/Sum[3] (RCA_bw4_6)                 0.00       2.12 f
+  m1/U0/menti/km1/u2/a[2] (vedic_4bit_7)                  0.00       2.12 f
+  m1/U0/menti/km1/u2/U9/Y (AND2X1_RVT)                    0.02       2.14 f
+  m1/U0/menti/km1/u2/adder2/c (Adder2_7)                  0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/A (half_adder_41)          0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/U2/Y (AND2X1_RVT)          0.02       2.16 f
+  m1/U0/menti/km1/u2/adder2/u1/cout (half_adder_41)       0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/B (full_adder_56)          0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/U2/Y (XOR2X1_RVT)          0.03       2.20 f
+  m1/U0/menti/km1/u2/adder2/u3/U1/Y (XOR2X1_RVT)          0.04       2.24 r
+  m1/U0/menti/km1/u2/adder2/u3/sum (full_adder_56)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder2/msb[0] (Adder2_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/add[0] (Adder3_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/cin (full_adder_55)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/U1/Y (XOR2X1_RVT)          0.04       2.28 f
+  m1/U0/menti/km1/u2/adder3/u1/sum (full_adder_55)        0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/B (half_adder_38)          0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/U2/Y (AND2X1_RVT)          0.02       2.30 f
+  m1/U0/menti/km1/u2/adder3/u2/cout (half_adder_38)       0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/B (full_adder_54)          0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/U1/Y (XOR2X1_RVT)          0.04       2.34 r
+  m1/U0/menti/km1/u2/adder3/u4/U3/Y (AO22X1_RVT)          0.02       2.36 r
+  m1/U0/menti/km1/u2/adder3/u4/cout (full_adder_54)       0.00       2.36 r
+  m1/U0/menti/km1/u2/adder3/U1/Y (OR2X1_RVT)              0.02       2.38 r
+  m1/U0/menti/km1/u2/adder3/msb[1] (Adder3_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/add[1] (Adder4_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/B (full_adder_51)          0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/U1/Y (XOR2X1_RVT)          0.04       2.42 f
+  m1/U0/menti/km1/u2/adder4/u2/U2/Y (XOR2X1_RVT)          0.04       2.46 r
+  m1/U0/menti/km1/u2/adder4/u2/sum (full_adder_51)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder4/msb[0] (Adder4_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/add[0] (Adder5_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/cin (full_adder_50)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/U3/Y (AO22X1_RVT)          0.02       2.49 r
+  m1/U0/menti/km1/u2/adder5/u0/cout (full_adder_50)       0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/B (full_adder_49)          0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/U1/Y (XOR2X1_RVT)          0.04       2.53 f
+  m1/U0/menti/km1/u2/adder5/u1/U2/Y (XOR2X1_RVT)          0.04       2.56 f
+  m1/U0/menti/km1/u2/adder5/u1/sum (full_adder_49)        0.00       2.56 f
+  m1/U0/menti/km1/u2/adder5/msb[0] (Adder5_7)             0.00       2.56 f
+  m1/U0/menti/km1/u2/U1/Y (XNOR2X1_RVT)                   0.03       2.59 f
+  m1/U0/menti/km1/u2/out[6] (vedic_4bit_7)                0.00       2.59 f
+  m1/U0/menti/km1/sub_mid/B[7] (RCA_bw8_5)                0.00       2.59 f
+  m1/U0/menti/km1/sub_mid/U6/Y (XOR2X1_RVT)               0.04       2.63 r
+  m1/U0/menti/km1/sub_mid/U5/Y (XOR2X1_RVT)               0.04       2.67 f
+  m1/U0/menti/km1/sub_mid/Sum[7] (RCA_bw8_5)              0.00       2.67 f
+  m1/U0/menti/km1/add1/B[7] (RCA_bw9_3)                   0.00       2.67 f
+  m1/U0/menti/km1/add1/U3/Y (XOR2X1_RVT)                  0.04       2.71 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/P1 (G_Cell_69)
+                                                          0.00       2.71 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.74 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/GG (G_Cell_69)
+                                                          0.00       2.74 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/G0 (G_Cell_68)
+                                                          0.00       2.74 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.77 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/GG (G_Cell_68)
+                                                          0.00       2.77 r
+  m1/U0/menti/km1/add1/U13/Y (XOR2X1_RVT)                 0.04       2.81 f
+  m1/U0/menti/km1/add1/Sum[9] (RCA_bw9_3)                 0.00       2.81 f
+  m1/U0/menti/km1/out[11] (karastuba_6bit_3)              0.00       2.81 f
+  m1/U0/menti/add1/A[6] (RCA_bw16)                        0.00       2.81 f
+  m1/U0/menti/add1/U8/Y (XOR2X1_RVT)                      0.04       2.84 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/P1 (G_Cell_143)
+                                                          0.00       2.84 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.87 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/GG (G_Cell_143)
+                                                          0.00       2.87 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/G0 (G_Cell_142)
+                                                          0.00       2.87 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.90 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/GG (G_Cell_142)
+                                                          0.00       2.90 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/G0 (G_Cell_141)
+                                                          0.00       2.90 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.92 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/GG (G_Cell_141)
+                                                          0.00       2.92 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/G0 (G_Cell_140)
+                                                          0.00       2.92 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.95 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/GG (G_Cell_140)
+                                                          0.00       2.95 r
+  m1/U0/menti/add1/loop_1[9].genblk1.U1/G0 (G_Cell_139)
+                                                          0.00       2.95 r
+  m1/U0/menti/add1/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.97 r
+  m1/U0/menti/add1/loop_1[9].genblk1.U1/GG (G_Cell_139)
+                                                          0.00       2.97 r
+  m1/U0/menti/add1/loop_1[10].genblk1.U1/G0 (G_Cell_138)
+                                                          0.00       2.97 r
+  m1/U0/menti/add1/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       3.00 r
+  m1/U0/menti/add1/loop_1[10].genblk1.U1/GG (G_Cell_138)
+                                                          0.00       3.00 r
+  m1/U0/menti/add1/loop_1[11].genblk1.U1/G0 (G_Cell_137)
+                                                          0.00       3.00 r
+  m1/U0/menti/add1/loop_1[11].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       3.02 r
+  m1/U0/menti/add1/loop_1[11].genblk1.U1/GG (G_Cell_137)
+                                                          0.00       3.02 r
+  m1/U0/menti/add1/loop_1[12].genblk1.U1/G0 (G_Cell_136)
+                                                          0.00       3.02 r
+  m1/U0/menti/add1/loop_1[12].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       3.05 r
+  m1/U0/menti/add1/loop_1[12].genblk1.U1/GG (G_Cell_136)
+                                                          0.00       3.05 r
+  m1/U0/menti/add1/loop_1[13].genblk1.U1/G0 (G_Cell_135)
+                                                          0.00       3.05 r
+  m1/U0/menti/add1/loop_1[13].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       3.08 r
+  m1/U0/menti/add1/loop_1[13].genblk1.U1/GG (G_Cell_135)
+                                                          0.00       3.08 r
+  m1/U0/menti/add1/U29/Y (XOR2X1_RVT)                     0.03       3.11 f
+  m1/U0/menti/add1/Sum[15] (RCA_bw16)                     0.00       3.11 f
+  m1/U0/menti/out[20] (karastuba_11bit)                   0.00       3.11 f
+  m1/U0/out[20] (menMult)                                 0.00       3.11 f
+  m1/U34/Y (AO22X1_RVT)                                   0.02       3.13 f
+  m1/p_multi_reg[20]/D (DFFX1_RVT)                        0.00       3.13 f
+  data arrival time                                                  3.13
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  m1/p_multi_reg[20]/CLK (DFFX1_RVT)                      0.00       4.50 r
+  library setup time                                     -0.01       4.49
+  data required time                                                 4.49
+  --------------------------------------------------------------------------
+  data required time                                                 4.49
+  data arrival time                                                 -3.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.36
+
+
+  Startpoint: a[1] (input port clocked by MAIN_CLOCK)
+  Endpoint: m1/p_multi_reg[19]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+  RCA_bw4_6          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_6bit_3   8000                  saed32rvt_ff1p16vn40c
+  vedic_4bit_7       ForQA                 saed32rvt_ff1p16vn40c
+  Adder2_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_56      ForQA                 saed32rvt_ff1p16vn40c
+  Adder3_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_54      ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_51      ForQA                 saed32rvt_ff1p16vn40c
+  Adder5_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_49      ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw8_5          ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw9_3          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_11bit    8000                  saed32rvt_ff1p16vn40c
+  RCA_bw16           8000                  saed32rvt_ff1p16vn40c
+  fp16multiplier     8000                  saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  a[1] (in)                                               0.01       2.01 f
+  m1/A[1] (fp16multiplier)                                0.00       2.01 f
+  m1/U0/a[1] (menMult)                                    0.00       2.01 f
+  m1/U0/menti/a[1] (karastuba_11bit)                      0.00       2.01 f
+  m1/U0/menti/km1/a[1] (karastuba_6bit_3)                 0.00       2.01 f
+  m1/U0/menti/km1/rca1/B[2] (RCA_bw4_6)                   0.00       2.01 f
+  m1/U0/menti/km1/rca1/U4/Y (XOR2X1_RVT)                  0.04       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/P1 (G_Cell_98)
+                                                          0.00       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.08 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/GG (G_Cell_98)
+                                                          0.00       2.08 r
+  m1/U0/menti/km1/rca1/U2/Y (XOR2X1_RVT)                  0.04       2.12 f
+  m1/U0/menti/km1/rca1/Sum[3] (RCA_bw4_6)                 0.00       2.12 f
+  m1/U0/menti/km1/u2/a[2] (vedic_4bit_7)                  0.00       2.12 f
+  m1/U0/menti/km1/u2/U9/Y (AND2X1_RVT)                    0.02       2.14 f
+  m1/U0/menti/km1/u2/adder2/c (Adder2_7)                  0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/A (half_adder_41)          0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/U2/Y (AND2X1_RVT)          0.02       2.16 f
+  m1/U0/menti/km1/u2/adder2/u1/cout (half_adder_41)       0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/B (full_adder_56)          0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/U2/Y (XOR2X1_RVT)          0.03       2.20 f
+  m1/U0/menti/km1/u2/adder2/u3/U1/Y (XOR2X1_RVT)          0.04       2.24 r
+  m1/U0/menti/km1/u2/adder2/u3/sum (full_adder_56)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder2/msb[0] (Adder2_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/add[0] (Adder3_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/cin (full_adder_55)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/U1/Y (XOR2X1_RVT)          0.04       2.28 f
+  m1/U0/menti/km1/u2/adder3/u1/sum (full_adder_55)        0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/B (half_adder_38)          0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/U2/Y (AND2X1_RVT)          0.02       2.30 f
+  m1/U0/menti/km1/u2/adder3/u2/cout (half_adder_38)       0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/B (full_adder_54)          0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/U1/Y (XOR2X1_RVT)          0.04       2.34 r
+  m1/U0/menti/km1/u2/adder3/u4/U3/Y (AO22X1_RVT)          0.02       2.36 r
+  m1/U0/menti/km1/u2/adder3/u4/cout (full_adder_54)       0.00       2.36 r
+  m1/U0/menti/km1/u2/adder3/U1/Y (OR2X1_RVT)              0.02       2.38 r
+  m1/U0/menti/km1/u2/adder3/msb[1] (Adder3_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/add[1] (Adder4_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/B (full_adder_51)          0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/U1/Y (XOR2X1_RVT)          0.04       2.42 f
+  m1/U0/menti/km1/u2/adder4/u2/U2/Y (XOR2X1_RVT)          0.04       2.46 r
+  m1/U0/menti/km1/u2/adder4/u2/sum (full_adder_51)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder4/msb[0] (Adder4_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/add[0] (Adder5_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/cin (full_adder_50)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/U3/Y (AO22X1_RVT)          0.02       2.49 r
+  m1/U0/menti/km1/u2/adder5/u0/cout (full_adder_50)       0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/B (full_adder_49)          0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/U1/Y (XOR2X1_RVT)          0.04       2.53 f
+  m1/U0/menti/km1/u2/adder5/u1/U2/Y (XOR2X1_RVT)          0.04       2.56 f
+  m1/U0/menti/km1/u2/adder5/u1/sum (full_adder_49)        0.00       2.56 f
+  m1/U0/menti/km1/u2/adder5/msb[0] (Adder5_7)             0.00       2.56 f
+  m1/U0/menti/km1/u2/U1/Y (XNOR2X1_RVT)                   0.03       2.59 f
+  m1/U0/menti/km1/u2/out[6] (vedic_4bit_7)                0.00       2.59 f
+  m1/U0/menti/km1/sub_mid/B[7] (RCA_bw8_5)                0.00       2.59 f
+  m1/U0/menti/km1/sub_mid/U6/Y (XOR2X1_RVT)               0.04       2.63 r
+  m1/U0/menti/km1/sub_mid/U5/Y (XOR2X1_RVT)               0.04       2.67 f
+  m1/U0/menti/km1/sub_mid/Sum[7] (RCA_bw8_5)              0.00       2.67 f
+  m1/U0/menti/km1/add1/B[7] (RCA_bw9_3)                   0.00       2.67 f
+  m1/U0/menti/km1/add1/U3/Y (XOR2X1_RVT)                  0.04       2.71 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/P1 (G_Cell_69)
+                                                          0.00       2.71 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.74 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/GG (G_Cell_69)
+                                                          0.00       2.74 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/G0 (G_Cell_68)
+                                                          0.00       2.74 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.77 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/GG (G_Cell_68)
+                                                          0.00       2.77 r
+  m1/U0/menti/km1/add1/U13/Y (XOR2X1_RVT)                 0.04       2.81 f
+  m1/U0/menti/km1/add1/Sum[9] (RCA_bw9_3)                 0.00       2.81 f
+  m1/U0/menti/km1/out[11] (karastuba_6bit_3)              0.00       2.81 f
+  m1/U0/menti/add1/A[6] (RCA_bw16)                        0.00       2.81 f
+  m1/U0/menti/add1/U8/Y (XOR2X1_RVT)                      0.04       2.84 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/P1 (G_Cell_143)
+                                                          0.00       2.84 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.87 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/GG (G_Cell_143)
+                                                          0.00       2.87 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/G0 (G_Cell_142)
+                                                          0.00       2.87 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.90 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/GG (G_Cell_142)
+                                                          0.00       2.90 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/G0 (G_Cell_141)
+                                                          0.00       2.90 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.92 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/GG (G_Cell_141)
+                                                          0.00       2.92 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/G0 (G_Cell_140)
+                                                          0.00       2.92 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.95 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/GG (G_Cell_140)
+                                                          0.00       2.95 r
+  m1/U0/menti/add1/loop_1[9].genblk1.U1/G0 (G_Cell_139)
+                                                          0.00       2.95 r
+  m1/U0/menti/add1/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.97 r
+  m1/U0/menti/add1/loop_1[9].genblk1.U1/GG (G_Cell_139)
+                                                          0.00       2.97 r
+  m1/U0/menti/add1/loop_1[10].genblk1.U1/G0 (G_Cell_138)
+                                                          0.00       2.97 r
+  m1/U0/menti/add1/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       3.00 r
+  m1/U0/menti/add1/loop_1[10].genblk1.U1/GG (G_Cell_138)
+                                                          0.00       3.00 r
+  m1/U0/menti/add1/loop_1[11].genblk1.U1/G0 (G_Cell_137)
+                                                          0.00       3.00 r
+  m1/U0/menti/add1/loop_1[11].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       3.02 r
+  m1/U0/menti/add1/loop_1[11].genblk1.U1/GG (G_Cell_137)
+                                                          0.00       3.02 r
+  m1/U0/menti/add1/loop_1[12].genblk1.U1/G0 (G_Cell_136)
+                                                          0.00       3.02 r
+  m1/U0/menti/add1/loop_1[12].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       3.05 r
+  m1/U0/menti/add1/loop_1[12].genblk1.U1/GG (G_Cell_136)
+                                                          0.00       3.05 r
+  m1/U0/menti/add1/U28/Y (XOR2X1_RVT)                     0.03       3.08 f
+  m1/U0/menti/add1/Sum[14] (RCA_bw16)                     0.00       3.08 f
+  m1/U0/menti/out[19] (karastuba_11bit)                   0.00       3.08 f
+  m1/U0/out[19] (menMult)                                 0.00       3.08 f
+  m1/U33/Y (AO22X1_RVT)                                   0.02       3.10 f
+  m1/p_multi_reg[19]/D (DFFX1_RVT)                        0.00       3.10 f
+  data arrival time                                                  3.10
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  m1/p_multi_reg[19]/CLK (DFFX1_RVT)                      0.00       4.50 r
+  library setup time                                     -0.01       4.49
+  data required time                                                 4.49
+  --------------------------------------------------------------------------
+  data required time                                                 4.49
+  data arrival time                                                 -3.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.39
+
+
+  Startpoint: a[1] (input port clocked by MAIN_CLOCK)
+  Endpoint: m1/p_multi_reg[18]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+  RCA_bw4_6          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_6bit_3   8000                  saed32rvt_ff1p16vn40c
+  vedic_4bit_7       ForQA                 saed32rvt_ff1p16vn40c
+  Adder2_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_56      ForQA                 saed32rvt_ff1p16vn40c
+  Adder3_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_54      ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_51      ForQA                 saed32rvt_ff1p16vn40c
+  Adder5_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_49      ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw8_5          ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw9_3          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_11bit    8000                  saed32rvt_ff1p16vn40c
+  RCA_bw16           8000                  saed32rvt_ff1p16vn40c
+  fp16multiplier     8000                  saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  a[1] (in)                                               0.01       2.01 f
+  m1/A[1] (fp16multiplier)                                0.00       2.01 f
+  m1/U0/a[1] (menMult)                                    0.00       2.01 f
+  m1/U0/menti/a[1] (karastuba_11bit)                      0.00       2.01 f
+  m1/U0/menti/km1/a[1] (karastuba_6bit_3)                 0.00       2.01 f
+  m1/U0/menti/km1/rca1/B[2] (RCA_bw4_6)                   0.00       2.01 f
+  m1/U0/menti/km1/rca1/U4/Y (XOR2X1_RVT)                  0.04       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/P1 (G_Cell_98)
+                                                          0.00       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.08 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/GG (G_Cell_98)
+                                                          0.00       2.08 r
+  m1/U0/menti/km1/rca1/U2/Y (XOR2X1_RVT)                  0.04       2.12 f
+  m1/U0/menti/km1/rca1/Sum[3] (RCA_bw4_6)                 0.00       2.12 f
+  m1/U0/menti/km1/u2/a[2] (vedic_4bit_7)                  0.00       2.12 f
+  m1/U0/menti/km1/u2/U9/Y (AND2X1_RVT)                    0.02       2.14 f
+  m1/U0/menti/km1/u2/adder2/c (Adder2_7)                  0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/A (half_adder_41)          0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/U2/Y (AND2X1_RVT)          0.02       2.16 f
+  m1/U0/menti/km1/u2/adder2/u1/cout (half_adder_41)       0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/B (full_adder_56)          0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/U2/Y (XOR2X1_RVT)          0.03       2.20 f
+  m1/U0/menti/km1/u2/adder2/u3/U1/Y (XOR2X1_RVT)          0.04       2.24 r
+  m1/U0/menti/km1/u2/adder2/u3/sum (full_adder_56)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder2/msb[0] (Adder2_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/add[0] (Adder3_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/cin (full_adder_55)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/U1/Y (XOR2X1_RVT)          0.04       2.28 f
+  m1/U0/menti/km1/u2/adder3/u1/sum (full_adder_55)        0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/B (half_adder_38)          0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/U2/Y (AND2X1_RVT)          0.02       2.30 f
+  m1/U0/menti/km1/u2/adder3/u2/cout (half_adder_38)       0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/B (full_adder_54)          0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/U1/Y (XOR2X1_RVT)          0.04       2.34 r
+  m1/U0/menti/km1/u2/adder3/u4/U3/Y (AO22X1_RVT)          0.02       2.36 r
+  m1/U0/menti/km1/u2/adder3/u4/cout (full_adder_54)       0.00       2.36 r
+  m1/U0/menti/km1/u2/adder3/U1/Y (OR2X1_RVT)              0.02       2.38 r
+  m1/U0/menti/km1/u2/adder3/msb[1] (Adder3_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/add[1] (Adder4_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/B (full_adder_51)          0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/U1/Y (XOR2X1_RVT)          0.04       2.42 f
+  m1/U0/menti/km1/u2/adder4/u2/U2/Y (XOR2X1_RVT)          0.04       2.46 r
+  m1/U0/menti/km1/u2/adder4/u2/sum (full_adder_51)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder4/msb[0] (Adder4_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/add[0] (Adder5_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/cin (full_adder_50)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/U3/Y (AO22X1_RVT)          0.02       2.49 r
+  m1/U0/menti/km1/u2/adder5/u0/cout (full_adder_50)       0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/B (full_adder_49)          0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/U1/Y (XOR2X1_RVT)          0.04       2.53 f
+  m1/U0/menti/km1/u2/adder5/u1/U2/Y (XOR2X1_RVT)          0.04       2.56 f
+  m1/U0/menti/km1/u2/adder5/u1/sum (full_adder_49)        0.00       2.56 f
+  m1/U0/menti/km1/u2/adder5/msb[0] (Adder5_7)             0.00       2.56 f
+  m1/U0/menti/km1/u2/U1/Y (XNOR2X1_RVT)                   0.03       2.59 f
+  m1/U0/menti/km1/u2/out[6] (vedic_4bit_7)                0.00       2.59 f
+  m1/U0/menti/km1/sub_mid/B[7] (RCA_bw8_5)                0.00       2.59 f
+  m1/U0/menti/km1/sub_mid/U6/Y (XOR2X1_RVT)               0.04       2.63 r
+  m1/U0/menti/km1/sub_mid/U5/Y (XOR2X1_RVT)               0.04       2.67 f
+  m1/U0/menti/km1/sub_mid/Sum[7] (RCA_bw8_5)              0.00       2.67 f
+  m1/U0/menti/km1/add1/B[7] (RCA_bw9_3)                   0.00       2.67 f
+  m1/U0/menti/km1/add1/U3/Y (XOR2X1_RVT)                  0.04       2.71 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/P1 (G_Cell_69)
+                                                          0.00       2.71 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.74 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/GG (G_Cell_69)
+                                                          0.00       2.74 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/G0 (G_Cell_68)
+                                                          0.00       2.74 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.77 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/GG (G_Cell_68)
+                                                          0.00       2.77 r
+  m1/U0/menti/km1/add1/U13/Y (XOR2X1_RVT)                 0.04       2.81 f
+  m1/U0/menti/km1/add1/Sum[9] (RCA_bw9_3)                 0.00       2.81 f
+  m1/U0/menti/km1/out[11] (karastuba_6bit_3)              0.00       2.81 f
+  m1/U0/menti/add1/A[6] (RCA_bw16)                        0.00       2.81 f
+  m1/U0/menti/add1/U8/Y (XOR2X1_RVT)                      0.04       2.84 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/P1 (G_Cell_143)
+                                                          0.00       2.84 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.87 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/GG (G_Cell_143)
+                                                          0.00       2.87 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/G0 (G_Cell_142)
+                                                          0.00       2.87 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.90 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/GG (G_Cell_142)
+                                                          0.00       2.90 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/G0 (G_Cell_141)
+                                                          0.00       2.90 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.92 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/GG (G_Cell_141)
+                                                          0.00       2.92 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/G0 (G_Cell_140)
+                                                          0.00       2.92 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.95 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/GG (G_Cell_140)
+                                                          0.00       2.95 r
+  m1/U0/menti/add1/loop_1[9].genblk1.U1/G0 (G_Cell_139)
+                                                          0.00       2.95 r
+  m1/U0/menti/add1/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.97 r
+  m1/U0/menti/add1/loop_1[9].genblk1.U1/GG (G_Cell_139)
+                                                          0.00       2.97 r
+  m1/U0/menti/add1/loop_1[10].genblk1.U1/G0 (G_Cell_138)
+                                                          0.00       2.97 r
+  m1/U0/menti/add1/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       3.00 r
+  m1/U0/menti/add1/loop_1[10].genblk1.U1/GG (G_Cell_138)
+                                                          0.00       3.00 r
+  m1/U0/menti/add1/loop_1[11].genblk1.U1/G0 (G_Cell_137)
+                                                          0.00       3.00 r
+  m1/U0/menti/add1/loop_1[11].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       3.02 r
+  m1/U0/menti/add1/loop_1[11].genblk1.U1/GG (G_Cell_137)
+                                                          0.00       3.02 r
+  m1/U0/menti/add1/U27/Y (XOR2X1_RVT)                     0.03       3.06 f
+  m1/U0/menti/add1/Sum[13] (RCA_bw16)                     0.00       3.06 f
+  m1/U0/menti/out[18] (karastuba_11bit)                   0.00       3.06 f
+  m1/U0/out[18] (menMult)                                 0.00       3.06 f
+  m1/U32/Y (AO22X1_RVT)                                   0.02       3.08 f
+  m1/p_multi_reg[18]/D (DFFX1_RVT)                        0.00       3.08 f
+  data arrival time                                                  3.08
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  m1/p_multi_reg[18]/CLK (DFFX1_RVT)                      0.00       4.50 r
+  library setup time                                     -0.01       4.49
+  data required time                                                 4.49
+  --------------------------------------------------------------------------
+  data required time                                                 4.49
+  data arrival time                                                 -3.08
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.41
+
+
+  Startpoint: a[1] (input port clocked by MAIN_CLOCK)
+  Endpoint: m1/p_multi_reg[17]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+  RCA_bw4_6          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_6bit_3   8000                  saed32rvt_ff1p16vn40c
+  vedic_4bit_7       ForQA                 saed32rvt_ff1p16vn40c
+  Adder2_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_56      ForQA                 saed32rvt_ff1p16vn40c
+  Adder3_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_54      ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_51      ForQA                 saed32rvt_ff1p16vn40c
+  Adder5_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_49      ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw8_5          ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw9_3          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_11bit    8000                  saed32rvt_ff1p16vn40c
+  RCA_bw16           8000                  saed32rvt_ff1p16vn40c
+  fp16multiplier     8000                  saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  a[1] (in)                                               0.01       2.01 f
+  m1/A[1] (fp16multiplier)                                0.00       2.01 f
+  m1/U0/a[1] (menMult)                                    0.00       2.01 f
+  m1/U0/menti/a[1] (karastuba_11bit)                      0.00       2.01 f
+  m1/U0/menti/km1/a[1] (karastuba_6bit_3)                 0.00       2.01 f
+  m1/U0/menti/km1/rca1/B[2] (RCA_bw4_6)                   0.00       2.01 f
+  m1/U0/menti/km1/rca1/U4/Y (XOR2X1_RVT)                  0.04       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/P1 (G_Cell_98)
+                                                          0.00       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.08 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/GG (G_Cell_98)
+                                                          0.00       2.08 r
+  m1/U0/menti/km1/rca1/U2/Y (XOR2X1_RVT)                  0.04       2.12 f
+  m1/U0/menti/km1/rca1/Sum[3] (RCA_bw4_6)                 0.00       2.12 f
+  m1/U0/menti/km1/u2/a[2] (vedic_4bit_7)                  0.00       2.12 f
+  m1/U0/menti/km1/u2/U9/Y (AND2X1_RVT)                    0.02       2.14 f
+  m1/U0/menti/km1/u2/adder2/c (Adder2_7)                  0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/A (half_adder_41)          0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/U2/Y (AND2X1_RVT)          0.02       2.16 f
+  m1/U0/menti/km1/u2/adder2/u1/cout (half_adder_41)       0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/B (full_adder_56)          0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/U2/Y (XOR2X1_RVT)          0.03       2.20 f
+  m1/U0/menti/km1/u2/adder2/u3/U1/Y (XOR2X1_RVT)          0.04       2.24 r
+  m1/U0/menti/km1/u2/adder2/u3/sum (full_adder_56)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder2/msb[0] (Adder2_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/add[0] (Adder3_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/cin (full_adder_55)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/U1/Y (XOR2X1_RVT)          0.04       2.28 f
+  m1/U0/menti/km1/u2/adder3/u1/sum (full_adder_55)        0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/B (half_adder_38)          0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/U2/Y (AND2X1_RVT)          0.02       2.30 f
+  m1/U0/menti/km1/u2/adder3/u2/cout (half_adder_38)       0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/B (full_adder_54)          0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/U1/Y (XOR2X1_RVT)          0.04       2.34 r
+  m1/U0/menti/km1/u2/adder3/u4/U3/Y (AO22X1_RVT)          0.02       2.36 r
+  m1/U0/menti/km1/u2/adder3/u4/cout (full_adder_54)       0.00       2.36 r
+  m1/U0/menti/km1/u2/adder3/U1/Y (OR2X1_RVT)              0.02       2.38 r
+  m1/U0/menti/km1/u2/adder3/msb[1] (Adder3_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/add[1] (Adder4_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/B (full_adder_51)          0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/U1/Y (XOR2X1_RVT)          0.04       2.42 f
+  m1/U0/menti/km1/u2/adder4/u2/U2/Y (XOR2X1_RVT)          0.04       2.46 r
+  m1/U0/menti/km1/u2/adder4/u2/sum (full_adder_51)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder4/msb[0] (Adder4_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/add[0] (Adder5_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/cin (full_adder_50)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/U3/Y (AO22X1_RVT)          0.02       2.49 r
+  m1/U0/menti/km1/u2/adder5/u0/cout (full_adder_50)       0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/B (full_adder_49)          0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/U1/Y (XOR2X1_RVT)          0.04       2.53 f
+  m1/U0/menti/km1/u2/adder5/u1/U2/Y (XOR2X1_RVT)          0.04       2.56 f
+  m1/U0/menti/km1/u2/adder5/u1/sum (full_adder_49)        0.00       2.56 f
+  m1/U0/menti/km1/u2/adder5/msb[0] (Adder5_7)             0.00       2.56 f
+  m1/U0/menti/km1/u2/U1/Y (XNOR2X1_RVT)                   0.03       2.59 f
+  m1/U0/menti/km1/u2/out[6] (vedic_4bit_7)                0.00       2.59 f
+  m1/U0/menti/km1/sub_mid/B[7] (RCA_bw8_5)                0.00       2.59 f
+  m1/U0/menti/km1/sub_mid/U6/Y (XOR2X1_RVT)               0.04       2.63 r
+  m1/U0/menti/km1/sub_mid/U5/Y (XOR2X1_RVT)               0.04       2.67 f
+  m1/U0/menti/km1/sub_mid/Sum[7] (RCA_bw8_5)              0.00       2.67 f
+  m1/U0/menti/km1/add1/B[7] (RCA_bw9_3)                   0.00       2.67 f
+  m1/U0/menti/km1/add1/U3/Y (XOR2X1_RVT)                  0.04       2.71 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/P1 (G_Cell_69)
+                                                          0.00       2.71 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.74 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/GG (G_Cell_69)
+                                                          0.00       2.74 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/G0 (G_Cell_68)
+                                                          0.00       2.74 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.77 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/GG (G_Cell_68)
+                                                          0.00       2.77 r
+  m1/U0/menti/km1/add1/U13/Y (XOR2X1_RVT)                 0.04       2.81 f
+  m1/U0/menti/km1/add1/Sum[9] (RCA_bw9_3)                 0.00       2.81 f
+  m1/U0/menti/km1/out[11] (karastuba_6bit_3)              0.00       2.81 f
+  m1/U0/menti/add1/A[6] (RCA_bw16)                        0.00       2.81 f
+  m1/U0/menti/add1/U8/Y (XOR2X1_RVT)                      0.04       2.84 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/P1 (G_Cell_143)
+                                                          0.00       2.84 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.87 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/GG (G_Cell_143)
+                                                          0.00       2.87 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/G0 (G_Cell_142)
+                                                          0.00       2.87 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.90 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/GG (G_Cell_142)
+                                                          0.00       2.90 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/G0 (G_Cell_141)
+                                                          0.00       2.90 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.92 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/GG (G_Cell_141)
+                                                          0.00       2.92 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/G0 (G_Cell_140)
+                                                          0.00       2.92 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.95 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/GG (G_Cell_140)
+                                                          0.00       2.95 r
+  m1/U0/menti/add1/loop_1[9].genblk1.U1/G0 (G_Cell_139)
+                                                          0.00       2.95 r
+  m1/U0/menti/add1/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.97 r
+  m1/U0/menti/add1/loop_1[9].genblk1.U1/GG (G_Cell_139)
+                                                          0.00       2.97 r
+  m1/U0/menti/add1/loop_1[10].genblk1.U1/G0 (G_Cell_138)
+                                                          0.00       2.97 r
+  m1/U0/menti/add1/loop_1[10].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       3.00 r
+  m1/U0/menti/add1/loop_1[10].genblk1.U1/GG (G_Cell_138)
+                                                          0.00       3.00 r
+  m1/U0/menti/add1/U26/Y (XOR2X1_RVT)                     0.03       3.03 f
+  m1/U0/menti/add1/Sum[12] (RCA_bw16)                     0.00       3.03 f
+  m1/U0/menti/out[17] (karastuba_11bit)                   0.00       3.03 f
+  m1/U0/out[17] (menMult)                                 0.00       3.03 f
+  m1/U31/Y (AO22X1_RVT)                                   0.02       3.05 f
+  m1/p_multi_reg[17]/D (DFFX1_RVT)                        0.00       3.05 f
+  data arrival time                                                  3.05
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  m1/p_multi_reg[17]/CLK (DFFX1_RVT)                      0.00       4.50 r
+  library setup time                                     -0.01       4.49
+  data required time                                                 4.49
+  --------------------------------------------------------------------------
+  data required time                                                 4.49
+  data arrival time                                                 -3.05
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.44
+
+
+  Startpoint: a[1] (input port clocked by MAIN_CLOCK)
+  Endpoint: m1/p_multi_reg[16]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+  RCA_bw4_6          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_6bit_3   8000                  saed32rvt_ff1p16vn40c
+  vedic_4bit_7       ForQA                 saed32rvt_ff1p16vn40c
+  Adder2_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_56      ForQA                 saed32rvt_ff1p16vn40c
+  Adder3_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_54      ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_51      ForQA                 saed32rvt_ff1p16vn40c
+  Adder5_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_49      ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw8_5          ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw9_3          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_11bit    8000                  saed32rvt_ff1p16vn40c
+  RCA_bw16           8000                  saed32rvt_ff1p16vn40c
+  fp16multiplier     8000                  saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  a[1] (in)                                               0.01       2.01 f
+  m1/A[1] (fp16multiplier)                                0.00       2.01 f
+  m1/U0/a[1] (menMult)                                    0.00       2.01 f
+  m1/U0/menti/a[1] (karastuba_11bit)                      0.00       2.01 f
+  m1/U0/menti/km1/a[1] (karastuba_6bit_3)                 0.00       2.01 f
+  m1/U0/menti/km1/rca1/B[2] (RCA_bw4_6)                   0.00       2.01 f
+  m1/U0/menti/km1/rca1/U4/Y (XOR2X1_RVT)                  0.04       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/P1 (G_Cell_98)
+                                                          0.00       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.08 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/GG (G_Cell_98)
+                                                          0.00       2.08 r
+  m1/U0/menti/km1/rca1/U2/Y (XOR2X1_RVT)                  0.04       2.12 f
+  m1/U0/menti/km1/rca1/Sum[3] (RCA_bw4_6)                 0.00       2.12 f
+  m1/U0/menti/km1/u2/a[2] (vedic_4bit_7)                  0.00       2.12 f
+  m1/U0/menti/km1/u2/U9/Y (AND2X1_RVT)                    0.02       2.14 f
+  m1/U0/menti/km1/u2/adder2/c (Adder2_7)                  0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/A (half_adder_41)          0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/U2/Y (AND2X1_RVT)          0.02       2.16 f
+  m1/U0/menti/km1/u2/adder2/u1/cout (half_adder_41)       0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/B (full_adder_56)          0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/U2/Y (XOR2X1_RVT)          0.03       2.20 f
+  m1/U0/menti/km1/u2/adder2/u3/U1/Y (XOR2X1_RVT)          0.04       2.24 r
+  m1/U0/menti/km1/u2/adder2/u3/sum (full_adder_56)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder2/msb[0] (Adder2_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/add[0] (Adder3_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/cin (full_adder_55)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/U1/Y (XOR2X1_RVT)          0.04       2.28 f
+  m1/U0/menti/km1/u2/adder3/u1/sum (full_adder_55)        0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/B (half_adder_38)          0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/U2/Y (AND2X1_RVT)          0.02       2.30 f
+  m1/U0/menti/km1/u2/adder3/u2/cout (half_adder_38)       0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/B (full_adder_54)          0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/U1/Y (XOR2X1_RVT)          0.04       2.34 r
+  m1/U0/menti/km1/u2/adder3/u4/U3/Y (AO22X1_RVT)          0.02       2.36 r
+  m1/U0/menti/km1/u2/adder3/u4/cout (full_adder_54)       0.00       2.36 r
+  m1/U0/menti/km1/u2/adder3/U1/Y (OR2X1_RVT)              0.02       2.38 r
+  m1/U0/menti/km1/u2/adder3/msb[1] (Adder3_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/add[1] (Adder4_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/B (full_adder_51)          0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/U1/Y (XOR2X1_RVT)          0.04       2.42 f
+  m1/U0/menti/km1/u2/adder4/u2/U2/Y (XOR2X1_RVT)          0.04       2.46 r
+  m1/U0/menti/km1/u2/adder4/u2/sum (full_adder_51)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder4/msb[0] (Adder4_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/add[0] (Adder5_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/cin (full_adder_50)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/U3/Y (AO22X1_RVT)          0.02       2.49 r
+  m1/U0/menti/km1/u2/adder5/u0/cout (full_adder_50)       0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/B (full_adder_49)          0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/U1/Y (XOR2X1_RVT)          0.04       2.53 f
+  m1/U0/menti/km1/u2/adder5/u1/U2/Y (XOR2X1_RVT)          0.04       2.56 f
+  m1/U0/menti/km1/u2/adder5/u1/sum (full_adder_49)        0.00       2.56 f
+  m1/U0/menti/km1/u2/adder5/msb[0] (Adder5_7)             0.00       2.56 f
+  m1/U0/menti/km1/u2/U1/Y (XNOR2X1_RVT)                   0.03       2.59 f
+  m1/U0/menti/km1/u2/out[6] (vedic_4bit_7)                0.00       2.59 f
+  m1/U0/menti/km1/sub_mid/B[7] (RCA_bw8_5)                0.00       2.59 f
+  m1/U0/menti/km1/sub_mid/U6/Y (XOR2X1_RVT)               0.04       2.63 r
+  m1/U0/menti/km1/sub_mid/U5/Y (XOR2X1_RVT)               0.04       2.67 f
+  m1/U0/menti/km1/sub_mid/Sum[7] (RCA_bw8_5)              0.00       2.67 f
+  m1/U0/menti/km1/add1/B[7] (RCA_bw9_3)                   0.00       2.67 f
+  m1/U0/menti/km1/add1/U3/Y (XOR2X1_RVT)                  0.04       2.71 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/P1 (G_Cell_69)
+                                                          0.00       2.71 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.74 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/GG (G_Cell_69)
+                                                          0.00       2.74 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/G0 (G_Cell_68)
+                                                          0.00       2.74 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.77 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/GG (G_Cell_68)
+                                                          0.00       2.77 r
+  m1/U0/menti/km1/add1/U13/Y (XOR2X1_RVT)                 0.04       2.81 f
+  m1/U0/menti/km1/add1/Sum[9] (RCA_bw9_3)                 0.00       2.81 f
+  m1/U0/menti/km1/out[11] (karastuba_6bit_3)              0.00       2.81 f
+  m1/U0/menti/add1/A[6] (RCA_bw16)                        0.00       2.81 f
+  m1/U0/menti/add1/U8/Y (XOR2X1_RVT)                      0.04       2.84 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/P1 (G_Cell_143)
+                                                          0.00       2.84 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.87 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/GG (G_Cell_143)
+                                                          0.00       2.87 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/G0 (G_Cell_142)
+                                                          0.00       2.87 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.90 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/GG (G_Cell_142)
+                                                          0.00       2.90 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/G0 (G_Cell_141)
+                                                          0.00       2.90 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.92 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/GG (G_Cell_141)
+                                                          0.00       2.92 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/G0 (G_Cell_140)
+                                                          0.00       2.92 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.95 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/GG (G_Cell_140)
+                                                          0.00       2.95 r
+  m1/U0/menti/add1/loop_1[9].genblk1.U1/G0 (G_Cell_139)
+                                                          0.00       2.95 r
+  m1/U0/menti/add1/loop_1[9].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.97 r
+  m1/U0/menti/add1/loop_1[9].genblk1.U1/GG (G_Cell_139)
+                                                          0.00       2.97 r
+  m1/U0/menti/add1/U25/Y (XOR2X1_RVT)                     0.03       3.01 f
+  m1/U0/menti/add1/Sum[11] (RCA_bw16)                     0.00       3.01 f
+  m1/U0/menti/out[16] (karastuba_11bit)                   0.00       3.01 f
+  m1/U0/out[16] (menMult)                                 0.00       3.01 f
+  m1/U30/Y (AO22X1_RVT)                                   0.02       3.03 f
+  m1/p_multi_reg[16]/D (DFFX1_RVT)                        0.00       3.03 f
+  data arrival time                                                  3.03
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  m1/p_multi_reg[16]/CLK (DFFX1_RVT)                      0.00       4.50 r
+  library setup time                                     -0.01       4.49
+  data required time                                                 4.49
+  --------------------------------------------------------------------------
+  data required time                                                 4.49
+  data arrival time                                                 -3.03
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.46
+
+
+  Startpoint: a[1] (input port clocked by MAIN_CLOCK)
+  Endpoint: m1/p_multi_reg[15]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+  RCA_bw4_6          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_6bit_3   8000                  saed32rvt_ff1p16vn40c
+  vedic_4bit_7       ForQA                 saed32rvt_ff1p16vn40c
+  Adder2_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_56      ForQA                 saed32rvt_ff1p16vn40c
+  Adder3_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_54      ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_51      ForQA                 saed32rvt_ff1p16vn40c
+  Adder5_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_49      ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw8_5          ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw9_3          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_11bit    8000                  saed32rvt_ff1p16vn40c
+  RCA_bw16           8000                  saed32rvt_ff1p16vn40c
+  fp16multiplier     8000                  saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  a[1] (in)                                               0.01       2.01 f
+  m1/A[1] (fp16multiplier)                                0.00       2.01 f
+  m1/U0/a[1] (menMult)                                    0.00       2.01 f
+  m1/U0/menti/a[1] (karastuba_11bit)                      0.00       2.01 f
+  m1/U0/menti/km1/a[1] (karastuba_6bit_3)                 0.00       2.01 f
+  m1/U0/menti/km1/rca1/B[2] (RCA_bw4_6)                   0.00       2.01 f
+  m1/U0/menti/km1/rca1/U4/Y (XOR2X1_RVT)                  0.04       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/P1 (G_Cell_98)
+                                                          0.00       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.08 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/GG (G_Cell_98)
+                                                          0.00       2.08 r
+  m1/U0/menti/km1/rca1/U2/Y (XOR2X1_RVT)                  0.04       2.12 f
+  m1/U0/menti/km1/rca1/Sum[3] (RCA_bw4_6)                 0.00       2.12 f
+  m1/U0/menti/km1/u2/a[2] (vedic_4bit_7)                  0.00       2.12 f
+  m1/U0/menti/km1/u2/U9/Y (AND2X1_RVT)                    0.02       2.14 f
+  m1/U0/menti/km1/u2/adder2/c (Adder2_7)                  0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/A (half_adder_41)          0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/U2/Y (AND2X1_RVT)          0.02       2.16 f
+  m1/U0/menti/km1/u2/adder2/u1/cout (half_adder_41)       0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/B (full_adder_56)          0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/U2/Y (XOR2X1_RVT)          0.03       2.20 f
+  m1/U0/menti/km1/u2/adder2/u3/U1/Y (XOR2X1_RVT)          0.04       2.24 r
+  m1/U0/menti/km1/u2/adder2/u3/sum (full_adder_56)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder2/msb[0] (Adder2_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/add[0] (Adder3_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/cin (full_adder_55)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/U1/Y (XOR2X1_RVT)          0.04       2.28 f
+  m1/U0/menti/km1/u2/adder3/u1/sum (full_adder_55)        0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/B (half_adder_38)          0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/U2/Y (AND2X1_RVT)          0.02       2.30 f
+  m1/U0/menti/km1/u2/adder3/u2/cout (half_adder_38)       0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/B (full_adder_54)          0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/U1/Y (XOR2X1_RVT)          0.04       2.34 r
+  m1/U0/menti/km1/u2/adder3/u4/U3/Y (AO22X1_RVT)          0.02       2.36 r
+  m1/U0/menti/km1/u2/adder3/u4/cout (full_adder_54)       0.00       2.36 r
+  m1/U0/menti/km1/u2/adder3/U1/Y (OR2X1_RVT)              0.02       2.38 r
+  m1/U0/menti/km1/u2/adder3/msb[1] (Adder3_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/add[1] (Adder4_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/B (full_adder_51)          0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/U1/Y (XOR2X1_RVT)          0.04       2.42 f
+  m1/U0/menti/km1/u2/adder4/u2/U2/Y (XOR2X1_RVT)          0.04       2.46 r
+  m1/U0/menti/km1/u2/adder4/u2/sum (full_adder_51)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder4/msb[0] (Adder4_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/add[0] (Adder5_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/cin (full_adder_50)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/U3/Y (AO22X1_RVT)          0.02       2.49 r
+  m1/U0/menti/km1/u2/adder5/u0/cout (full_adder_50)       0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/B (full_adder_49)          0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/U1/Y (XOR2X1_RVT)          0.04       2.53 f
+  m1/U0/menti/km1/u2/adder5/u1/U2/Y (XOR2X1_RVT)          0.04       2.56 f
+  m1/U0/menti/km1/u2/adder5/u1/sum (full_adder_49)        0.00       2.56 f
+  m1/U0/menti/km1/u2/adder5/msb[0] (Adder5_7)             0.00       2.56 f
+  m1/U0/menti/km1/u2/U1/Y (XNOR2X1_RVT)                   0.03       2.59 f
+  m1/U0/menti/km1/u2/out[6] (vedic_4bit_7)                0.00       2.59 f
+  m1/U0/menti/km1/sub_mid/B[7] (RCA_bw8_5)                0.00       2.59 f
+  m1/U0/menti/km1/sub_mid/U6/Y (XOR2X1_RVT)               0.04       2.63 r
+  m1/U0/menti/km1/sub_mid/U5/Y (XOR2X1_RVT)               0.04       2.67 f
+  m1/U0/menti/km1/sub_mid/Sum[7] (RCA_bw8_5)              0.00       2.67 f
+  m1/U0/menti/km1/add1/B[7] (RCA_bw9_3)                   0.00       2.67 f
+  m1/U0/menti/km1/add1/U3/Y (XOR2X1_RVT)                  0.04       2.71 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/P1 (G_Cell_69)
+                                                          0.00       2.71 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.74 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/GG (G_Cell_69)
+                                                          0.00       2.74 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/G0 (G_Cell_68)
+                                                          0.00       2.74 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.77 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/GG (G_Cell_68)
+                                                          0.00       2.77 r
+  m1/U0/menti/km1/add1/U13/Y (XOR2X1_RVT)                 0.04       2.81 f
+  m1/U0/menti/km1/add1/Sum[9] (RCA_bw9_3)                 0.00       2.81 f
+  m1/U0/menti/km1/out[11] (karastuba_6bit_3)              0.00       2.81 f
+  m1/U0/menti/add1/A[6] (RCA_bw16)                        0.00       2.81 f
+  m1/U0/menti/add1/U8/Y (XOR2X1_RVT)                      0.04       2.84 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/P1 (G_Cell_143)
+                                                          0.00       2.84 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.87 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/GG (G_Cell_143)
+                                                          0.00       2.87 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/G0 (G_Cell_142)
+                                                          0.00       2.87 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.90 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/GG (G_Cell_142)
+                                                          0.00       2.90 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/G0 (G_Cell_141)
+                                                          0.00       2.90 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.92 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/GG (G_Cell_141)
+                                                          0.00       2.92 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/G0 (G_Cell_140)
+                                                          0.00       2.92 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.95 r
+  m1/U0/menti/add1/loop_1[8].genblk1.U1/GG (G_Cell_140)
+                                                          0.00       2.95 r
+  m1/U0/menti/add1/U19/Y (XOR2X1_RVT)                     0.03       2.98 f
+  m1/U0/menti/add1/Sum[10] (RCA_bw16)                     0.00       2.98 f
+  m1/U0/menti/out[15] (karastuba_11bit)                   0.00       2.98 f
+  m1/U0/out[15] (menMult)                                 0.00       2.98 f
+  m1/U29/Y (AO22X1_RVT)                                   0.02       3.00 f
+  m1/p_multi_reg[15]/D (DFFX1_RVT)                        0.00       3.00 f
+  data arrival time                                                  3.00
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  m1/p_multi_reg[15]/CLK (DFFX1_RVT)                      0.00       4.50 r
+  library setup time                                     -0.01       4.49
+  data required time                                                 4.49
+  --------------------------------------------------------------------------
+  data required time                                                 4.49
+  data arrival time                                                 -3.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.49
+
+
+  Startpoint: a[1] (input port clocked by MAIN_CLOCK)
+  Endpoint: m1/p_multi_reg[14]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+  RCA_bw4_6          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_6bit_3   8000                  saed32rvt_ff1p16vn40c
+  vedic_4bit_7       ForQA                 saed32rvt_ff1p16vn40c
+  Adder2_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_56      ForQA                 saed32rvt_ff1p16vn40c
+  Adder3_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_54      ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_51      ForQA                 saed32rvt_ff1p16vn40c
+  Adder5_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_49      ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw8_5          ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw9_3          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_11bit    8000                  saed32rvt_ff1p16vn40c
+  RCA_bw16           8000                  saed32rvt_ff1p16vn40c
+  fp16multiplier     8000                  saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  a[1] (in)                                               0.01       2.01 f
+  m1/A[1] (fp16multiplier)                                0.00       2.01 f
+  m1/U0/a[1] (menMult)                                    0.00       2.01 f
+  m1/U0/menti/a[1] (karastuba_11bit)                      0.00       2.01 f
+  m1/U0/menti/km1/a[1] (karastuba_6bit_3)                 0.00       2.01 f
+  m1/U0/menti/km1/rca1/B[2] (RCA_bw4_6)                   0.00       2.01 f
+  m1/U0/menti/km1/rca1/U4/Y (XOR2X1_RVT)                  0.04       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/P1 (G_Cell_98)
+                                                          0.00       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.08 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/GG (G_Cell_98)
+                                                          0.00       2.08 r
+  m1/U0/menti/km1/rca1/U2/Y (XOR2X1_RVT)                  0.04       2.12 f
+  m1/U0/menti/km1/rca1/Sum[3] (RCA_bw4_6)                 0.00       2.12 f
+  m1/U0/menti/km1/u2/a[2] (vedic_4bit_7)                  0.00       2.12 f
+  m1/U0/menti/km1/u2/U9/Y (AND2X1_RVT)                    0.02       2.14 f
+  m1/U0/menti/km1/u2/adder2/c (Adder2_7)                  0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/A (half_adder_41)          0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/U2/Y (AND2X1_RVT)          0.02       2.16 f
+  m1/U0/menti/km1/u2/adder2/u1/cout (half_adder_41)       0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/B (full_adder_56)          0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/U2/Y (XOR2X1_RVT)          0.03       2.20 f
+  m1/U0/menti/km1/u2/adder2/u3/U1/Y (XOR2X1_RVT)          0.04       2.24 r
+  m1/U0/menti/km1/u2/adder2/u3/sum (full_adder_56)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder2/msb[0] (Adder2_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/add[0] (Adder3_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/cin (full_adder_55)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/U1/Y (XOR2X1_RVT)          0.04       2.28 f
+  m1/U0/menti/km1/u2/adder3/u1/sum (full_adder_55)        0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/B (half_adder_38)          0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/U2/Y (AND2X1_RVT)          0.02       2.30 f
+  m1/U0/menti/km1/u2/adder3/u2/cout (half_adder_38)       0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/B (full_adder_54)          0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/U1/Y (XOR2X1_RVT)          0.04       2.34 r
+  m1/U0/menti/km1/u2/adder3/u4/U3/Y (AO22X1_RVT)          0.02       2.36 r
+  m1/U0/menti/km1/u2/adder3/u4/cout (full_adder_54)       0.00       2.36 r
+  m1/U0/menti/km1/u2/adder3/U1/Y (OR2X1_RVT)              0.02       2.38 r
+  m1/U0/menti/km1/u2/adder3/msb[1] (Adder3_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/add[1] (Adder4_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/B (full_adder_51)          0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/U1/Y (XOR2X1_RVT)          0.04       2.42 f
+  m1/U0/menti/km1/u2/adder4/u2/U2/Y (XOR2X1_RVT)          0.04       2.46 r
+  m1/U0/menti/km1/u2/adder4/u2/sum (full_adder_51)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder4/msb[0] (Adder4_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/add[0] (Adder5_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/cin (full_adder_50)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/U3/Y (AO22X1_RVT)          0.02       2.49 r
+  m1/U0/menti/km1/u2/adder5/u0/cout (full_adder_50)       0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/B (full_adder_49)          0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/U1/Y (XOR2X1_RVT)          0.04       2.53 f
+  m1/U0/menti/km1/u2/adder5/u1/U2/Y (XOR2X1_RVT)          0.04       2.56 f
+  m1/U0/menti/km1/u2/adder5/u1/sum (full_adder_49)        0.00       2.56 f
+  m1/U0/menti/km1/u2/adder5/msb[0] (Adder5_7)             0.00       2.56 f
+  m1/U0/menti/km1/u2/U1/Y (XNOR2X1_RVT)                   0.03       2.59 f
+  m1/U0/menti/km1/u2/out[6] (vedic_4bit_7)                0.00       2.59 f
+  m1/U0/menti/km1/sub_mid/B[7] (RCA_bw8_5)                0.00       2.59 f
+  m1/U0/menti/km1/sub_mid/U6/Y (XOR2X1_RVT)               0.04       2.63 r
+  m1/U0/menti/km1/sub_mid/U5/Y (XOR2X1_RVT)               0.04       2.67 f
+  m1/U0/menti/km1/sub_mid/Sum[7] (RCA_bw8_5)              0.00       2.67 f
+  m1/U0/menti/km1/add1/B[7] (RCA_bw9_3)                   0.00       2.67 f
+  m1/U0/menti/km1/add1/U3/Y (XOR2X1_RVT)                  0.04       2.71 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/P1 (G_Cell_69)
+                                                          0.00       2.71 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.74 r
+  m1/U0/menti/km1/add1/loop_1[6].genblk1.U1/GG (G_Cell_69)
+                                                          0.00       2.74 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/G0 (G_Cell_68)
+                                                          0.00       2.74 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.77 r
+  m1/U0/menti/km1/add1/loop_1[7].genblk1.U1/GG (G_Cell_68)
+                                                          0.00       2.77 r
+  m1/U0/menti/km1/add1/U13/Y (XOR2X1_RVT)                 0.04       2.81 f
+  m1/U0/menti/km1/add1/Sum[9] (RCA_bw9_3)                 0.00       2.81 f
+  m1/U0/menti/km1/out[11] (karastuba_6bit_3)              0.00       2.81 f
+  m1/U0/menti/add1/A[6] (RCA_bw16)                        0.00       2.81 f
+  m1/U0/menti/add1/U8/Y (XOR2X1_RVT)                      0.04       2.84 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/P1 (G_Cell_143)
+                                                          0.00       2.84 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.87 r
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/GG (G_Cell_143)
+                                                          0.00       2.87 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/G0 (G_Cell_142)
+                                                          0.00       2.87 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.90 r
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/GG (G_Cell_142)
+                                                          0.00       2.90 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/G0 (G_Cell_141)
+                                                          0.00       2.90 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.92 r
+  m1/U0/menti/add1/loop_1[7].genblk1.U1/GG (G_Cell_141)
+                                                          0.00       2.92 r
+  m1/U0/menti/add1/U18/Y (XOR2X1_RVT)                     0.03       2.95 f
+  m1/U0/menti/add1/Sum[9] (RCA_bw16)                      0.00       2.95 f
+  m1/U0/menti/out[14] (karastuba_11bit)                   0.00       2.95 f
+  m1/U0/out[14] (menMult)                                 0.00       2.95 f
+  m1/U28/Y (AO22X1_RVT)                                   0.02       2.97 f
+  m1/p_multi_reg[14]/D (DFFX1_RVT)                        0.00       2.97 f
+  data arrival time                                                  2.97
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  m1/p_multi_reg[14]/CLK (DFFX1_RVT)                      0.00       4.50 r
+  library setup time                                     -0.01       4.49
+  data required time                                                 4.49
+  --------------------------------------------------------------------------
+  data required time                                                 4.49
+  data arrival time                                                 -2.97
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.52
+
+
+  Startpoint: a[1] (input port clocked by MAIN_CLOCK)
+  Endpoint: m1/p_multi_reg[13]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+  RCA_bw4_6          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_6bit_3   8000                  saed32rvt_ff1p16vn40c
+  vedic_4bit_7       ForQA                 saed32rvt_ff1p16vn40c
+  Adder2_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_56      ForQA                 saed32rvt_ff1p16vn40c
+  Adder3_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_54      ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_51      ForQA                 saed32rvt_ff1p16vn40c
+  Adder5_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_49      ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw8_5          ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw9_3          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_11bit    8000                  saed32rvt_ff1p16vn40c
+  RCA_bw16           8000                  saed32rvt_ff1p16vn40c
+  fp16multiplier     8000                  saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  a[1] (in)                                               0.01       2.01 f
+  m1/A[1] (fp16multiplier)                                0.00       2.01 f
+  m1/U0/a[1] (menMult)                                    0.00       2.01 f
+  m1/U0/menti/a[1] (karastuba_11bit)                      0.00       2.01 f
+  m1/U0/menti/km1/a[1] (karastuba_6bit_3)                 0.00       2.01 f
+  m1/U0/menti/km1/rca1/B[2] (RCA_bw4_6)                   0.00       2.01 f
+  m1/U0/menti/km1/rca1/U4/Y (XOR2X1_RVT)                  0.04       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/P1 (G_Cell_98)
+                                                          0.00       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.08 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/GG (G_Cell_98)
+                                                          0.00       2.08 r
+  m1/U0/menti/km1/rca1/U2/Y (XOR2X1_RVT)                  0.04       2.12 f
+  m1/U0/menti/km1/rca1/Sum[3] (RCA_bw4_6)                 0.00       2.12 f
+  m1/U0/menti/km1/u2/a[2] (vedic_4bit_7)                  0.00       2.12 f
+  m1/U0/menti/km1/u2/U9/Y (AND2X1_RVT)                    0.02       2.14 f
+  m1/U0/menti/km1/u2/adder2/c (Adder2_7)                  0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/A (half_adder_41)          0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/U2/Y (AND2X1_RVT)          0.02       2.16 f
+  m1/U0/menti/km1/u2/adder2/u1/cout (half_adder_41)       0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/B (full_adder_56)          0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/U2/Y (XOR2X1_RVT)          0.03       2.20 f
+  m1/U0/menti/km1/u2/adder2/u3/U1/Y (XOR2X1_RVT)          0.04       2.24 r
+  m1/U0/menti/km1/u2/adder2/u3/sum (full_adder_56)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder2/msb[0] (Adder2_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/add[0] (Adder3_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/cin (full_adder_55)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/U1/Y (XOR2X1_RVT)          0.04       2.28 f
+  m1/U0/menti/km1/u2/adder3/u1/sum (full_adder_55)        0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/B (half_adder_38)          0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/U2/Y (AND2X1_RVT)          0.02       2.30 f
+  m1/U0/menti/km1/u2/adder3/u2/cout (half_adder_38)       0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/B (full_adder_54)          0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/U1/Y (XOR2X1_RVT)          0.04       2.34 r
+  m1/U0/menti/km1/u2/adder3/u4/U3/Y (AO22X1_RVT)          0.02       2.36 r
+  m1/U0/menti/km1/u2/adder3/u4/cout (full_adder_54)       0.00       2.36 r
+  m1/U0/menti/km1/u2/adder3/U1/Y (OR2X1_RVT)              0.02       2.38 r
+  m1/U0/menti/km1/u2/adder3/msb[1] (Adder3_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/add[1] (Adder4_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/B (full_adder_51)          0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/U1/Y (XOR2X1_RVT)          0.04       2.42 f
+  m1/U0/menti/km1/u2/adder4/u2/U2/Y (XOR2X1_RVT)          0.04       2.46 r
+  m1/U0/menti/km1/u2/adder4/u2/sum (full_adder_51)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder4/msb[0] (Adder4_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/add[0] (Adder5_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/cin (full_adder_50)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/U3/Y (AO22X1_RVT)          0.02       2.49 r
+  m1/U0/menti/km1/u2/adder5/u0/cout (full_adder_50)       0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/B (full_adder_49)          0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/U1/Y (XOR2X1_RVT)          0.04       2.53 f
+  m1/U0/menti/km1/u2/adder5/u1/U2/Y (XOR2X1_RVT)          0.04       2.56 f
+  m1/U0/menti/km1/u2/adder5/u1/sum (full_adder_49)        0.00       2.56 f
+  m1/U0/menti/km1/u2/adder5/msb[0] (Adder5_7)             0.00       2.56 f
+  m1/U0/menti/km1/u2/U1/Y (XNOR2X1_RVT)                   0.04       2.60 r
+  m1/U0/menti/km1/u2/out[6] (vedic_4bit_7)                0.00       2.60 r
+  m1/U0/menti/km1/sub_mid/B[7] (RCA_bw8_5)                0.00       2.60 r
+  m1/U0/menti/km1/sub_mid/U6/Y (XOR2X1_RVT)               0.04       2.64 f
+  m1/U0/menti/km1/sub_mid/U5/Y (XOR2X1_RVT)               0.04       2.68 r
+  m1/U0/menti/km1/sub_mid/Sum[7] (RCA_bw8_5)              0.00       2.68 r
+  m1/U0/menti/km1/add1/B[7] (RCA_bw9_3)                   0.00       2.68 r
+  m1/U0/menti/km1/add1/U3/Y (XOR2X1_RVT)                  0.04       2.72 f
+  m1/U0/menti/km1/add1/U1/Y (XOR2X1_RVT)                  0.04       2.76 r
+  m1/U0/menti/km1/add1/Sum[7] (RCA_bw9_3)                 0.00       2.76 r
+  m1/U0/menti/km1/out[9] (karastuba_6bit_3)               0.00       2.76 r
+  m1/U0/menti/add1/A[4] (RCA_bw16)                        0.00       2.76 r
+  m1/U0/menti/add1/U3/Y (XOR2X1_RVT)                      0.04       2.79 f
+  m1/U0/menti/add1/loop_1[3].genblk1.U1/P1 (G_Cell_145)
+                                                          0.00       2.79 f
+  m1/U0/menti/add1/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.02       2.82 f
+  m1/U0/menti/add1/loop_1[3].genblk1.U1/GG (G_Cell_145)
+                                                          0.00       2.82 f
+  m1/U0/menti/add1/loop_1[4].genblk1.U1/G0 (G_Cell_144)
+                                                          0.00       2.82 f
+  m1/U0/menti/add1/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.02       2.84 f
+  m1/U0/menti/add1/loop_1[4].genblk1.U1/GG (G_Cell_144)
+                                                          0.00       2.84 f
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/G0 (G_Cell_143)
+                                                          0.00       2.84 f
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.02       2.86 f
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/GG (G_Cell_143)
+                                                          0.00       2.86 f
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/G0 (G_Cell_142)
+                                                          0.00       2.86 f
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.02       2.89 f
+  m1/U0/menti/add1/loop_1[6].genblk1.U1/GG (G_Cell_142)
+                                                          0.00       2.89 f
+  m1/U0/menti/add1/U17/Y (XOR2X1_RVT)                     0.03       2.92 r
+  m1/U0/menti/add1/Sum[8] (RCA_bw16)                      0.00       2.92 r
+  m1/U0/menti/out[13] (karastuba_11bit)                   0.00       2.92 r
+  m1/U0/out[13] (menMult)                                 0.00       2.92 r
+  m1/U27/Y (AO22X1_RVT)                                   0.03       2.95 r
+  m1/p_multi_reg[13]/D (DFFX1_RVT)                        0.00       2.95 r
+  data arrival time                                                  2.95
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  m1/p_multi_reg[13]/CLK (DFFX1_RVT)                      0.00       4.50 r
+  library setup time                                     -0.01       4.49
+  data required time                                                 4.49
+  --------------------------------------------------------------------------
+  data required time                                                 4.49
+  data arrival time                                                 -2.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.54
+
+
+  Startpoint: a[1] (input port clocked by MAIN_CLOCK)
+  Endpoint: m1/p_multi_reg[12]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+  RCA_bw4_6          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_6bit_3   8000                  saed32rvt_ff1p16vn40c
+  vedic_4bit_7       ForQA                 saed32rvt_ff1p16vn40c
+  Adder2_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_56      ForQA                 saed32rvt_ff1p16vn40c
+  Adder3_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_54      ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_51      ForQA                 saed32rvt_ff1p16vn40c
+  Adder5_7           ForQA                 saed32rvt_ff1p16vn40c
+  full_adder_49      ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw8_5          ForQA                 saed32rvt_ff1p16vn40c
+  RCA_bw9_3          ForQA                 saed32rvt_ff1p16vn40c
+  karastuba_11bit    8000                  saed32rvt_ff1p16vn40c
+  RCA_bw16           8000                  saed32rvt_ff1p16vn40c
+  fp16multiplier     8000                  saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  a[1] (in)                                               0.01       2.01 f
+  m1/A[1] (fp16multiplier)                                0.00       2.01 f
+  m1/U0/a[1] (menMult)                                    0.00       2.01 f
+  m1/U0/menti/a[1] (karastuba_11bit)                      0.00       2.01 f
+  m1/U0/menti/km1/a[1] (karastuba_6bit_3)                 0.00       2.01 f
+  m1/U0/menti/km1/rca1/B[2] (RCA_bw4_6)                   0.00       2.01 f
+  m1/U0/menti/km1/rca1/U4/Y (XOR2X1_RVT)                  0.04       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/P1 (G_Cell_98)
+                                                          0.00       2.05 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.03       2.08 r
+  m1/U0/menti/km1/rca1/loop_1[1].genblk1.U1/GG (G_Cell_98)
+                                                          0.00       2.08 r
+  m1/U0/menti/km1/rca1/U2/Y (XOR2X1_RVT)                  0.04       2.12 f
+  m1/U0/menti/km1/rca1/Sum[3] (RCA_bw4_6)                 0.00       2.12 f
+  m1/U0/menti/km1/u2/a[2] (vedic_4bit_7)                  0.00       2.12 f
+  m1/U0/menti/km1/u2/U9/Y (AND2X1_RVT)                    0.02       2.14 f
+  m1/U0/menti/km1/u2/adder2/c (Adder2_7)                  0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/A (half_adder_41)          0.00       2.14 f
+  m1/U0/menti/km1/u2/adder2/u1/U2/Y (AND2X1_RVT)          0.02       2.16 f
+  m1/U0/menti/km1/u2/adder2/u1/cout (half_adder_41)       0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/B (full_adder_56)          0.00       2.16 f
+  m1/U0/menti/km1/u2/adder2/u3/U2/Y (XOR2X1_RVT)          0.03       2.20 f
+  m1/U0/menti/km1/u2/adder2/u3/U1/Y (XOR2X1_RVT)          0.04       2.24 r
+  m1/U0/menti/km1/u2/adder2/u3/sum (full_adder_56)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder2/msb[0] (Adder2_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/add[0] (Adder3_7)             0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/cin (full_adder_55)        0.00       2.24 r
+  m1/U0/menti/km1/u2/adder3/u1/U1/Y (XOR2X1_RVT)          0.04       2.28 f
+  m1/U0/menti/km1/u2/adder3/u1/sum (full_adder_55)        0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/B (half_adder_38)          0.00       2.28 f
+  m1/U0/menti/km1/u2/adder3/u2/U2/Y (AND2X1_RVT)          0.02       2.30 f
+  m1/U0/menti/km1/u2/adder3/u2/cout (half_adder_38)       0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/B (full_adder_54)          0.00       2.30 f
+  m1/U0/menti/km1/u2/adder3/u4/U1/Y (XOR2X1_RVT)          0.04       2.34 r
+  m1/U0/menti/km1/u2/adder3/u4/U3/Y (AO22X1_RVT)          0.02       2.36 r
+  m1/U0/menti/km1/u2/adder3/u4/cout (full_adder_54)       0.00       2.36 r
+  m1/U0/menti/km1/u2/adder3/U1/Y (OR2X1_RVT)              0.02       2.38 r
+  m1/U0/menti/km1/u2/adder3/msb[1] (Adder3_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/add[1] (Adder4_7)             0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/B (full_adder_51)          0.00       2.38 r
+  m1/U0/menti/km1/u2/adder4/u2/U1/Y (XOR2X1_RVT)          0.04       2.42 f
+  m1/U0/menti/km1/u2/adder4/u2/U2/Y (XOR2X1_RVT)          0.04       2.46 r
+  m1/U0/menti/km1/u2/adder4/u2/sum (full_adder_51)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder4/msb[0] (Adder4_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/add[0] (Adder5_7)             0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/cin (full_adder_50)        0.00       2.46 r
+  m1/U0/menti/km1/u2/adder5/u0/U3/Y (AO22X1_RVT)          0.02       2.49 r
+  m1/U0/menti/km1/u2/adder5/u0/cout (full_adder_50)       0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/B (full_adder_49)          0.00       2.49 r
+  m1/U0/menti/km1/u2/adder5/u1/U1/Y (XOR2X1_RVT)          0.04       2.53 f
+  m1/U0/menti/km1/u2/adder5/u1/U2/Y (XOR2X1_RVT)          0.04       2.56 f
+  m1/U0/menti/km1/u2/adder5/u1/sum (full_adder_49)        0.00       2.56 f
+  m1/U0/menti/km1/u2/adder5/msb[0] (Adder5_7)             0.00       2.56 f
+  m1/U0/menti/km1/u2/U1/Y (XNOR2X1_RVT)                   0.04       2.60 r
+  m1/U0/menti/km1/u2/out[6] (vedic_4bit_7)                0.00       2.60 r
+  m1/U0/menti/km1/sub_mid/B[7] (RCA_bw8_5)                0.00       2.60 r
+  m1/U0/menti/km1/sub_mid/U6/Y (XOR2X1_RVT)               0.04       2.64 f
+  m1/U0/menti/km1/sub_mid/U5/Y (XOR2X1_RVT)               0.04       2.68 r
+  m1/U0/menti/km1/sub_mid/Sum[7] (RCA_bw8_5)              0.00       2.68 r
+  m1/U0/menti/km1/add1/B[7] (RCA_bw9_3)                   0.00       2.68 r
+  m1/U0/menti/km1/add1/U3/Y (XOR2X1_RVT)                  0.04       2.72 f
+  m1/U0/menti/km1/add1/U1/Y (XOR2X1_RVT)                  0.04       2.76 r
+  m1/U0/menti/km1/add1/Sum[7] (RCA_bw9_3)                 0.00       2.76 r
+  m1/U0/menti/km1/out[9] (karastuba_6bit_3)               0.00       2.76 r
+  m1/U0/menti/add1/A[4] (RCA_bw16)                        0.00       2.76 r
+  m1/U0/menti/add1/U3/Y (XOR2X1_RVT)                      0.04       2.79 f
+  m1/U0/menti/add1/loop_1[3].genblk1.U1/P1 (G_Cell_145)
+                                                          0.00       2.79 f
+  m1/U0/menti/add1/loop_1[3].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.02       2.82 f
+  m1/U0/menti/add1/loop_1[3].genblk1.U1/GG (G_Cell_145)
+                                                          0.00       2.82 f
+  m1/U0/menti/add1/loop_1[4].genblk1.U1/G0 (G_Cell_144)
+                                                          0.00       2.82 f
+  m1/U0/menti/add1/loop_1[4].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.02       2.84 f
+  m1/U0/menti/add1/loop_1[4].genblk1.U1/GG (G_Cell_144)
+                                                          0.00       2.84 f
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/G0 (G_Cell_143)
+                                                          0.00       2.84 f
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/U1/Y (AO21X1_RVT)
+                                                          0.02       2.86 f
+  m1/U0/menti/add1/loop_1[5].genblk1.U1/GG (G_Cell_143)
+                                                          0.00       2.86 f
+  m1/U0/menti/add1/U24/Y (XOR2X1_RVT)                     0.03       2.90 r
+  m1/U0/menti/add1/Sum[7] (RCA_bw16)                      0.00       2.90 r
+  m1/U0/menti/out[12] (karastuba_11bit)                   0.00       2.90 r
+  m1/U0/out[12] (menMult)                                 0.00       2.90 r
+  m1/U26/Y (AO22X1_RVT)                                   0.03       2.92 r
+  m1/p_multi_reg[12]/D (DFFX1_RVT)                        0.00       2.92 r
+  data arrival time                                                  2.92
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  m1/p_multi_reg[12]/CLK (DFFX1_RVT)                      0.00       4.50 r
+  library setup time                                     -0.01       4.49
+  data required time                                                 4.49
+  --------------------------------------------------------------------------
+  data required time                                                 4.49
+  data arrival time                                                 -2.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.56
+
+
+1

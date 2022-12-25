@@ -1,0 +1,170 @@
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.4 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.4 |     *     |
+============================================================================
+
+
+Information: There are 111 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition ff1p16vn40c set on design fp16MAC has different process,
+voltage and temperatures parameters than the parameters at which target library 
+saed32rvt_ss0p95v125c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'encoder_add'
+  Processing 'fp16adder'
+  Processing 'encoder'
+  Processing 'G_cell_0'
+  Processing 'buffer_0'
+  Processing 'B_cell_0'
+  Processing 'kogge_stone_Nbit_NOCLK_bw12'
+  Processing 'G_Cell_0'
+  Processing 'RCA_bw16'
+  Processing 'RCA_bw11'
+  Processing 'RCA_bw9_0'
+  Processing 'RCA_bw8_0'
+  Processing 'full_adder_0'
+  Processing 'Adder5_0'
+  Processing 'Adder4_0'
+  Processing 'half_adder_0'
+  Processing 'Adder3_0'
+  Processing 'Adder2_0'
+  Processing 'vedic_4bit_0'
+  Processing 'RCA_bw4_0'
+  Processing 'karastuba_6bit_0'
+  Processing 'karastuba_11bit'
+  Processing 'menMult'
+  Processing 'RCA_bw5_0'
+  Processing 'biasAdder'
+  Processing 'fp16multiplier'
+  Processing 'fp16MAC'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'fp16adder_DW01_add_0'
+  Mapping 'DW_leftsh'
+Information: Added key list 'DesignWare' to design 'fp16adder'. (DDB-72)
+  Mapping 'DW_leftsh'
+  Mapping 'DW_leftsh'
+  Mapping 'DW_leftsh'
+  Mapping 'DW_leftsh'
+  Mapping 'DW_leftsh'
+  Mapping 'DW_leftsh'
+  Mapping 'DW_leftsh'
+  Mapping 'DW_leftsh'
+  Mapping 'DW_leftsh'
+  Mapping 'DW_leftsh'
+  Processing 'fp16adder_DW01_inc_0'
+  Processing 'fp16adder_DW01_add_1'
+  Processing 'fp16adder_DW01_sub_0'
+  Mapping 'DW_rightsh'
+  Mapping 'DW_rightsh'
+  Processing 'fp16adder_DW01_inc_1'
+  Processing 'fp16adder_DW01_sub_1'
+  Processing 'fp16adder_DW01_sub_2'
+  Processing 'fp16adder_DW01_inc_2'
+  Processing 'fp16adder_DW01_sub_3'
+  Processing 'fp16adder_DW01_sub_4'
+  Processing 'fp16adder_DW01_add_2'
+  Processing 'fp16adder_DW01_add_3'
+  Processing 'fp16adder_DW01_sub_5'
+  Processing 'fp16adder_DW01_add_4'
+  Processing 'fp16adder_DW01_add_5'
+  Processing 'fp16adder_DW01_add_6'
+
+  Beginning Mapping Optimizations  (High effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04    7889.9     35.46     209.4    8648.1                          
+    0:00:04    7808.6     18.53     115.6    8580.2                          
+    0:00:04    7808.6     18.53     115.6    8580.2                          
+    0:00:04    7810.9     18.52     115.6    8580.2                          
+    0:00:04    7810.9     18.52     115.6    8580.2                          
+    0:00:04    7128.7    739.90    8031.4      22.3                          
+    0:00:04    7263.7  35588.98  639607.0       4.5                          
+    0:00:05    7150.8 142440.56 2564073.2       2.3                          
+    0:00:05    7250.5 142468.25 2564410.2      18.5                          
+    0:00:05    7211.8 143480.03 2578502.5       0.0                          
+    0:00:05    7255.8  88496.84 1549578.5     375.0                          
+    0:00:05    7257.8  35508.98  639197.9       5.1                          
+    0:00:05    7253.8    913.47   16464.8       8.1                          
+    0:00:05    7266.5    685.86   12378.7       6.9                          
+    0:00:05    7263.9 206968.91 3725489.2       0.0                          
+    0:00:05    7263.9   1030.53   18566.0       9.1                          
+    0:00:05    7285.8   6087.72  109611.9       6.9                          
+    0:00:05    7303.3    982.67   17717.4       6.9                          
+    0:00:05    7303.3    982.67   17717.4       6.9                          
+    0:00:05    7303.3    982.67   17717.4       6.9                          
+    0:00:05    7303.3    982.67   17717.4       6.9                          
+    0:00:05    7305.6    982.67   17728.8       0.0                          
+    0:00:05    7305.6    982.67   17728.8       0.0                          
+    0:00:05    7305.6    982.67   17728.8       0.0                          
+    0:00:05    7305.6    982.67   17728.8       0.0                          
+    0:00:05    7577.0    213.44    2672.7    1541.3 a1/sum_reg[9]/D          
+    0:00:06    7633.5    170.91    2559.2     316.1 a1/sum_reg[14]/D         
+    0:00:06    7799.7      0.57       4.6       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:06    7799.7      0.57       4.6       0.0                          
+    0:00:06    7797.4      0.00      -0.0       0.0                          
+    0:00:06    7797.4      0.00      -0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:06    7797.4      0.00      -0.0       0.0                          
+    0:00:06    7797.4      0.00      -0.0       0.0                          
+    0:00:06    7381.9      4.69      77.7       0.1                          
+    0:00:06    7143.5      0.00      -0.0       0.0                          
+    0:00:06    7029.4      0.00      -0.0       0.1                          
+    0:00:06    6967.6      0.00      -0.0       0.0                          
+    0:00:06    6945.5      0.00      -0.0       0.0                          
+    0:00:06    6945.5      0.00      -0.0       0.0                          
+    0:00:06    6945.5      0.00      -0.0       0.0                          
+    0:00:06    6812.6      0.00      -0.0       0.0                          
+    0:00:06    6812.6      0.00      -0.0       0.0                          
+    0:00:06    6812.6      0.00      -0.0       0.0                          
+    0:00:06    6812.6      0.00      -0.0       0.0                          
+    0:00:06    6812.6      0.00      -0.0       0.0                          
+    0:00:06    6812.6      0.00      -0.0       0.0                          
+    0:00:07    6796.8      0.00      -0.0       0.0                          
+    0:00:07    6796.8      0.00      -0.0       0.0                          
+    0:00:07    6796.8      0.00      -0.0       0.0                          
+    0:00:07    6796.8      0.00      -0.0       0.0                          
+    0:00:07    6796.8      0.00      -0.0       0.0                          
+    0:00:07    6796.8      0.00      -0.0       0.0                          
+    0:00:07    6790.7      0.00      -0.0       0.0                          
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1

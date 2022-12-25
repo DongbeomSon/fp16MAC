@@ -1,0 +1,536 @@
+ 
+****************************************
+check_design summary:
+Version:     O-2018.06-SP4
+Date:        Fri Dec 23 23:44:42 2022
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      5
+    Feedthrough (LINT-29)                                           5
+
+Cells                                                             248
+    Cells do not drive (LINT-1)                                     2
+    Connected to power or ground (LINT-32)                        197
+    Nets connected to multiple pins on same cell (LINT-33)         49
+
+Nets                                                               15
+    Unloaded nets (LINT-2)                                         15
+--------------------------------------------------------------------------------
+
+Warning: In design 'compshift', cell 'B_4' does not drive any nets. (LINT-1)
+Warning: In design 'compshift', cell 'C204' does not drive any nets. (LINT-1)
+Warning: In design 'fp16MAC', net 'a1/exp[0]' driven by pin 'a1/nor0/exp[0]' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'a1/exp[1]' driven by pin 'a1/nor0/exp[1]' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'a1/exp[2]' driven by pin 'a1/nor0/exp[2]' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'a1/exp[3]' driven by pin 'a1/nor0/exp[3]' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'a1/exp[4]' driven by pin 'a1/nor0/exp[4]' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'a1/exptempB[0]' driven by pin 'a1/cs0/expB_R[0]' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'a1/exptempB[1]' driven by pin 'a1/cs0/expB_R[1]' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'a1/exptempB[2]' driven by pin 'a1/cs0/expB_R[2]' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'a1/exptempB[3]' driven by pin 'a1/cs0/expB_R[3]' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'a1/exptempB[4]' driven by pin 'a1/cs0/expB_R[4]' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'a1/nor0/mts_rnd_0' driven by pin 'a1/nor0/rc8/Sum[1]' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U0/menti/x1[11]' driven by pin 'm1/U0/menti/km2/out[11]' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U0/menti/x2[11]' driven by pin 'm1/U0/menti/km3/out[11]' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U0/menti/xy[10]' driven by pin 'm1/U0/menti/km0/out[10]' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U0/menti/xy[11]' driven by pin 'm1/U0/menti/km0/out[11]' has no loads. (LINT-2)
+Warning: In design 'normalization', input port 'expA_R[4]' is connected directly to output port 'exp[4]'. (LINT-29)
+Warning: In design 'normalization', input port 'expA_R[3]' is connected directly to output port 'exp[3]'. (LINT-29)
+Warning: In design 'normalization', input port 'expA_R[2]' is connected directly to output port 'exp[2]'. (LINT-29)
+Warning: In design 'normalization', input port 'expA_R[1]' is connected directly to output port 'exp[1]'. (LINT-29)
+Warning: In design 'normalization', input port 'expA_R[0]' is connected directly to output port 'exp[0]'. (LINT-29)
+Warning: In design 'fpadder', a pin on submodule 'cs0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'mtsA[10]' is connected to logic 1. 
+Warning: In design 'fpadder', a pin on submodule 'cs0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'mtsB[10]' is connected to logic 1. 
+Warning: In design 'menMult', a pin on submodule 'menti' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[10]' is connected to logic 1. 
+Warning: In design 'menMult', a pin on submodule 'menti' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[10]' is connected to logic 1. 
+Warning: In design 'biasAdder', a pin on submodule 'badder1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'biasAdder', a pin on submodule 'badder2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 1. 
+Warning: In design 'biasAdder', a pin on submodule 'badder2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 0. 
+Warning: In design 'biasAdder', a pin on submodule 'badder2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 0. 
+Warning: In design 'biasAdder', a pin on submodule 'badder2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 0. 
+Warning: In design 'biasAdder', a pin on submodule 'badder2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[1]' is connected to logic 0. 
+Warning: In design 'biasAdder', a pin on submodule 'badder2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'biasAdder', a pin on submodule 'badder3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 1. 
+Warning: In design 'biasAdder', a pin on submodule 'badder3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 0. 
+Warning: In design 'biasAdder', a pin on submodule 'badder3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 0. 
+Warning: In design 'biasAdder', a pin on submodule 'badder3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 0. 
+Warning: In design 'biasAdder', a pin on submodule 'badder3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[1]' is connected to logic 0. 
+Warning: In design 'biasAdder', a pin on submodule 'badder3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 0. 
+Warning: In design 'rounder', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[12]' is connected to logic 0. 
+Warning: In design 'rounder', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[11]' is connected to logic 0. 
+Warning: In design 'rounder', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[10]' is connected to logic 0. 
+Warning: In design 'rounder', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[9]' is connected to logic 0. 
+Warning: In design 'rounder', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'rounder', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[7]' is connected to logic 0. 
+Warning: In design 'rounder', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[6]' is connected to logic 0. 
+Warning: In design 'rounder', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 0. 
+Warning: In design 'rounder', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 0. 
+Warning: In design 'rounder', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 0. 
+Warning: In design 'rounder', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 0. 
+Warning: In design 'rounder', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[1]' is connected to logic 0. 
+Warning: In design 'compshift', a pin on submodule 'rc0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[6]' is connected to logic 0. 
+Warning: In design 'compshift', a pin on submodule 'rc0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[6]' is connected to logic 1. 
+Warning: In design 'compshift', a pin on submodule 'rc0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'compshift', a pin on submodule 'rc1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'compshift', a pin on submodule 'rc2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'compshift', a pin on submodule 'rc3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 0. 
+Warning: In design 'compshift', a pin on submodule 'rc3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 0. 
+Warning: In design 'compshift', a pin on submodule 'rc3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 0. 
+Warning: In design 'compshift', a pin on submodule 'rc3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 0. 
+Warning: In design 'compshift', a pin on submodule 'rc3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[1]' is connected to logic 1. 
+Warning: In design 'compshift', a pin on submodule 'rc3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 0. 
+Warning: In design 'compshift', a pin on submodule 'rc4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 0. 
+Warning: In design 'compshift', a pin on submodule 'rc4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 0. 
+Warning: In design 'compshift', a pin on submodule 'rc4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 0. 
+Warning: In design 'compshift', a pin on submodule 'rc4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 0. 
+Warning: In design 'compshift', a pin on submodule 'rc4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[1]' is connected to logic 1. 
+Warning: In design 'compshift', a pin on submodule 'rc4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc5' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[23]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc5' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[11]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc5' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[10]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc5' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[9]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc5' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc5' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[7]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc5' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[6]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc5' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[5]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc5' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[4]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc5' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[3]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc5' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[2]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc5' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[1]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc5' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[23]' is connected to logic 1. 
+Warning: In design 'mantissa', a pin on submodule 'rc5' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'mantissa', a pin on submodule 'rc6' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[23]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc6' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[11]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc6' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[10]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc6' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[9]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc6' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc6' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[7]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc6' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[6]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc6' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[5]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc6' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[4]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc6' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[3]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc6' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[2]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc6' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[1]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc6' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[23]' is connected to logic 0. 
+Warning: In design 'mantissa', a pin on submodule 'rc6' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[23]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[22]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[21]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[20]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[19]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[18]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[17]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[16]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[15]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[14]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[13]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[12]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[11]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[10]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[9]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[7]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[6]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[1]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[0].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[0].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[0].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[0].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[0].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[1].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[1].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[1].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[1].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[1].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[2].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[2].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[2].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[2].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[2].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[3].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[3].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[3].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[3].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[3].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[4].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[4].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[4].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[4].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[4].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[5].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[5].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[5].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[5].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[5].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[6].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[6].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[6].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[6].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[6].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[7].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[7].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[7].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[7].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[7].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[8].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[8].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[8].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[8].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[8].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[9].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[9].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[9].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[9].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[9].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[10].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[10].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[10].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[10].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'loop_1[10].rc7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'normalization', a pin on submodule 'rc8' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[12]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc8' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[11]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc8' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[10]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc8' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[9]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc8' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc8' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[7]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc8' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[6]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc8' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc8' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc8' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc8' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc8' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc9' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc9' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc9' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc9' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc9' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[1]' is connected to logic 0. 
+Warning: In design 'normalization', a pin on submodule 'rc9' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'km0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[5]' is connected to logic 0. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'km0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[5]' is connected to logic 0. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'km2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[5]' is connected to logic 0. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'km3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[5]' is connected to logic 0. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'rca1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 0. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'add1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[16]' is connected to logic 0. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'add1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[15]' is connected to logic 0. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'add1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[14]' is connected to logic 0. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'add1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[13]' is connected to logic 0. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'add1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'u0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[3]' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'u0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[3]' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'u1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[3]' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'u1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[3]' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'rca1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[4]' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'rca1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'rca1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'rca2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[4]' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'rca2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'rca2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'add_mid' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'sub_mid' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'add1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[9]' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'add1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 0. 
+Warning: In design 'Adder4', a pin on submodule 'u1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cin' is connected to logic 0. 
+Warning: In design 'Adder5', a pin on submodule 'u1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cin' is connected to logic 0. 
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[15]' is connected to pins 'A[15]', 'sum[15]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[14]' is connected to pins 'A[14]', 'sum[14]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[13]' is connected to pins 'A[13]', 'sum[13]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[12]' is connected to pins 'A[12]', 'sum[12]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[11]' is connected to pins 'A[11]', 'sum[11]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[10]' is connected to pins 'A[10]', 'sum[10]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[9]' is connected to pins 'A[9]', 'sum[9]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[8]' is connected to pins 'A[8]', 'sum[8]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[7]' is connected to pins 'A[7]', 'sum[7]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[6]' is connected to pins 'A[6]', 'sum[6]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[5]' is connected to pins 'A[5]', 'sum[5]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[4]' is connected to pins 'A[4]', 'sum[4]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[3]' is connected to pins 'A[3]', 'sum[3]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[2]' is connected to pins 'A[2]', 'sum[2]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[1]' is connected to pins 'A[1]', 'sum[1]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[0]' is connected to pins 'A[0]', 'sum[0]''.
+Warning: In design 'fpadder', the same net is connected to more than one pin on submodule 'cs0'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'mtsA[10]', 'mtsB[10]''.
+Warning: In design 'menMult', the same net is connected to more than one pin on submodule 'menti'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'a[10]', 'b[10]''.
+Warning: In design 'biasAdder', the same net is connected to more than one pin on submodule 'badder2'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'B[5]', 'Cin''.
+Warning: In design 'biasAdder', the same net is connected to more than one pin on submodule 'badder2'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'B[4]', 'B[3]'', 'B[2]', 'B[1]'.
+Warning: In design 'biasAdder', the same net is connected to more than one pin on submodule 'badder3'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'B[4]', 'B[3]'', 'B[2]', 'B[1]', 'Cin'.
+Warning: In design 'rounder', the same net is connected to more than one pin on submodule 'rnd_add'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'B[12]', 'B[11]'', 'B[10]', 'B[9]', 'B[8]', 'B[7]', 'B[6]', 'B[5]', 'B[4]', 'B[3]', 'B[2]', 'B[1]'.
+Warning: In design 'compshift', the same net is connected to more than one pin on submodule 'rc0'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'B[6]', 'Cin''.
+Warning: In design 'compshift', the same net is connected to more than one pin on submodule 'rc3'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'B[5]', 'B[4]'', 'B[3]', 'B[2]', 'Cin'.
+Warning: In design 'compshift', the same net is connected to more than one pin on submodule 'rc4'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'B[5]', 'B[4]'', 'B[3]', 'B[2]', 'Cin'.
+Warning: In design 'mantissa', the same net is connected to more than one pin on submodule 'rc5'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'A[23]', 'A[11]'', 'A[10]', 'A[9]', 'A[8]', 'A[7]', 'A[6]', 'A[5]', 'A[4]', 'A[3]', 'A[2]', 'A[1]'.
+Warning: In design 'mantissa', the same net is connected to more than one pin on submodule 'rc5'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'B[23]', 'Cin''.
+Warning: In design 'mantissa', the same net is connected to more than one pin on submodule 'rc6'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'A[23]', 'A[11]'', 'A[10]', 'A[9]', 'A[8]', 'A[7]', 'A[6]', 'A[5]', 'A[4]', 'A[3]', 'A[2]', 'A[1]', 'B[23]', 'Cin'.
+Warning: In design 'normalization', the same net is connected to more than one pin on submodule 'rc7'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'B[23]', 'B[22]'', 'B[21]', 'B[20]', 'B[19]', 'B[18]', 'B[17]', 'B[16]', 'B[15]', 'B[14]', 'B[13]', 'B[12]', 'B[11]', 'B[10]', 'B[9]', 'B[8]', 'B[7]', 'B[6]', 'B[5]', 'B[4]', 'B[3]', 'B[2]', 'B[1]'.
+Warning: In design 'normalization', the same net is connected to more than one pin on submodule 'loop_1[0].rc7'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'B[5]', 'B[4]'', 'B[3]', 'B[2]', 'Cin'.
+Warning: In design 'normalization', the same net is connected to more than one pin on submodule 'loop_1[1].rc7'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'B[5]', 'B[4]'', 'B[3]', 'B[2]', 'Cin'.
+Warning: In design 'normalization', the same net is connected to more than one pin on submodule 'loop_1[2].rc7'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'B[5]', 'B[4]'', 'B[3]', 'B[2]', 'Cin'.
+Warning: In design 'normalization', the same net is connected to more than one pin on submodule 'loop_1[3].rc7'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'B[5]', 'B[4]'', 'B[3]', 'B[2]', 'Cin'.
+Warning: In design 'normalization', the same net is connected to more than one pin on submodule 'loop_1[4].rc7'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'B[5]', 'B[4]'', 'B[3]', 'B[2]', 'Cin'.
+Warning: In design 'normalization', the same net is connected to more than one pin on submodule 'loop_1[5].rc7'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'B[5]', 'B[4]'', 'B[3]', 'B[2]', 'Cin'.
+Warning: In design 'normalization', the same net is connected to more than one pin on submodule 'loop_1[6].rc7'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'B[5]', 'B[4]'', 'B[3]', 'B[2]', 'Cin'.
+Warning: In design 'normalization', the same net is connected to more than one pin on submodule 'loop_1[7].rc7'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'B[5]', 'B[4]'', 'B[3]', 'B[2]', 'Cin'.
+Warning: In design 'normalization', the same net is connected to more than one pin on submodule 'loop_1[8].rc7'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'B[5]', 'B[4]'', 'B[3]', 'B[2]', 'Cin'.
+Warning: In design 'normalization', the same net is connected to more than one pin on submodule 'loop_1[9].rc7'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'B[5]', 'B[4]'', 'B[3]', 'B[2]', 'Cin'.
+Warning: In design 'normalization', the same net is connected to more than one pin on submodule 'loop_1[10].rc7'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'B[5]', 'B[4]'', 'B[3]', 'B[2]', 'Cin'.
+Warning: In design 'normalization', the same net is connected to more than one pin on submodule 'rc8'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'B[12]', 'B[11]'', 'B[10]', 'B[9]', 'B[8]', 'B[7]', 'B[6]', 'B[5]', 'B[4]', 'B[3]', 'B[2]', 'Cin'.
+Warning: In design 'normalization', the same net is connected to more than one pin on submodule 'rc9'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'B[5]', 'B[4]'', 'B[3]', 'B[2]', 'B[1]'.
+Warning: In design 'karastuba_11bit', the same net is connected to more than one pin on submodule 'km0'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'a[5]', 'b[5]''.
+Warning: In design 'karastuba_11bit', the same net is connected to more than one pin on submodule 'add1'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'B[16]', 'B[15]'', 'B[14]', 'B[13]', 'Cin'.
+Warning: In design 'karastuba_6bit', the same net is connected to more than one pin on submodule 'u0'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'a[3]', 'b[3]''.
+Warning: In design 'karastuba_6bit', the same net is connected to more than one pin on submodule 'u1'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'a[3]', 'b[3]''.
+Warning: In design 'karastuba_6bit', the same net is connected to more than one pin on submodule 'rca1'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'A[4]', 'B[4]'', 'Cin'.
+Warning: In design 'karastuba_6bit', the same net is connected to more than one pin on submodule 'rca2'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'A[4]', 'B[4]'', 'Cin'.
+Warning: In design 'karastuba_6bit', the same net is connected to more than one pin on submodule 'add1'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'B[9]', 'Cin''.
+1

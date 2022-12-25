@@ -1,0 +1,31 @@
+ 
+****************************************
+Report : area
+Design : fp16MAC
+Version: O-2018.06-SP4
+Date   : Fri Dec 23 17:23:39 2022
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    saed32rvt_ff1p16vn40c (File: /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ff1p16vn40c.db)
+
+Number of ports:                         3296
+Number of nets:                          5472
+Number of cells:                         2641
+Number of combinational cells:           2054
+Number of sequential cells:                80
+Number of macros/black boxes:               0
+Number of buf/inv:                        114
+Number of references:                       4
+
+Combinational area:               6269.986646
+Buf/Inv area:                      146.386945
+Noncombinational area:             569.282570
+Macro/Black Box area:                0.000000
+Net Interconnect area:             977.504281
+
+Total cell area:                  6839.269216
+Total area:                       7816.773496
+1

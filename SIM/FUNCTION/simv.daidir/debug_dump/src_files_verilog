@@ -1,0 +1,5 @@
+/home/capstone8/capstone/project/lab4_front-end/RTL/1bit_adder.v
+/home/capstone8/capstone/project/lab4_front-end/RTL/fp16MAC.v
+/home/capstone8/capstone/project/lab4_front-end/RTL/fp16multiplier.v
+/home/capstone8/capstone/project/lab4_front-end/RTL/fpadder.v
+/home/capstone8/capstone/project/lab4_front-end/SIM/TESTBENCH/tb_fp16MAC.v

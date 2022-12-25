@@ -1,0 +1,3 @@
+Command Line: /data/SYNOPSYS/vcs-mx/M-2017.03-SP2/linux/bin/elabcom -logdir simv.daidir/elabcomLog -simvdaidir simv.daidir -lib simv.daidir/work -saveLevel -elab simv.daidir/kdb -simflow -simdir simv.daidir/kdb_libs -top tb_fp16MAC karastuba_12bit karastuba_11bit_test karastuba_12bit_test fp16multiplier_pipe CSA -Lf work
+uname(Linux AIHA 5.4.0-132-generic #148~18.04.1-Ubuntu SMP Mon Oct 24 20:41:14 UTC 2022 x86_64)
+au time 0.063759 0.038493 0.022963 delta 286724096 286724096 total 338112512 338112512

@@ -1,0 +1,212 @@
+ 
+****************************************
+check_design summary:
+Version:     O-2018.06-SP4
+Date:        Fri Dec 23 02:46:43 2022
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      4
+    Unconnected ports (LINT-28)                                     1
+    Feedthrough (LINT-29)                                           3
+
+Cells                                                              88
+    Cells do not drive (LINT-1)                                    10
+    Connected to power or ground (LINT-32)                         50
+    Nets connected to multiple pins on same cell (LINT-33)         26
+    Cells have undriven hier pins (LINT-59)                         1
+    Hier pins without driver and load (LINT-60)                     1
+
+Nets                                                               18
+    Unloaded nets (LINT-2)                                         16
+    Undriven nets (LINT-3)                                          2
+--------------------------------------------------------------------------------
+
+Warning: In design 'fp16adder', cell 'B_8' does not drive any nets. (LINT-1)
+Warning: In design 'fp16adder', cell 'B_9' does not drive any nets. (LINT-1)
+Warning: In design 'fp16adder', cell 'B_10' does not drive any nets. (LINT-1)
+Warning: In design 'fp16adder', cell 'B_12' does not drive any nets. (LINT-1)
+Warning: In design 'fp16adder', cell 'C278' does not drive any nets. (LINT-1)
+Warning: In design 'fp16adder', cell 'B_14' does not drive any nets. (LINT-1)
+Warning: In design 'fp16adder', cell 'C295' does not drive any nets. (LINT-1)
+Warning: In design 'fp16adder', cell 'B_15' does not drive any nets. (LINT-1)
+Warning: In design 'fp16adder', cell 'B_16' does not drive any nets. (LINT-1)
+Warning: In design 'fp16adder', cell 'B_17' does not drive any nets. (LINT-1)
+Warning: In design 'fp16MAC', net 'm1/U1/menti/x1[11]' driven by pin 'm1/U1/menti/km2/out[11]' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U1/menti/x2[11]' driven by pin 'm1/U1/menti/km3/out[11]' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U1/menti/xy[10]' driven by pin 'm1/U1/menti/km0/out[10]' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U1/menti/xy[11]' driven by pin 'm1/U1/menti/km0/out[11]' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U1/rnd_add/PP_56' driven by pin 'm1/U1/rnd_add/loop_1[4].genblk1.loop_2[4].genblk1.U0/PPP' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U1/rnd_add/PP_57' driven by pin 'm1/U1/rnd_add/loop_1[4].genblk1.loop_2[5].genblk1.U0/PPP' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U1/rnd_add/PP_58' driven by pin 'm1/U1/rnd_add/loop_1[4].genblk1.loop_2[6].genblk1.U0/PPP' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U1/rnd_add/PP_59' driven by pin 'm1/U1/rnd_add/loop_1[4].genblk1.loop_2[7].genblk1.U0/PPP' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U1/rnd_add/GG_56' driven by pin 'm1/U1/rnd_add/loop_1[4].genblk1.loop_2[4].genblk1.U0/GGG' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U1/rnd_add/GG_57' driven by pin 'm1/U1/rnd_add/loop_1[4].genblk1.loop_2[5].genblk1.U0/GGG' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U1/rnd_add/GG_58' driven by pin 'm1/U1/rnd_add/loop_1[4].genblk1.loop_2[6].genblk1.U0/GGG' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U1/rnd_add/PP_60' driven by pin 'm1/U1/rnd_add/loop_1[4].loop_3[8].genblk1.U1/PPP' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U1/rnd_add/PP_61' driven by pin 'm1/U1/rnd_add/loop_1[4].loop_3[9].genblk1.U1/PPP' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U1/rnd_add/PP_62' driven by pin 'm1/U1/rnd_add/loop_1[4].loop_3[10].genblk1.U1/PPP' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U1/rnd_add/PP_63' driven by pin 'm1/U1/rnd_add/loop_1[4].loop_3[11].genblk1.U1/PPP' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U1/rnd_add/PP_64' driven by pin 'm1/U1/rnd_add/loop_1[4].loop_3[12].genblk1.U1/PPP' has no loads. (LINT-2)
+Warning: In design 'fp16MAC', net 'm1/U1/rnd_add/PP[40]' has no drivers.  Logic 0 assumed. (LINT-3)
+Warning: In design 'fp16MAC', net 'm1/U1/rnd_add/GG[40]' has no drivers.  Logic 0 assumed. (LINT-3)
+Warning: In design 'G_cell', port 'PP' is not connected to any nets. (LINT-28)
+Warning: In design 'G_cell', input port 'P' is connected directly to output port 'PPP'. (LINT-29)
+Warning: In design 'buffer', input port 'G' is connected directly to output port 'GGG'. (LINT-29)
+Warning: In design 'buffer', input port 'P' is connected directly to output port 'PPP'. (LINT-29)
+Warning: In design 'biasAdder', a pin on submodule 'badder1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'biasAdder', a pin on submodule 'badder2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 1. 
+Warning: In design 'biasAdder', a pin on submodule 'badder2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 0. 
+Warning: In design 'biasAdder', a pin on submodule 'badder2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 0. 
+Warning: In design 'biasAdder', a pin on submodule 'badder2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 0. 
+Warning: In design 'biasAdder', a pin on submodule 'badder2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[1]' is connected to logic 0. 
+Warning: In design 'menMult', a pin on submodule 'menti' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[10]' is connected to logic 1. 
+Warning: In design 'menMult', a pin on submodule 'menti' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[10]' is connected to logic 1. 
+Warning: In design 'menMult', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[12]' is connected to logic 0. 
+Warning: In design 'menMult', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[11]' is connected to logic 0. 
+Warning: In design 'menMult', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[10]' is connected to logic 0. 
+Warning: In design 'menMult', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[9]' is connected to logic 0. 
+Warning: In design 'menMult', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'menMult', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[7]' is connected to logic 0. 
+Warning: In design 'menMult', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[6]' is connected to logic 0. 
+Warning: In design 'menMult', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 0. 
+Warning: In design 'menMult', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 0. 
+Warning: In design 'menMult', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 0. 
+Warning: In design 'menMult', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 0. 
+Warning: In design 'menMult', a pin on submodule 'rnd_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[1]' is connected to logic 0. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'km0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[5]' is connected to logic 0. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'km0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[5]' is connected to logic 0. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'km2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[5]' is connected to logic 0. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'km3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[5]' is connected to logic 0. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'rca1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 0. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'add1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[16]' is connected to logic 0. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'add1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[15]' is connected to logic 0. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'add1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[14]' is connected to logic 0. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'add1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[13]' is connected to logic 0. 
+Warning: In design 'karastuba_11bit', a pin on submodule 'add1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 0. 
+Warning: In design 'kogge_stone_Nbit_NOCLK_bw12', a pin on submodule 'loop_1[1].loop_3[1].genblk1.U1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'PP' is connected to logic 0. 
+Warning: In design 'kogge_stone_Nbit_NOCLK_bw12', a pin on submodule 'loop_1[2].loop_3[2].genblk1.U1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'PP' is connected to logic 0. 
+Warning: In design 'kogge_stone_Nbit_NOCLK_bw12', a pin on submodule 'loop_1[3].loop_3[4].genblk1.U1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'PP' is connected to logic 0. 
+Warning: In design 'kogge_stone_Nbit_NOCLK_bw12', a pin on submodule 'loop_1[4].loop_3[8].genblk1.U1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'PP' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'u0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[3]' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'u0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[3]' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'u1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[3]' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'u1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[3]' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'rca1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[4]' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'rca1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'rca1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'rca2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[4]' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'rca2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'rca2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'add_mid' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'sub_mid' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 1. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'add1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[9]' is connected to logic 0. 
+Warning: In design 'karastuba_6bit', a pin on submodule 'add1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Cin' is connected to logic 0. 
+Warning: In design 'Adder4', a pin on submodule 'u1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cin' is connected to logic 0. 
+Warning: In design 'Adder5', a pin on submodule 'u1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cin' is connected to logic 0. 
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[15]' is connected to pins 'A[15]', 'sum[15]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[14]' is connected to pins 'A[14]', 'sum[14]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[13]' is connected to pins 'A[13]', 'sum[13]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[12]' is connected to pins 'A[12]', 'sum[12]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[11]' is connected to pins 'A[11]', 'sum[11]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[10]' is connected to pins 'A[10]', 'sum[10]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[9]' is connected to pins 'A[9]', 'sum[9]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[8]' is connected to pins 'A[8]', 'sum[8]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[7]' is connected to pins 'A[7]', 'sum[7]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[6]' is connected to pins 'A[6]', 'sum[6]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[5]' is connected to pins 'A[5]', 'sum[5]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[4]' is connected to pins 'A[4]', 'sum[4]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[3]' is connected to pins 'A[3]', 'sum[3]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[2]' is connected to pins 'A[2]', 'sum[2]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[1]' is connected to pins 'A[1]', 'sum[1]''.
+Warning: In design 'fp16MAC', the same net is connected to more than one pin on submodule 'a1'. (LINT-33)
+   Net 'pAcc[0]' is connected to pins 'A[0]', 'sum[0]''.
+Warning: In design 'biasAdder', the same net is connected to more than one pin on submodule 'badder2'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'B[4]', 'B[3]'', 'B[2]', 'B[1]'.
+Warning: In design 'menMult', the same net is connected to more than one pin on submodule 'menti'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'a[10]', 'b[10]''.
+Warning: In design 'menMult', the same net is connected to more than one pin on submodule 'rnd_add'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'B[12]', 'B[11]'', 'B[10]', 'B[9]', 'B[8]', 'B[7]', 'B[6]', 'B[5]', 'B[4]', 'B[3]', 'B[2]', 'B[1]'.
+Warning: In design 'karastuba_11bit', the same net is connected to more than one pin on submodule 'km0'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'a[5]', 'b[5]''.
+Warning: In design 'karastuba_11bit', the same net is connected to more than one pin on submodule 'add1'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'B[16]', 'B[15]'', 'B[14]', 'B[13]', 'Cin'.
+Warning: In design 'karastuba_6bit', the same net is connected to more than one pin on submodule 'u0'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'a[3]', 'b[3]''.
+Warning: In design 'karastuba_6bit', the same net is connected to more than one pin on submodule 'u1'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'a[3]', 'b[3]''.
+Warning: In design 'karastuba_6bit', the same net is connected to more than one pin on submodule 'rca1'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'A[4]', 'B[4]'', 'Cin'.
+Warning: In design 'karastuba_6bit', the same net is connected to more than one pin on submodule 'rca2'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'A[4]', 'B[4]'', 'Cin'.
+Warning: In design 'karastuba_6bit', the same net is connected to more than one pin on submodule 'add1'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'B[9]', 'Cin''.
+Warning: In design 'kogge_stone_Nbit_NOCLK_bw12', input pin 'GG' of hierarchical cell 'loop_1[4].loop_3[9].genblk1.U1' has one or more internal loads, but is not connected to any nets. 'Logic 0' is assumed. (LINT-59)
+Warning: In design 'kogge_stone_Nbit_NOCLK_bw12', input pin 'PP' of hierarchical cell 'loop_1[4].loop_3[9].genblk1.U1' has no internal loads and is not connected to any nets. (LINT-60)
+1

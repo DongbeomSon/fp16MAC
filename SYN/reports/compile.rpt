@@ -1,0 +1,145 @@
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.4 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.4 |     *     |
+============================================================================
+
+
+Information: There are 268 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition ff1p16vn40c set on design fp16MAC has different process,
+voltage and temperatures parameters than the parameters at which target library 
+saed32rvt_ss0p95v125c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'G_Cell_0'
+  Processing 'RCA_bw5_0'
+  Processing 'RCA_bw12_0'
+  Processing 'RCA_bw23_0'
+  Processing 'normalization'
+  Processing 'mantissa'
+  Processing 'RCA_bw6'
+  Processing 'compshift'
+  Processing 'encoder_add'
+  Processing 'fpadder'
+  Processing 'encoder_b'
+  Processing 'rounder'
+  Processing 'biasAdder'
+  Processing 'encoder_a'
+  Processing 'RCA_bw16'
+  Processing 'RCA_bw11'
+  Processing 'RCA_bw9_0'
+  Processing 'RCA_bw8_0'
+  Processing 'full_adder_0'
+  Processing 'Adder5_0'
+  Processing 'Adder4_0'
+  Processing 'half_adder_0'
+  Processing 'Adder3_0'
+  Processing 'Adder2_0'
+  Processing 'vedic_4bit_0'
+  Processing 'RCA_bw4_0'
+  Processing 'karastuba_6bit_0'
+  Processing 'karastuba_11bit'
+  Processing 'menMult'
+  Processing 'fp16multiplier'
+  Processing 'fp16MAC'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Mapping 'DW_leftsh'
+Information: Added key list 'DesignWare' to design 'normalization'. (DDB-72)
+  Mapping 'DW_leftsh'
+  Mapping 'DW_leftsh'
+  Mapping 'DW_leftsh'
+  Mapping 'DW_leftsh'
+  Mapping 'DW_leftsh'
+  Mapping 'DW_leftsh'
+  Mapping 'DW_leftsh'
+  Mapping 'DW_leftsh'
+  Mapping 'DW_leftsh'
+  Mapping 'DW_leftsh'
+  Mapping 'DW_rightsh'
+Information: Added key list 'DesignWare' to design 'compshift'. (DDB-72)
+  Mapping 'DW_rightsh'
+
+  Beginning Mapping Optimizations  (High effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05   10337.3      0.00      -0.0       5.2                          
+    0:00:05   10337.3      0.00      -0.0       5.2                          
+    0:00:05   10337.3      0.00      -0.0       5.2                          
+    0:00:05   10337.3      0.00      -0.0       5.2                          
+    0:00:05   10337.3      0.00      -0.0       5.2                          
+    0:00:06    9609.9      0.00      -0.0       0.0                          
+    0:00:06    9605.4      0.00      -0.0       0.0                          
+    0:00:06    9605.4      0.00      -0.0       0.0                          
+    0:00:06    9605.4      0.00      -0.0       0.0                          
+    0:00:06    9605.4      0.00      -0.0       0.0                          
+    0:00:06    9605.4      0.00      -0.0       0.0                          
+    0:00:06    9605.4      0.00      -0.0       0.0                          
+    0:00:06    9605.4      0.00      -0.0       0.0                          
+    0:00:06    9605.4      0.00      -0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:06    9605.4      0.00      -0.0       0.0                          
+    0:00:06    9605.4      0.00      -0.0       0.0                          
+    0:00:06    9602.8      0.00      -0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:06    9602.8      0.00      -0.0       0.0                          
+    0:00:06    9602.8      0.00      -0.0       0.0                          
+    0:00:06    9511.1      0.00      -0.0       0.0                          
+    0:00:07    9476.3      0.00      -0.0       0.0                          
+    0:00:07    9463.3      0.00      -0.0       0.0                          
+    0:00:07    9455.7      0.00      -0.0       0.0                          
+    0:00:07    9453.1      0.00      -0.0       0.0                          
+    0:00:07    9453.1      0.00      -0.0       0.0                          
+    0:00:07    9453.1      0.00      -0.0       0.0                          
+    0:00:07    9452.9      0.00      -0.0       0.0                          
+    0:00:07    9452.9      0.00      -0.0       0.0                          
+    0:00:07    9452.9      0.00      -0.0       0.0                          
+    0:00:07    9452.9      0.00      -0.0       0.0                          
+    0:00:07    9452.9      0.00      -0.0       0.0                          
+    0:00:07    9452.9      0.00      -0.0       0.0                          
+    0:00:07    9418.6      0.00      -0.0       0.0                          
+    0:00:07    9418.6      0.00      -0.0       0.0                          
+    0:00:07    9418.6      0.00      -0.0       0.0                          
+    0:00:07    9418.6      0.00      -0.0       0.0                          
+    0:00:07    9418.6      0.00      -0.0       0.0                          
+    0:00:07    9418.6      0.00      -0.0       0.0                          
+    0:00:07    9418.6      0.00      -0.0       0.0                          
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1

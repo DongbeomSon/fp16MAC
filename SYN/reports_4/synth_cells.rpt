@@ -1,0 +1,128 @@
+ 
+****************************************
+Report : cell
+Design : fp16MAC
+Version: O-2018.06-SP4
+Date   : Fri Dec 23 17:23:40 2022
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U3                        INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U4                        INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U5                        INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U6                        INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+a1                        fp16adder                       1604.156950
+                                                                    h, n
+acc_reg[0]                DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+acc_reg[1]                DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+acc_reg[2]                DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+acc_reg[3]                DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+acc_reg[4]                DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+acc_reg[5]                DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+acc_reg[6]                DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+acc_reg[7]                DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+acc_reg[8]                DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+acc_reg[9]                DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+acc_reg[10]               DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+acc_reg[11]               DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+acc_reg[12]               DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+acc_reg[13]               DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+acc_reg[14]               DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+acc_reg[15]               DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_a_reg[0]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_a_reg[1]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_a_reg[2]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_a_reg[3]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_a_reg[4]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_a_reg[5]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_a_reg[6]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_a_reg[7]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_a_reg[8]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_a_reg[9]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_a_reg[10]           DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_a_reg[11]           DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_a_reg[12]           DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_a_reg[13]           DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_a_reg[14]           DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_a_reg[15]           DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_b_reg[0]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_b_reg[1]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_b_reg[2]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_b_reg[3]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_b_reg[4]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_b_reg[5]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_b_reg[6]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_b_reg[7]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_b_reg[8]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_b_reg[9]            DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_b_reg[10]           DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_b_reg[11]           DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_b_reg[12]           DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_b_reg[13]           DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_b_reg[14]           DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+input_b_reg[15]           DFFARX1_RVT     saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+m1                        fp16multiplier                  4888.459844
+                                                                    h, n
+--------------------------------------------------------------------------------
+Total 54 cells                                            6839.269216
+1

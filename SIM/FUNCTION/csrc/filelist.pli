@@ -1,0 +1,3 @@
+PLI_STUB_OBJS += _vcs_pli_stub_.o
+_vcs_pli_stub_.o: _vcs_pli_stub_.c
+	@$(CC) -I/data/SYNOPSYS/vcs-mx/M-2017.03-SP2/include  -pipe -m32    -I/data/SYNOPSYS/vcs-mx/M-2017.03-SP2/include  -fPIC -c -o _vcs_pli_stub_.o _vcs_pli_stub_.c

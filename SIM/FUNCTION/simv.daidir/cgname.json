@@ -1,0 +1,116 @@
+{
+    "RCA_0005": [
+        "RCA_0005",
+        "ehnx4",
+        "module",
+        5
+    ],
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        1
+    ],
+    "karastuba_12bit_test": [
+        "karastuba_12bit_test",
+        "p6jTb",
+        "module",
+        13
+    ],
+    "RCA_0008": [
+        "RCA_0008",
+        "fDGFP",
+        "module",
+        7
+    ],
+    "tb_fp16MAC": [
+        "tb_fp16MAC",
+        "yMrAT",
+        "module",
+        2
+    ],
+    "karastuba_11bit_test": [
+        "karastuba_11bit_test",
+        "Cx9zp",
+        "module",
+        12
+    ],
+    "RCA_0006": [
+        "RCA_0006",
+        "niYej",
+        "module",
+        6
+    ],
+    "RCA_0000": [
+        "RCA_0000",
+        "eNvia",
+        "module",
+        3
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        19
+    ],
+    "RCA_0001": [
+        "RCA_0001",
+        "yNvz0",
+        "module",
+        4
+    ],
+    "RCA_0009": [
+        "RCA_0009",
+        "ryz4W",
+        "module",
+        8
+    ],
+    "fp16multiplier_pipe": [
+        "fp16multiplier_pipe",
+        "AEWT8",
+        "module",
+        16
+    ],
+    "vedic_4bit": [
+        "vedic_4bit",
+        "QMbwx",
+        "module",
+        9
+    ],
+    "karastuba_6bit": [
+        "karastuba_6bit",
+        "Z11GV",
+        "module",
+        10
+    ],
+    "encoder_a": [
+        "encoder_a",
+        "JFeZ2",
+        "module",
+        15
+    ],
+    "karastuba_12bit": [
+        "karastuba_12bit",
+        "dEMT0",
+        "module",
+        11
+    ],
+    "menMult": [
+        "menMult",
+        "BVMSK",
+        "module",
+        14
+    ],
+    "CSA": [
+        "CSA",
+        "SrZub",
+        "module",
+        17
+    ],
+    "fp16MAC": [
+        "fp16MAC",
+        "tuUAY",
+        "module",
+        18
+    ]
+}

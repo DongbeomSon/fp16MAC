@@ -1,0 +1,99 @@
+0 
+37
++itf+/data/SYNOPSYS/vcs-mx/M-2017.03-SP2/linux/lib/vcsdp_lite.tab
++vcsd1
++vpi
+-Mamsrun=
+-Masflags=--32
+-Mcc=gcc
+-Mcfl= -pipe -m32 -O -I/data/SYNOPSYS/vcs-mx/M-2017.03-SP2/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -m32 -L/usr/lib/i386-linux-gnu -L/lib/i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu -Wl,--no-as-needed -m32 -rdynamic
+-Mobjects= /data/SYNOPSYS/vcs-mx/M-2017.03-SP2/linux/lib/libvirsim.so /data/SYNOPSYS/vcs-mx/M-2017.03-SP2/linux/lib/liberrorinf.so /data/SYNOPSYS/vcs-mx/M-2017.03-SP2/linux/lib/libsnpsmalloc.so
+-Mout=simv
+-Msaverestoreobj=/data/SYNOPSYS/vcs-mx/M-2017.03-SP2/linux/lib/vcs_save_restore_new.o
+-Msyslibs=/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/share/PLI/VCS/LINUX/pli.a /data/SYNOPSYS/vcs-mx/M-2017.03-SP2/linux/lib/ctype-stubs_32.a -ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -m32 -I/data/SYNOPSYS/vcs-mx/M-2017.03-SP2/include
+-P
+-Xufe=2steps
+-debug_access+all
+-fsdb
+-gen_obj
+-kdb
+-l
+-lca
+-picarchive
+-sverilog
+../../RTL/1bit_adder.v
+../../RTL/fp16MAC.v
+../../RTL/fp16multiplier.v
+../../RTL/fpadder.v
+../TESTBENCH/tb_fp16MAC.v
+/data/SYNOPSYS/vcs-mx/M-2017.03-SP2/linux/bin/vcs1
+/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/share/PLI/VCS/LINUX/verdi.tab
+func_sim.log
+44
+sysc_uni_pwd=/home/capstone8/capstone/project/lab4_front-end/SIM/FUNCTION
+XDG_SESSION_ID=19546
+XDG_RUNTIME_DIR=/run/user/1028
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+VMR_MODE_FLAG=32
+VERDI_HOME=/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2
+VCS_MX_HOME_INTERNAL=1
+VCS_LOG_FILE=func_sim.log
+VCS_LCAMSG_PRINT_OFF=1
+VCS_HOME=/data/SYNOPSYS/vcs-mx/M-2017.03-SP2
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux
+VCS_AMD_PURE32=1
+UNAME=/bin/uname
+TOOL_HOME=/data/SYNOPSYS/vcs-mx/M-2017.03-SP2/linux
+S_COLORS=auto
+SYNOPSYS_LC_ROOT=/data/SYNOPSYS/lc/O-2018.06-SP5
+SSH_TTY=/dev/pts/12
+SSH_CONNECTION=166.104.160.100 1281 166.104.35.43 22
+SSH_CLIENT=166.104.160.100 1281 22
+SNPS_VCS_INTERNAL_UBUNTU_PRE_LDFLAGS=-Wl,--no-as-needed 
+SNPS_VCS_INTERNAL_LINKER_NEEDS_NO_AS_NEEDED=1
+SNPS_VCS_CLANG_PATH=/fs/src/interfaces/LLVM_Project/QSCM/opt/llvm-3.9.1/linux64
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+OVA_UUM=0
+LIBRARY_PATH=/usr/lib/i386-linux-gnu
+LESSOPEN=| /usr/bin/lesspipe %s
+LESSCLOSE=/usr/bin/lesspipe %s %s
+LC_TIME=ko_KR.UTF-8
+LC_TELEPHONE=ko_KR.UTF-8
+LC_PAPER=ko_KR.UTF-8
+LC_NUMERIC=ko_KR.UTF-8
+LC_NAME=ko_KR.UTF-8
+LC_MONETARY=ko_KR.UTF-8
+LC_MEASUREMENT=ko_KR.UTF-8
+LC_IDENTIFICATION=ko_KR.UTF-8
+LC_HOME=/data/SYNOPSYS/lc/O-2018.06-SP5
+LC_ALL=C
+LC_ADDRESS=ko_KR.UTF-8
+JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/bin/javac
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1028/bus
+CPATH=/usr/include/i386-linux-gnu
+0
+7
+1671730933 ../../RTL/1bit_adder.v
+1671806290 ../../RTL/fp16MAC.v
+1671806666 ../../RTL/fpadder.v
+1671806301 ../../RTL/fp16multiplier.v
+1671807457 ../TESTBENCH/tb_fp16MAC.v
+1503223771 /data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/share/PLI/VCS/LINUX/verdi.tab
+1503457497 /data/SYNOPSYS/vcs-mx/M-2017.03-SP2/linux/lib/vcsdp_lite.tab
+4
+0 
+1503460026 /data/SYNOPSYS/vcs-mx/M-2017.03-SP2/linux/lib/libvirsim.so
+1503459201 /data/SYNOPSYS/vcs-mx/M-2017.03-SP2/linux/lib/liberrorinf.so
+1503459167 /data/SYNOPSYS/vcs-mx/M-2017.03-SP2/linux/lib/libsnpsmalloc.so
+1671807461 simv.daidir

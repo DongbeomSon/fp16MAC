@@ -1,0 +1,870 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : fp16MAC
+Version: O-2018.06-SP4
+Date   : Fri Dec 23 17:23:40 2022
+****************************************
+
+Operating Conditions: ff1p16vn40c   Library: saed32rvt_ff1p16vn40c
+Wire Load Model Mode: enclosed
+
+  Startpoint: m1/out_reg[10]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a1/sum_reg[9]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+  fp16adder          8000                  saed32rvt_ff1p16vn40c
+  fp16adder_DW01_add_1
+                     ForQA                 saed32rvt_ff1p16vn40c
+  fp16adder_DW01_inc_0
+                     ForQA                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  m1/out_reg[10]/CLK (DFFARX1_RVT)                        0.00       0.00 r
+  m1/out_reg[10]/Q (DFFARX1_RVT)                          0.06       0.06 f
+  m1/out[10] (fp16multiplier)                             0.00       0.06 f
+  a1/B[10] (fp16adder)                                    0.00       0.06 f
+  a1/U259/Y (INVX1_RVT)                                   0.02       0.08 r
+  a1/U244/Y (OR2X1_RVT)                                   0.02       0.10 r
+  a1/sub_112/U2_1/CO (FADDX1_RVT)                         0.03       0.13 r
+  a1/sub_112/U2_2/CO (FADDX1_RVT)                         0.03       0.16 r
+  a1/sub_112/U2_3/CO (FADDX1_RVT)                         0.03       0.19 r
+  a1/sub_112/U2_4/CO (FADDX1_RVT)                         0.04       0.24 r
+  a1/U136/Y (INVX1_RVT)                                   0.03       0.26 f
+  a1/U218/Y (AO22X1_RVT)                                  0.05       0.32 f
+  a1/U211/Y (INVX1_RVT)                                   0.04       0.36 r
+  a1/U264/Y (MUX21X1_RVT)                                 0.03       0.39 r
+  a1/U265/Y (MUX21X1_RVT)                                 0.03       0.41 r
+  a1/U209/Y (MUX21X1_RVT)                                 0.03       0.44 r
+  a1/U270/Y (MUX21X1_RVT)                                 0.03       0.47 r
+  a1/U271/Y (AND2X1_RVT)                                  0.01       0.48 r
+  a1/U77/Y (AO222X1_RVT)                                  0.05       0.53 r
+  a1/add_155/B[0] (fp16adder_DW01_add_1)                  0.00       0.53 r
+  a1/add_155/U1_0/CO (FADDX1_RVT)                         0.03       0.56 r
+  a1/add_155/U1_1/CO (FADDX1_RVT)                         0.03       0.59 r
+  a1/add_155/U1_2/CO (FADDX1_RVT)                         0.03       0.62 r
+  a1/add_155/U1_3/CO (FADDX1_RVT)                         0.03       0.66 r
+  a1/add_155/U1_4/CO (FADDX1_RVT)                         0.03       0.69 r
+  a1/add_155/U1_5/CO (FADDX1_RVT)                         0.03       0.72 r
+  a1/add_155/U1_6/CO (FADDX1_RVT)                         0.03       0.75 r
+  a1/add_155/U1_7/CO (FADDX1_RVT)                         0.03       0.78 r
+  a1/add_155/U1_8/CO (FADDX1_RVT)                         0.03       0.81 r
+  a1/add_155/U1_9/CO (FADDX1_RVT)                         0.03       0.84 r
+  a1/add_155/U1/Y (XNOR2X1_RVT)                           0.04       0.88 r
+  a1/add_155/SUM[10] (fp16adder_DW01_add_1)               0.00       0.88 r
+  a1/U64/Y (OA22X1_RVT)                                   0.02       0.91 r
+  a1/U38/Y (INVX1_RVT)                                    0.01       0.91 f
+  a1/add_160/A[10] (fp16adder_DW01_inc_0)                 0.00       0.91 f
+  a1/add_160/U1_1_10/C1 (HADDX1_RVT)                      0.02       0.93 f
+  a1/add_160/U1/Y (INVX1_RVT)                             0.01       0.94 r
+  a1/add_160/U2/Y (XNOR2X1_RVT)                           0.03       0.97 r
+  a1/add_160/SUM[11] (fp16adder_DW01_inc_0)               0.00       0.97 r
+  a1/U47/Y (OA21X1_RVT)                                   0.03       1.00 r
+  a1/U66/Y (INVX1_RVT)                                    0.04       1.04 f
+  a1/U332/Y (MUX21X1_RVT)                                 0.04       1.08 f
+  a1/U106/Y (INVX1_RVT)                                   0.04       1.12 r
+  a1/U338/Y (MUX21X1_RVT)                                 0.04       1.16 f
+  a1/U67/Y (INVX1_RVT)                                    0.04       1.20 r
+  a1/U182/Y (MUX21X1_RVT)                                 0.03       1.22 r
+  a1/U134/Y (INVX1_RVT)                                   0.04       1.27 f
+  a1/U343/Y (MUX21X1_RVT)                                 0.04       1.31 f
+  a1/U121/Y (INVX1_RVT)                                   0.04       1.35 r
+  a1/U51/Y (MUX21X1_RVT)                                  0.03       1.38 r
+  a1/U139/Y (INVX1_RVT)                                   0.04       1.42 f
+  a1/U349/Y (MUX21X1_RVT)                                 0.04       1.46 f
+  a1/U65/Y (INVX1_RVT)                                    0.04       1.50 r
+  a1/U59/Y (MUX21X1_RVT)                                  0.04       1.54 f
+  a1/U168/Y (INVX1_RVT)                                   0.04       1.57 r
+  a1/U93/Y (MUX21X1_RVT)                                  0.03       1.60 r
+  a1/U166/Y (INVX0_RVT)                                   0.06       1.66 f
+  a1/U107/Y (MUX21X1_RVT)                                 0.05       1.71 f
+  a1/U165/Y (INVX0_RVT)                                   0.05       1.76 r
+  a1/U372/Y (MUX21X1_RVT)                                 0.05       1.81 f
+  a1/U130/Y (INVX1_RVT)                                   0.03       1.84 r
+  a1/U141/Y (MUX21X1_RVT)                                 0.04       1.88 f
+  a1/U129/Y (AND2X1_RVT)                                  0.02       1.90 f
+  a1/U232/Y (AND2X1_RVT)                                  0.02       1.92 f
+  a1/U230/Y (AND2X1_RVT)                                  0.02       1.94 f
+  a1/U228/Y (AND2X1_RVT)                                  0.02       1.96 f
+  a1/U226/Y (AND2X1_RVT)                                  0.02       1.98 f
+  a1/U162/Y (AND2X1_RVT)                                  0.02       2.00 f
+  a1/U140/Y (INVX1_RVT)                                   0.01       2.00 r
+  a1/U155/Y (NOR2X0_RVT)                                  0.03       2.03 f
+  a1/U220/Y (AND2X1_RVT)                                  0.02       2.05 f
+  a1/U146/Y (NAND2X0_RVT)                                 0.02       2.07 r
+  a1/U118/Y (XNOR2X1_RVT)                                 0.04       2.10 r
+  a1/en/product[9] (encoder_add)                          0.00       2.10 r
+  a1/en/U15/Y (AO222X1_RVT)                               0.03       2.14 r
+  a1/en/out[9] (encoder_add)                              0.00       2.14 r
+  a1/sum_reg[9]/D (DFFARX1_RVT)                           0.00       2.14 r
+  data arrival time                                                  2.14
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a1/sum_reg[9]/CLK (DFFARX1_RVT)                         0.00       4.50 r
+  library setup time                                     -0.02       4.48
+  data required time                                                 4.48
+  --------------------------------------------------------------------------
+  data required time                                                 4.48
+  data arrival time                                                 -2.14
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.35
+
+
+  Startpoint: m1/out_reg[10]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a1/sum_reg[8]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+  fp16adder          8000                  saed32rvt_ff1p16vn40c
+  fp16adder_DW01_add_1
+                     ForQA                 saed32rvt_ff1p16vn40c
+  fp16adder_DW01_inc_0
+                     ForQA                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  m1/out_reg[10]/CLK (DFFARX1_RVT)                        0.00       0.00 r
+  m1/out_reg[10]/Q (DFFARX1_RVT)                          0.06       0.06 f
+  m1/out[10] (fp16multiplier)                             0.00       0.06 f
+  a1/B[10] (fp16adder)                                    0.00       0.06 f
+  a1/U259/Y (INVX1_RVT)                                   0.02       0.08 r
+  a1/U244/Y (OR2X1_RVT)                                   0.02       0.10 r
+  a1/sub_112/U2_1/CO (FADDX1_RVT)                         0.03       0.13 r
+  a1/sub_112/U2_2/CO (FADDX1_RVT)                         0.03       0.16 r
+  a1/sub_112/U2_3/CO (FADDX1_RVT)                         0.03       0.19 r
+  a1/sub_112/U2_4/CO (FADDX1_RVT)                         0.04       0.24 r
+  a1/U136/Y (INVX1_RVT)                                   0.03       0.26 f
+  a1/U218/Y (AO22X1_RVT)                                  0.05       0.32 f
+  a1/U211/Y (INVX1_RVT)                                   0.04       0.36 r
+  a1/U264/Y (MUX21X1_RVT)                                 0.03       0.39 r
+  a1/U265/Y (MUX21X1_RVT)                                 0.03       0.41 r
+  a1/U209/Y (MUX21X1_RVT)                                 0.03       0.44 r
+  a1/U270/Y (MUX21X1_RVT)                                 0.03       0.47 r
+  a1/U271/Y (AND2X1_RVT)                                  0.01       0.48 r
+  a1/U77/Y (AO222X1_RVT)                                  0.05       0.53 r
+  a1/add_155/B[0] (fp16adder_DW01_add_1)                  0.00       0.53 r
+  a1/add_155/U1_0/CO (FADDX1_RVT)                         0.03       0.56 r
+  a1/add_155/U1_1/CO (FADDX1_RVT)                         0.03       0.59 r
+  a1/add_155/U1_2/CO (FADDX1_RVT)                         0.03       0.62 r
+  a1/add_155/U1_3/CO (FADDX1_RVT)                         0.03       0.66 r
+  a1/add_155/U1_4/CO (FADDX1_RVT)                         0.03       0.69 r
+  a1/add_155/U1_5/CO (FADDX1_RVT)                         0.03       0.72 r
+  a1/add_155/U1_6/CO (FADDX1_RVT)                         0.03       0.75 r
+  a1/add_155/U1_7/CO (FADDX1_RVT)                         0.03       0.78 r
+  a1/add_155/U1_8/CO (FADDX1_RVT)                         0.03       0.81 r
+  a1/add_155/U1_9/CO (FADDX1_RVT)                         0.03       0.84 r
+  a1/add_155/U1/Y (XNOR2X1_RVT)                           0.04       0.88 r
+  a1/add_155/SUM[10] (fp16adder_DW01_add_1)               0.00       0.88 r
+  a1/U64/Y (OA22X1_RVT)                                   0.02       0.91 r
+  a1/U38/Y (INVX1_RVT)                                    0.01       0.91 f
+  a1/add_160/A[10] (fp16adder_DW01_inc_0)                 0.00       0.91 f
+  a1/add_160/U1_1_10/C1 (HADDX1_RVT)                      0.02       0.93 f
+  a1/add_160/U1/Y (INVX1_RVT)                             0.01       0.94 r
+  a1/add_160/U2/Y (XNOR2X1_RVT)                           0.03       0.97 r
+  a1/add_160/SUM[11] (fp16adder_DW01_inc_0)               0.00       0.97 r
+  a1/U47/Y (OA21X1_RVT)                                   0.03       1.00 r
+  a1/U66/Y (INVX1_RVT)                                    0.04       1.04 f
+  a1/U332/Y (MUX21X1_RVT)                                 0.04       1.08 f
+  a1/U106/Y (INVX1_RVT)                                   0.04       1.12 r
+  a1/U338/Y (MUX21X1_RVT)                                 0.04       1.16 f
+  a1/U67/Y (INVX1_RVT)                                    0.04       1.20 r
+  a1/U182/Y (MUX21X1_RVT)                                 0.03       1.22 r
+  a1/U134/Y (INVX1_RVT)                                   0.04       1.27 f
+  a1/U343/Y (MUX21X1_RVT)                                 0.04       1.31 f
+  a1/U121/Y (INVX1_RVT)                                   0.04       1.35 r
+  a1/U51/Y (MUX21X1_RVT)                                  0.03       1.38 r
+  a1/U139/Y (INVX1_RVT)                                   0.04       1.42 f
+  a1/U349/Y (MUX21X1_RVT)                                 0.04       1.46 f
+  a1/U65/Y (INVX1_RVT)                                    0.04       1.50 r
+  a1/U59/Y (MUX21X1_RVT)                                  0.04       1.54 f
+  a1/U168/Y (INVX1_RVT)                                   0.04       1.57 r
+  a1/U93/Y (MUX21X1_RVT)                                  0.03       1.60 r
+  a1/U166/Y (INVX0_RVT)                                   0.06       1.66 f
+  a1/U107/Y (MUX21X1_RVT)                                 0.05       1.71 f
+  a1/U165/Y (INVX0_RVT)                                   0.05       1.76 r
+  a1/U372/Y (MUX21X1_RVT)                                 0.05       1.81 f
+  a1/U130/Y (INVX1_RVT)                                   0.03       1.84 r
+  a1/U141/Y (MUX21X1_RVT)                                 0.04       1.88 f
+  a1/U129/Y (AND2X1_RVT)                                  0.02       1.90 f
+  a1/U232/Y (AND2X1_RVT)                                  0.02       1.92 f
+  a1/U230/Y (AND2X1_RVT)                                  0.02       1.94 f
+  a1/U228/Y (AND2X1_RVT)                                  0.02       1.96 f
+  a1/U226/Y (AND2X1_RVT)                                  0.02       1.98 f
+  a1/U162/Y (AND2X1_RVT)                                  0.02       2.00 f
+  a1/U140/Y (INVX1_RVT)                                   0.01       2.00 r
+  a1/U155/Y (NOR2X0_RVT)                                  0.03       2.03 f
+  a1/U220/Y (AND2X1_RVT)                                  0.02       2.05 f
+  a1/U219/Y (XOR2X1_RVT)                                  0.04       2.09 r
+  a1/en/product[8] (encoder_add)                          0.00       2.09 r
+  a1/en/U16/Y (AO222X1_RVT)                               0.03       2.12 r
+  a1/en/out[8] (encoder_add)                              0.00       2.12 r
+  a1/sum_reg[8]/D (DFFARX1_RVT)                           0.00       2.12 r
+  data arrival time                                                  2.12
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a1/sum_reg[8]/CLK (DFFARX1_RVT)                         0.00       4.50 r
+  library setup time                                     -0.02       4.48
+  data required time                                                 4.48
+  --------------------------------------------------------------------------
+  data required time                                                 4.48
+  data arrival time                                                 -2.12
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.36
+
+
+  Startpoint: m1/out_reg[10]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a1/sum_reg[7]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+  fp16adder          8000                  saed32rvt_ff1p16vn40c
+  fp16adder_DW01_add_1
+                     ForQA                 saed32rvt_ff1p16vn40c
+  fp16adder_DW01_inc_0
+                     ForQA                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  m1/out_reg[10]/CLK (DFFARX1_RVT)                        0.00       0.00 r
+  m1/out_reg[10]/Q (DFFARX1_RVT)                          0.06       0.06 f
+  m1/out[10] (fp16multiplier)                             0.00       0.06 f
+  a1/B[10] (fp16adder)                                    0.00       0.06 f
+  a1/U259/Y (INVX1_RVT)                                   0.02       0.08 r
+  a1/U244/Y (OR2X1_RVT)                                   0.02       0.10 r
+  a1/sub_112/U2_1/CO (FADDX1_RVT)                         0.03       0.13 r
+  a1/sub_112/U2_2/CO (FADDX1_RVT)                         0.03       0.16 r
+  a1/sub_112/U2_3/CO (FADDX1_RVT)                         0.03       0.19 r
+  a1/sub_112/U2_4/CO (FADDX1_RVT)                         0.04       0.24 r
+  a1/U136/Y (INVX1_RVT)                                   0.03       0.26 f
+  a1/U218/Y (AO22X1_RVT)                                  0.05       0.32 f
+  a1/U211/Y (INVX1_RVT)                                   0.04       0.36 r
+  a1/U264/Y (MUX21X1_RVT)                                 0.03       0.39 r
+  a1/U265/Y (MUX21X1_RVT)                                 0.03       0.41 r
+  a1/U209/Y (MUX21X1_RVT)                                 0.03       0.44 r
+  a1/U270/Y (MUX21X1_RVT)                                 0.03       0.47 r
+  a1/U271/Y (AND2X1_RVT)                                  0.01       0.48 r
+  a1/U77/Y (AO222X1_RVT)                                  0.05       0.53 r
+  a1/add_155/B[0] (fp16adder_DW01_add_1)                  0.00       0.53 r
+  a1/add_155/U1_0/CO (FADDX1_RVT)                         0.03       0.56 r
+  a1/add_155/U1_1/CO (FADDX1_RVT)                         0.03       0.59 r
+  a1/add_155/U1_2/CO (FADDX1_RVT)                         0.03       0.62 r
+  a1/add_155/U1_3/CO (FADDX1_RVT)                         0.03       0.66 r
+  a1/add_155/U1_4/CO (FADDX1_RVT)                         0.03       0.69 r
+  a1/add_155/U1_5/CO (FADDX1_RVT)                         0.03       0.72 r
+  a1/add_155/U1_6/CO (FADDX1_RVT)                         0.03       0.75 r
+  a1/add_155/U1_7/CO (FADDX1_RVT)                         0.03       0.78 r
+  a1/add_155/U1_8/CO (FADDX1_RVT)                         0.03       0.81 r
+  a1/add_155/U1_9/CO (FADDX1_RVT)                         0.03       0.84 r
+  a1/add_155/U1/Y (XNOR2X1_RVT)                           0.04       0.88 r
+  a1/add_155/SUM[10] (fp16adder_DW01_add_1)               0.00       0.88 r
+  a1/U64/Y (OA22X1_RVT)                                   0.02       0.91 r
+  a1/U38/Y (INVX1_RVT)                                    0.01       0.91 f
+  a1/add_160/A[10] (fp16adder_DW01_inc_0)                 0.00       0.91 f
+  a1/add_160/U1_1_10/C1 (HADDX1_RVT)                      0.02       0.93 f
+  a1/add_160/U1/Y (INVX1_RVT)                             0.01       0.94 r
+  a1/add_160/U2/Y (XNOR2X1_RVT)                           0.03       0.97 r
+  a1/add_160/SUM[11] (fp16adder_DW01_inc_0)               0.00       0.97 r
+  a1/U47/Y (OA21X1_RVT)                                   0.03       1.00 r
+  a1/U66/Y (INVX1_RVT)                                    0.04       1.04 f
+  a1/U332/Y (MUX21X1_RVT)                                 0.04       1.08 f
+  a1/U106/Y (INVX1_RVT)                                   0.04       1.12 r
+  a1/U338/Y (MUX21X1_RVT)                                 0.04       1.16 f
+  a1/U67/Y (INVX1_RVT)                                    0.04       1.20 r
+  a1/U182/Y (MUX21X1_RVT)                                 0.03       1.22 r
+  a1/U134/Y (INVX1_RVT)                                   0.04       1.27 f
+  a1/U343/Y (MUX21X1_RVT)                                 0.04       1.31 f
+  a1/U121/Y (INVX1_RVT)                                   0.04       1.35 r
+  a1/U51/Y (MUX21X1_RVT)                                  0.03       1.38 r
+  a1/U139/Y (INVX1_RVT)                                   0.04       1.42 f
+  a1/U349/Y (MUX21X1_RVT)                                 0.04       1.46 f
+  a1/U65/Y (INVX1_RVT)                                    0.04       1.50 r
+  a1/U59/Y (MUX21X1_RVT)                                  0.04       1.54 f
+  a1/U168/Y (INVX1_RVT)                                   0.04       1.57 r
+  a1/U93/Y (MUX21X1_RVT)                                  0.03       1.60 r
+  a1/U166/Y (INVX0_RVT)                                   0.06       1.66 f
+  a1/U107/Y (MUX21X1_RVT)                                 0.05       1.71 f
+  a1/U165/Y (INVX0_RVT)                                   0.05       1.76 r
+  a1/U372/Y (MUX21X1_RVT)                                 0.05       1.81 f
+  a1/U130/Y (INVX1_RVT)                                   0.03       1.84 r
+  a1/U141/Y (MUX21X1_RVT)                                 0.04       1.88 f
+  a1/U129/Y (AND2X1_RVT)                                  0.02       1.90 f
+  a1/U232/Y (AND2X1_RVT)                                  0.02       1.92 f
+  a1/U230/Y (AND2X1_RVT)                                  0.02       1.94 f
+  a1/U228/Y (AND2X1_RVT)                                  0.02       1.96 f
+  a1/U226/Y (AND2X1_RVT)                                  0.02       1.98 f
+  a1/U162/Y (AND2X1_RVT)                                  0.02       2.00 f
+  a1/U140/Y (INVX1_RVT)                                   0.01       2.00 r
+  a1/U155/Y (NOR2X0_RVT)                                  0.03       2.03 f
+  a1/U221/Y (XOR2X1_RVT)                                  0.04       2.07 r
+  a1/en/product[7] (encoder_add)                          0.00       2.07 r
+  a1/en/U17/Y (AO222X1_RVT)                               0.03       2.10 r
+  a1/en/out[7] (encoder_add)                              0.00       2.10 r
+  a1/sum_reg[7]/D (DFFARX1_RVT)                           0.00       2.10 r
+  data arrival time                                                  2.10
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a1/sum_reg[7]/CLK (DFFARX1_RVT)                         0.00       4.50 r
+  library setup time                                     -0.02       4.48
+  data required time                                                 4.48
+  --------------------------------------------------------------------------
+  data required time                                                 4.48
+  data arrival time                                                 -2.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.38
+
+
+  Startpoint: m1/out_reg[10]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a1/sum_reg[6]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+  fp16adder          8000                  saed32rvt_ff1p16vn40c
+  fp16adder_DW01_add_1
+                     ForQA                 saed32rvt_ff1p16vn40c
+  fp16adder_DW01_inc_0
+                     ForQA                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  m1/out_reg[10]/CLK (DFFARX1_RVT)                        0.00       0.00 r
+  m1/out_reg[10]/Q (DFFARX1_RVT)                          0.06       0.06 f
+  m1/out[10] (fp16multiplier)                             0.00       0.06 f
+  a1/B[10] (fp16adder)                                    0.00       0.06 f
+  a1/U259/Y (INVX1_RVT)                                   0.02       0.08 r
+  a1/U244/Y (OR2X1_RVT)                                   0.02       0.10 r
+  a1/sub_112/U2_1/CO (FADDX1_RVT)                         0.03       0.13 r
+  a1/sub_112/U2_2/CO (FADDX1_RVT)                         0.03       0.16 r
+  a1/sub_112/U2_3/CO (FADDX1_RVT)                         0.03       0.19 r
+  a1/sub_112/U2_4/CO (FADDX1_RVT)                         0.04       0.24 r
+  a1/U136/Y (INVX1_RVT)                                   0.03       0.26 f
+  a1/U218/Y (AO22X1_RVT)                                  0.05       0.32 f
+  a1/U211/Y (INVX1_RVT)                                   0.04       0.36 r
+  a1/U264/Y (MUX21X1_RVT)                                 0.03       0.39 r
+  a1/U265/Y (MUX21X1_RVT)                                 0.03       0.41 r
+  a1/U209/Y (MUX21X1_RVT)                                 0.03       0.44 r
+  a1/U270/Y (MUX21X1_RVT)                                 0.03       0.47 r
+  a1/U271/Y (AND2X1_RVT)                                  0.01       0.48 r
+  a1/U77/Y (AO222X1_RVT)                                  0.05       0.53 r
+  a1/add_155/B[0] (fp16adder_DW01_add_1)                  0.00       0.53 r
+  a1/add_155/U1_0/CO (FADDX1_RVT)                         0.03       0.56 r
+  a1/add_155/U1_1/CO (FADDX1_RVT)                         0.03       0.59 r
+  a1/add_155/U1_2/CO (FADDX1_RVT)                         0.03       0.62 r
+  a1/add_155/U1_3/CO (FADDX1_RVT)                         0.03       0.66 r
+  a1/add_155/U1_4/CO (FADDX1_RVT)                         0.03       0.69 r
+  a1/add_155/U1_5/CO (FADDX1_RVT)                         0.03       0.72 r
+  a1/add_155/U1_6/CO (FADDX1_RVT)                         0.03       0.75 r
+  a1/add_155/U1_7/CO (FADDX1_RVT)                         0.03       0.78 r
+  a1/add_155/U1_8/CO (FADDX1_RVT)                         0.03       0.81 r
+  a1/add_155/U1_9/CO (FADDX1_RVT)                         0.03       0.84 r
+  a1/add_155/U1/Y (XNOR2X1_RVT)                           0.04       0.88 r
+  a1/add_155/SUM[10] (fp16adder_DW01_add_1)               0.00       0.88 r
+  a1/U64/Y (OA22X1_RVT)                                   0.02       0.91 r
+  a1/U38/Y (INVX1_RVT)                                    0.01       0.91 f
+  a1/add_160/A[10] (fp16adder_DW01_inc_0)                 0.00       0.91 f
+  a1/add_160/U1_1_10/C1 (HADDX1_RVT)                      0.02       0.93 f
+  a1/add_160/U1/Y (INVX1_RVT)                             0.01       0.94 r
+  a1/add_160/U2/Y (XNOR2X1_RVT)                           0.03       0.97 r
+  a1/add_160/SUM[11] (fp16adder_DW01_inc_0)               0.00       0.97 r
+  a1/U47/Y (OA21X1_RVT)                                   0.03       1.00 r
+  a1/U66/Y (INVX1_RVT)                                    0.04       1.04 f
+  a1/U332/Y (MUX21X1_RVT)                                 0.04       1.08 f
+  a1/U106/Y (INVX1_RVT)                                   0.04       1.12 r
+  a1/U338/Y (MUX21X1_RVT)                                 0.04       1.16 f
+  a1/U67/Y (INVX1_RVT)                                    0.04       1.20 r
+  a1/U182/Y (MUX21X1_RVT)                                 0.03       1.22 r
+  a1/U134/Y (INVX1_RVT)                                   0.04       1.27 f
+  a1/U343/Y (MUX21X1_RVT)                                 0.04       1.31 f
+  a1/U121/Y (INVX1_RVT)                                   0.04       1.35 r
+  a1/U51/Y (MUX21X1_RVT)                                  0.03       1.38 r
+  a1/U139/Y (INVX1_RVT)                                   0.04       1.42 f
+  a1/U349/Y (MUX21X1_RVT)                                 0.04       1.46 f
+  a1/U65/Y (INVX1_RVT)                                    0.04       1.50 r
+  a1/U59/Y (MUX21X1_RVT)                                  0.04       1.54 f
+  a1/U168/Y (INVX1_RVT)                                   0.04       1.57 r
+  a1/U93/Y (MUX21X1_RVT)                                  0.03       1.60 r
+  a1/U166/Y (INVX0_RVT)                                   0.06       1.66 f
+  a1/U107/Y (MUX21X1_RVT)                                 0.05       1.71 f
+  a1/U165/Y (INVX0_RVT)                                   0.05       1.76 r
+  a1/U372/Y (MUX21X1_RVT)                                 0.05       1.81 f
+  a1/U130/Y (INVX1_RVT)                                   0.03       1.84 r
+  a1/U141/Y (MUX21X1_RVT)                                 0.04       1.88 f
+  a1/U129/Y (AND2X1_RVT)                                  0.02       1.90 f
+  a1/U232/Y (AND2X1_RVT)                                  0.02       1.92 f
+  a1/U230/Y (AND2X1_RVT)                                  0.02       1.94 f
+  a1/U228/Y (AND2X1_RVT)                                  0.02       1.96 f
+  a1/U226/Y (AND2X1_RVT)                                  0.02       1.98 f
+  a1/U162/Y (AND2X1_RVT)                                  0.02       2.00 f
+  a1/U223/Y (AND2X1_RVT)                                  0.02       2.02 f
+  a1/U222/Y (XOR2X1_RVT)                                  0.04       2.05 r
+  a1/en/product[6] (encoder_add)                          0.00       2.05 r
+  a1/en/U18/Y (AO222X1_RVT)                               0.03       2.09 r
+  a1/en/out[6] (encoder_add)                              0.00       2.09 r
+  a1/sum_reg[6]/D (DFFARX1_RVT)                           0.00       2.09 r
+  data arrival time                                                  2.09
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a1/sum_reg[6]/CLK (DFFARX1_RVT)                         0.00       4.50 r
+  library setup time                                     -0.02       4.48
+  data required time                                                 4.48
+  --------------------------------------------------------------------------
+  data required time                                                 4.48
+  data arrival time                                                 -2.09
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.40
+
+
+  Startpoint: m1/out_reg[10]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a1/sum_reg[5]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+  fp16adder          8000                  saed32rvt_ff1p16vn40c
+  fp16adder_DW01_add_1
+                     ForQA                 saed32rvt_ff1p16vn40c
+  fp16adder_DW01_inc_0
+                     ForQA                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  m1/out_reg[10]/CLK (DFFARX1_RVT)                        0.00       0.00 r
+  m1/out_reg[10]/Q (DFFARX1_RVT)                          0.06       0.06 f
+  m1/out[10] (fp16multiplier)                             0.00       0.06 f
+  a1/B[10] (fp16adder)                                    0.00       0.06 f
+  a1/U259/Y (INVX1_RVT)                                   0.02       0.08 r
+  a1/U244/Y (OR2X1_RVT)                                   0.02       0.10 r
+  a1/sub_112/U2_1/CO (FADDX1_RVT)                         0.03       0.13 r
+  a1/sub_112/U2_2/CO (FADDX1_RVT)                         0.03       0.16 r
+  a1/sub_112/U2_3/CO (FADDX1_RVT)                         0.03       0.19 r
+  a1/sub_112/U2_4/CO (FADDX1_RVT)                         0.04       0.24 r
+  a1/U136/Y (INVX1_RVT)                                   0.03       0.26 f
+  a1/U218/Y (AO22X1_RVT)                                  0.05       0.32 f
+  a1/U211/Y (INVX1_RVT)                                   0.04       0.36 r
+  a1/U264/Y (MUX21X1_RVT)                                 0.03       0.39 r
+  a1/U265/Y (MUX21X1_RVT)                                 0.03       0.41 r
+  a1/U209/Y (MUX21X1_RVT)                                 0.03       0.44 r
+  a1/U270/Y (MUX21X1_RVT)                                 0.03       0.47 r
+  a1/U271/Y (AND2X1_RVT)                                  0.01       0.48 r
+  a1/U77/Y (AO222X1_RVT)                                  0.05       0.53 r
+  a1/add_155/B[0] (fp16adder_DW01_add_1)                  0.00       0.53 r
+  a1/add_155/U1_0/CO (FADDX1_RVT)                         0.03       0.56 r
+  a1/add_155/U1_1/CO (FADDX1_RVT)                         0.03       0.59 r
+  a1/add_155/U1_2/CO (FADDX1_RVT)                         0.03       0.62 r
+  a1/add_155/U1_3/CO (FADDX1_RVT)                         0.03       0.66 r
+  a1/add_155/U1_4/CO (FADDX1_RVT)                         0.03       0.69 r
+  a1/add_155/U1_5/CO (FADDX1_RVT)                         0.03       0.72 r
+  a1/add_155/U1_6/CO (FADDX1_RVT)                         0.03       0.75 r
+  a1/add_155/U1_7/CO (FADDX1_RVT)                         0.03       0.78 r
+  a1/add_155/U1_8/CO (FADDX1_RVT)                         0.03       0.81 r
+  a1/add_155/U1_9/CO (FADDX1_RVT)                         0.03       0.84 r
+  a1/add_155/U1/Y (XNOR2X1_RVT)                           0.04       0.88 r
+  a1/add_155/SUM[10] (fp16adder_DW01_add_1)               0.00       0.88 r
+  a1/U64/Y (OA22X1_RVT)                                   0.02       0.91 r
+  a1/U38/Y (INVX1_RVT)                                    0.01       0.91 f
+  a1/add_160/A[10] (fp16adder_DW01_inc_0)                 0.00       0.91 f
+  a1/add_160/U1_1_10/C1 (HADDX1_RVT)                      0.02       0.93 f
+  a1/add_160/U1/Y (INVX1_RVT)                             0.01       0.94 r
+  a1/add_160/U2/Y (XNOR2X1_RVT)                           0.03       0.97 r
+  a1/add_160/SUM[11] (fp16adder_DW01_inc_0)               0.00       0.97 r
+  a1/U47/Y (OA21X1_RVT)                                   0.03       1.00 r
+  a1/U66/Y (INVX1_RVT)                                    0.04       1.04 f
+  a1/U332/Y (MUX21X1_RVT)                                 0.04       1.08 f
+  a1/U106/Y (INVX1_RVT)                                   0.04       1.12 r
+  a1/U338/Y (MUX21X1_RVT)                                 0.04       1.16 f
+  a1/U67/Y (INVX1_RVT)                                    0.04       1.20 r
+  a1/U182/Y (MUX21X1_RVT)                                 0.03       1.22 r
+  a1/U134/Y (INVX1_RVT)                                   0.04       1.27 f
+  a1/U343/Y (MUX21X1_RVT)                                 0.04       1.31 f
+  a1/U121/Y (INVX1_RVT)                                   0.04       1.35 r
+  a1/U51/Y (MUX21X1_RVT)                                  0.03       1.38 r
+  a1/U139/Y (INVX1_RVT)                                   0.04       1.42 f
+  a1/U349/Y (MUX21X1_RVT)                                 0.04       1.46 f
+  a1/U65/Y (INVX1_RVT)                                    0.04       1.50 r
+  a1/U59/Y (MUX21X1_RVT)                                  0.04       1.54 f
+  a1/U168/Y (INVX1_RVT)                                   0.04       1.57 r
+  a1/U93/Y (MUX21X1_RVT)                                  0.03       1.60 r
+  a1/U166/Y (INVX0_RVT)                                   0.06       1.66 f
+  a1/U107/Y (MUX21X1_RVT)                                 0.05       1.71 f
+  a1/U165/Y (INVX0_RVT)                                   0.05       1.76 r
+  a1/U372/Y (MUX21X1_RVT)                                 0.05       1.81 f
+  a1/U130/Y (INVX1_RVT)                                   0.03       1.84 r
+  a1/U141/Y (MUX21X1_RVT)                                 0.04       1.88 f
+  a1/U129/Y (AND2X1_RVT)                                  0.02       1.90 f
+  a1/U232/Y (AND2X1_RVT)                                  0.02       1.92 f
+  a1/U230/Y (AND2X1_RVT)                                  0.02       1.94 f
+  a1/U228/Y (AND2X1_RVT)                                  0.02       1.96 f
+  a1/U226/Y (AND2X1_RVT)                                  0.02       1.98 f
+  a1/U162/Y (AND2X1_RVT)                                  0.02       2.00 f
+  a1/U224/Y (XOR2X1_RVT)                                  0.04       2.03 r
+  a1/en/product[5] (encoder_add)                          0.00       2.03 r
+  a1/en/U19/Y (AO222X1_RVT)                               0.03       2.07 r
+  a1/en/out[5] (encoder_add)                              0.00       2.07 r
+  a1/sum_reg[5]/D (DFFARX1_RVT)                           0.00       2.07 r
+  data arrival time                                                  2.07
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a1/sum_reg[5]/CLK (DFFARX1_RVT)                         0.00       4.50 r
+  library setup time                                     -0.02       4.48
+  data required time                                                 4.48
+  --------------------------------------------------------------------------
+  data required time                                                 4.48
+  data arrival time                                                 -2.07
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.41
+
+
+  Startpoint: m1/out_reg[10]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a1/sum_reg[4]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+  fp16adder          8000                  saed32rvt_ff1p16vn40c
+  fp16adder_DW01_add_1
+                     ForQA                 saed32rvt_ff1p16vn40c
+  fp16adder_DW01_inc_0
+                     ForQA                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  m1/out_reg[10]/CLK (DFFARX1_RVT)                        0.00       0.00 r
+  m1/out_reg[10]/Q (DFFARX1_RVT)                          0.06       0.06 f
+  m1/out[10] (fp16multiplier)                             0.00       0.06 f
+  a1/B[10] (fp16adder)                                    0.00       0.06 f
+  a1/U259/Y (INVX1_RVT)                                   0.02       0.08 r
+  a1/U244/Y (OR2X1_RVT)                                   0.02       0.10 r
+  a1/sub_112/U2_1/CO (FADDX1_RVT)                         0.03       0.13 r
+  a1/sub_112/U2_2/CO (FADDX1_RVT)                         0.03       0.16 r
+  a1/sub_112/U2_3/CO (FADDX1_RVT)                         0.03       0.19 r
+  a1/sub_112/U2_4/CO (FADDX1_RVT)                         0.04       0.24 r
+  a1/U136/Y (INVX1_RVT)                                   0.03       0.26 f
+  a1/U218/Y (AO22X1_RVT)                                  0.05       0.32 f
+  a1/U211/Y (INVX1_RVT)                                   0.04       0.36 r
+  a1/U264/Y (MUX21X1_RVT)                                 0.03       0.39 r
+  a1/U265/Y (MUX21X1_RVT)                                 0.03       0.41 r
+  a1/U209/Y (MUX21X1_RVT)                                 0.03       0.44 r
+  a1/U270/Y (MUX21X1_RVT)                                 0.03       0.47 r
+  a1/U271/Y (AND2X1_RVT)                                  0.01       0.48 r
+  a1/U77/Y (AO222X1_RVT)                                  0.05       0.53 r
+  a1/add_155/B[0] (fp16adder_DW01_add_1)                  0.00       0.53 r
+  a1/add_155/U1_0/CO (FADDX1_RVT)                         0.03       0.56 r
+  a1/add_155/U1_1/CO (FADDX1_RVT)                         0.03       0.59 r
+  a1/add_155/U1_2/CO (FADDX1_RVT)                         0.03       0.62 r
+  a1/add_155/U1_3/CO (FADDX1_RVT)                         0.03       0.66 r
+  a1/add_155/U1_4/CO (FADDX1_RVT)                         0.03       0.69 r
+  a1/add_155/U1_5/CO (FADDX1_RVT)                         0.03       0.72 r
+  a1/add_155/U1_6/CO (FADDX1_RVT)                         0.03       0.75 r
+  a1/add_155/U1_7/CO (FADDX1_RVT)                         0.03       0.78 r
+  a1/add_155/U1_8/CO (FADDX1_RVT)                         0.03       0.81 r
+  a1/add_155/U1_9/CO (FADDX1_RVT)                         0.03       0.84 r
+  a1/add_155/U1/Y (XNOR2X1_RVT)                           0.04       0.88 r
+  a1/add_155/SUM[10] (fp16adder_DW01_add_1)               0.00       0.88 r
+  a1/U64/Y (OA22X1_RVT)                                   0.02       0.91 r
+  a1/U38/Y (INVX1_RVT)                                    0.01       0.91 f
+  a1/add_160/A[10] (fp16adder_DW01_inc_0)                 0.00       0.91 f
+  a1/add_160/U1_1_10/C1 (HADDX1_RVT)                      0.02       0.93 f
+  a1/add_160/U1/Y (INVX1_RVT)                             0.01       0.94 r
+  a1/add_160/U2/Y (XNOR2X1_RVT)                           0.03       0.97 r
+  a1/add_160/SUM[11] (fp16adder_DW01_inc_0)               0.00       0.97 r
+  a1/U47/Y (OA21X1_RVT)                                   0.03       1.00 r
+  a1/U66/Y (INVX1_RVT)                                    0.04       1.04 f
+  a1/U332/Y (MUX21X1_RVT)                                 0.04       1.08 f
+  a1/U106/Y (INVX1_RVT)                                   0.04       1.12 r
+  a1/U338/Y (MUX21X1_RVT)                                 0.04       1.16 f
+  a1/U67/Y (INVX1_RVT)                                    0.04       1.20 r
+  a1/U182/Y (MUX21X1_RVT)                                 0.03       1.22 r
+  a1/U134/Y (INVX1_RVT)                                   0.04       1.27 f
+  a1/U343/Y (MUX21X1_RVT)                                 0.04       1.31 f
+  a1/U121/Y (INVX1_RVT)                                   0.04       1.35 r
+  a1/U51/Y (MUX21X1_RVT)                                  0.03       1.38 r
+  a1/U139/Y (INVX1_RVT)                                   0.04       1.42 f
+  a1/U349/Y (MUX21X1_RVT)                                 0.04       1.46 f
+  a1/U65/Y (INVX1_RVT)                                    0.04       1.50 r
+  a1/U59/Y (MUX21X1_RVT)                                  0.04       1.54 f
+  a1/U168/Y (INVX1_RVT)                                   0.04       1.57 r
+  a1/U93/Y (MUX21X1_RVT)                                  0.03       1.60 r
+  a1/U166/Y (INVX0_RVT)                                   0.06       1.66 f
+  a1/U107/Y (MUX21X1_RVT)                                 0.05       1.71 f
+  a1/U165/Y (INVX0_RVT)                                   0.05       1.76 r
+  a1/U372/Y (MUX21X1_RVT)                                 0.05       1.81 f
+  a1/U130/Y (INVX1_RVT)                                   0.03       1.84 r
+  a1/U141/Y (MUX21X1_RVT)                                 0.04       1.88 f
+  a1/U129/Y (AND2X1_RVT)                                  0.02       1.90 f
+  a1/U232/Y (AND2X1_RVT)                                  0.02       1.92 f
+  a1/U230/Y (AND2X1_RVT)                                  0.02       1.94 f
+  a1/U228/Y (AND2X1_RVT)                                  0.02       1.96 f
+  a1/U226/Y (AND2X1_RVT)                                  0.02       1.98 f
+  a1/U225/Y (XOR2X1_RVT)                                  0.04       2.01 r
+  a1/en/product[4] (encoder_add)                          0.00       2.01 r
+  a1/en/U20/Y (AO222X1_RVT)                               0.03       2.05 r
+  a1/en/out[4] (encoder_add)                              0.00       2.05 r
+  a1/sum_reg[4]/D (DFFARX1_RVT)                           0.00       2.05 r
+  data arrival time                                                  2.05
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a1/sum_reg[4]/CLK (DFFARX1_RVT)                         0.00       4.50 r
+  library setup time                                     -0.02       4.48
+  data required time                                                 4.48
+  --------------------------------------------------------------------------
+  data required time                                                 4.48
+  data arrival time                                                 -2.05
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.44
+
+
+  Startpoint: m1/out_reg[10]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a1/sum_reg[14]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+  fp16adder          8000                  saed32rvt_ff1p16vn40c
+  fp16adder_DW01_add_1
+                     ForQA                 saed32rvt_ff1p16vn40c
+  fp16adder_DW01_inc_0
+                     ForQA                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  m1/out_reg[10]/CLK (DFFARX1_RVT)                        0.00       0.00 r
+  m1/out_reg[10]/Q (DFFARX1_RVT)                          0.06       0.06 f
+  m1/out[10] (fp16multiplier)                             0.00       0.06 f
+  a1/B[10] (fp16adder)                                    0.00       0.06 f
+  a1/U259/Y (INVX1_RVT)                                   0.02       0.08 r
+  a1/U244/Y (OR2X1_RVT)                                   0.02       0.10 r
+  a1/sub_112/U2_1/CO (FADDX1_RVT)                         0.03       0.13 r
+  a1/sub_112/U2_2/CO (FADDX1_RVT)                         0.03       0.16 r
+  a1/sub_112/U2_3/CO (FADDX1_RVT)                         0.03       0.19 r
+  a1/sub_112/U2_4/CO (FADDX1_RVT)                         0.04       0.24 r
+  a1/U136/Y (INVX1_RVT)                                   0.03       0.26 f
+  a1/U218/Y (AO22X1_RVT)                                  0.05       0.32 f
+  a1/U211/Y (INVX1_RVT)                                   0.04       0.36 r
+  a1/U264/Y (MUX21X1_RVT)                                 0.03       0.39 r
+  a1/U265/Y (MUX21X1_RVT)                                 0.03       0.41 r
+  a1/U209/Y (MUX21X1_RVT)                                 0.03       0.44 r
+  a1/U270/Y (MUX21X1_RVT)                                 0.03       0.47 r
+  a1/U271/Y (AND2X1_RVT)                                  0.01       0.48 r
+  a1/U77/Y (AO222X1_RVT)                                  0.05       0.53 r
+  a1/add_155/B[0] (fp16adder_DW01_add_1)                  0.00       0.53 r
+  a1/add_155/U1_0/CO (FADDX1_RVT)                         0.03       0.56 r
+  a1/add_155/U1_1/CO (FADDX1_RVT)                         0.03       0.59 r
+  a1/add_155/U1_2/CO (FADDX1_RVT)                         0.03       0.62 r
+  a1/add_155/U1_3/CO (FADDX1_RVT)                         0.03       0.66 r
+  a1/add_155/U1_4/CO (FADDX1_RVT)                         0.03       0.69 r
+  a1/add_155/U1_5/CO (FADDX1_RVT)                         0.03       0.72 r
+  a1/add_155/U1_6/CO (FADDX1_RVT)                         0.03       0.75 r
+  a1/add_155/U1_7/CO (FADDX1_RVT)                         0.03       0.78 r
+  a1/add_155/U1_8/CO (FADDX1_RVT)                         0.03       0.81 r
+  a1/add_155/U1_9/CO (FADDX1_RVT)                         0.03       0.84 r
+  a1/add_155/U1/Y (XNOR2X1_RVT)                           0.04       0.88 r
+  a1/add_155/SUM[10] (fp16adder_DW01_add_1)               0.00       0.88 r
+  a1/U64/Y (OA22X1_RVT)                                   0.02       0.91 r
+  a1/U38/Y (INVX1_RVT)                                    0.01       0.91 f
+  a1/add_160/A[10] (fp16adder_DW01_inc_0)                 0.00       0.91 f
+  a1/add_160/U1_1_10/C1 (HADDX1_RVT)                      0.02       0.93 f
+  a1/add_160/U1/Y (INVX1_RVT)                             0.01       0.94 r
+  a1/add_160/U2/Y (XNOR2X1_RVT)                           0.03       0.97 r
+  a1/add_160/SUM[11] (fp16adder_DW01_inc_0)               0.00       0.97 r
+  a1/U47/Y (OA21X1_RVT)                                   0.03       1.00 r
+  a1/U66/Y (INVX1_RVT)                                    0.04       1.04 f
+  a1/U332/Y (MUX21X1_RVT)                                 0.04       1.08 f
+  a1/U106/Y (INVX1_RVT)                                   0.04       1.12 r
+  a1/U338/Y (MUX21X1_RVT)                                 0.04       1.16 f
+  a1/U67/Y (INVX1_RVT)                                    0.04       1.20 r
+  a1/U182/Y (MUX21X1_RVT)                                 0.03       1.22 r
+  a1/U134/Y (INVX1_RVT)                                   0.04       1.27 f
+  a1/U343/Y (MUX21X1_RVT)                                 0.04       1.31 f
+  a1/U121/Y (INVX1_RVT)                                   0.04       1.35 r
+  a1/U51/Y (MUX21X1_RVT)                                  0.03       1.38 r
+  a1/U139/Y (INVX1_RVT)                                   0.04       1.42 f
+  a1/U349/Y (MUX21X1_RVT)                                 0.04       1.46 f
+  a1/U65/Y (INVX1_RVT)                                    0.04       1.50 r
+  a1/U59/Y (MUX21X1_RVT)                                  0.04       1.54 f
+  a1/U168/Y (INVX1_RVT)                                   0.04       1.57 r
+  a1/U93/Y (MUX21X1_RVT)                                  0.03       1.60 r
+  a1/U166/Y (INVX0_RVT)                                   0.06       1.66 f
+  a1/U107/Y (MUX21X1_RVT)                                 0.05       1.71 f
+  a1/U165/Y (INVX0_RVT)                                   0.05       1.76 r
+  a1/U372/Y (MUX21X1_RVT)                                 0.05       1.81 f
+  a1/sub_3_root_sub_4_root_sub_182_G11_ni/U2_0/CO (FADDX1_RVT)
+                                                          0.03       1.84 f
+  a1/U243/Y (XNOR2X1_RVT)                                 0.04       1.88 r
+  a1/sub_0_root_sub_4_root_sub_182_G11_ni/U2_1/CO (FADDX1_RVT)
+                                                          0.03       1.91 r
+  a1/U190/CO (FADDX1_RVT)                                 0.03       1.94 r
+  a1/sub_0_root_sub_4_root_sub_182_G11_ni/U2_3/CO (FADDX1_RVT)
+                                                          0.03       1.97 r
+  a1/U234/Y (XNOR2X1_RVT)                                 0.04       2.01 r
+  a1/en/product[14] (encoder_add)                         0.00       2.01 r
+  a1/en/U21/Y (AO221X1_RVT)                               0.03       2.04 r
+  a1/en/out[14] (encoder_add)                             0.00       2.04 r
+  a1/sum_reg[14]/D (DFFARX1_RVT)                          0.00       2.04 r
+  data arrival time                                                  2.04
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a1/sum_reg[14]/CLK (DFFARX1_RVT)                        0.00       4.50 r
+  library setup time                                     -0.02       4.48
+  data required time                                                 4.48
+  --------------------------------------------------------------------------
+  data required time                                                 4.48
+  data arrival time                                                 -2.04
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.45
+
+
+  Startpoint: acc_reg[2] (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: acc[2] (output port clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)             0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  acc_reg[2]/CLK (DFFARX1_RVT)             0.00       0.00 r
+  acc_reg[2]/Q (DFFARX1_RVT)               0.05       0.05 f
+  acc[2] (out)                             0.00       0.05 f
+  data arrival time                                   0.05
+
+  clock MAIN_CLOCK (rise edge)             5.00       5.00
+  clock network delay (ideal)              0.00       5.00
+  clock uncertainty                       -0.50       4.50
+  output external delay                   -2.00       2.50
+  data required time                                  2.50
+  -----------------------------------------------------------
+  data required time                                  2.50
+  data arrival time                                  -0.05
+  -----------------------------------------------------------
+  slack (MET)                                         2.45
+
+
+  Startpoint: acc_reg[1] (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: acc[1] (output port clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)             0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  acc_reg[1]/CLK (DFFARX1_RVT)             0.00       0.00 r
+  acc_reg[1]/Q (DFFARX1_RVT)               0.05       0.05 f
+  acc[1] (out)                             0.00       0.05 f
+  data arrival time                                   0.05
+
+  clock MAIN_CLOCK (rise edge)             5.00       5.00
+  clock network delay (ideal)              0.00       5.00
+  clock uncertainty                       -0.50       4.50
+  output external delay                   -2.00       2.50
+  data required time                                  2.50
+  -----------------------------------------------------------
+  data required time                                  2.50
+  data arrival time                                  -0.05
+  -----------------------------------------------------------
+  slack (MET)                                         2.45
+
+
+  Startpoint: acc_reg[0] (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: acc[0] (output port clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fp16MAC            8000                  saed32rvt_ff1p16vn40c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)             0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  acc_reg[0]/CLK (DFFARX1_RVT)             0.00       0.00 r
+  acc_reg[0]/Q (DFFARX1_RVT)               0.05       0.05 f
+  acc[0] (out)                             0.00       0.05 f
+  data arrival time                                   0.05
+
+  clock MAIN_CLOCK (rise edge)             5.00       5.00
+  clock network delay (ideal)              0.00       5.00
+  clock uncertainty                       -0.50       4.50
+  output external delay                   -2.00       2.50
+  data required time                                  2.50
+  -----------------------------------------------------------
+  data required time                                  2.50
+  data arrival time                                  -0.05
+  -----------------------------------------------------------
+  slack (MET)                                         2.45
+
+
+1

@@ -1,0 +1,83 @@
+ 
+****************************************
+Report : qor
+Design : fp16MAC
+Version: O-2018.06-SP4
+Date   : Fri Dec 23 17:23:40 2022
+****************************************
+
+
+  Timing Path Group 'MAIN_CLOCK'
+  -----------------------------------
+  Levels of Logic:              66.00
+  Critical Path Length:          2.14
+  Critical Path Slack:           2.35
+  Critical Path Clk Period:      5.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:         -0.55
+  Total Hold Violation:        -40.78
+  No. of Hold Violations:       96.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:        466
+  Hierarchical Port Count:       3246
+  Leaf Cell Count:               2134
+  Buf/Inv Cell Count:             114
+  Buf Cell Count:                   2
+  Inv Cell Count:                 112
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:      2054
+  Sequential Cell Count:           80
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:     6269.986646
+  Noncombinational Area:   569.282570
+  Buf/Inv Area:            146.386945
+  Total Buffer Area:             4.07
+  Total Inverter Area:         142.32
+  Macro/Black Box Area:      0.000000
+  Net Area:                977.504281
+  -----------------------------------
+  Cell Area:              6839.269216
+  Design Area:            7816.773496
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:          2263
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: AIHA
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.75
+  Logic Optimization:                  1.76
+  Mapping Optimization:                2.40
+  -----------------------------------------
+  Overall Compile Time:                6.21
+  Overall Compile Wall Clock Time:     6.28
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.55  TNS: 40.78  Number of Violating Paths: 96
+
+  --------------------------------------------------------------------
+
+
+1

@@ -1,0 +1,5 @@
+../TESTBENCH/tb_fp16MAC.v
+../../RTL/fp16multiplier.v
+../../RTL/1bit_adder.v
+../../RTL/fpadder.v
+../../RTL/fp16MAC.v
