@@ -1,0 +1,67 @@
+module tb_fp16MAC;
+
+	// Inputs
+	reg [15:0] A;
+	reg [15:0] B;
+	reg CLK;
+	reg RESETn;
+	reg [15:0] ans_reg;
+	// Outputs
+	reg [15:0] a,b,c,r;
+	reg ans_m;
+	wire  [15:0] acc, error;
+	reg [15:0] ans_a;
+	assign error = acc - r;
+
+	// Instantiate the Unit Under Test (UUT)
+	fp16MAC uut (
+		.a(A), 
+		.b(B), 
+		.acc(acc), 
+		.CLK(CLK), 
+		.RESETn(RESETn)
+	);
+
+	initial begin
+		// Initialize Inputs
+	#50
+
+
+
+
+		
+		// Wait 100 ns for global reset to finish
+		#200050;
+        		
+		$finish;
+		// Add stimulus here
+
+	end
+   
+	initial begin
+		CLK = 0;
+		RESETn = 0;
+		#50;
+		RESETn = 1;
+		forever #10 CLK = ~CLK;
+	end
+	
+	always@ (posedge CLK, negedge RESETn) begin
+		if(!RESETn) begin
+			ans_reg <= 0;
+			A <= 0;
+			B <= 0;
+			a <= 0;
+			b <= 0;
+			c <= 0;
+			r <= 0;
+		end else begin
+			r <= c;
+			c <= b;
+			b <= a;
+			a <= ans_a;
+		end
+	end
+      
+endmodule
+
